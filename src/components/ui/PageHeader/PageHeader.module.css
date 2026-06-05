@@ -1,0 +1,35 @@
+.header {
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--text-faint);
+}
+
+.title {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.description {
+  margin: 0;
+  max-width: 36rem;
+  color: var(--text-muted);
+}
+
+.availability {
+  margin: 0 0 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}

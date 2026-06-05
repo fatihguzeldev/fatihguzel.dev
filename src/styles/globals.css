@@ -1,0 +1,125 @@
+:root {
+  --bg: #f8f7f4;
+  --bg-elevated: #ffffff;
+  --text: #1a1a1a;
+  --text-muted: #6b6b6b;
+  --text-faint: #a3a3a3;
+  --accent: #1a1a1a;
+  --border: #e8e6e1;
+
+  --font-display: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-body: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+
+  --max-width-prose: 40rem;
+  --max-width-wide: 56rem;
+  --section-gap: 6rem;
+  --page-padding: 1.5rem;
+  --transition: 150ms ease;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --page-padding: 3rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111110;
+    --bg-elevated: #1a1a19;
+    --text: #edebe6;
+    --text-muted: #9a9893;
+    --text-faint: #6b6a66;
+    --accent: #edebe6;
+    --border: #2a2a28;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  text-transform: lowercase;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  display: block;
+}
+
+.prose {
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 2rem 0 1rem;
+}
+
+.prose p {
+  margin: 0 0 1rem;
+}
+
+.prose pre {
+  text-transform: none;
+  overflow-x: auto;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+}
+
+.prose code {
+  text-transform: none;
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+}
+
+.prose a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}

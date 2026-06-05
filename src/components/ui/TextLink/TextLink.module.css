@@ -1,0 +1,20 @@
+.link {
+  color: var(--text);
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+
+.link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}

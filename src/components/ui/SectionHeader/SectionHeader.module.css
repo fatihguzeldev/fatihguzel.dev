@@ -1,0 +1,21 @@
+.header {
+  margin: 0 0 1.5rem;
+}
+
+.eyebrow {
+  display: block;
+  margin: 0 0 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--text-faint);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}

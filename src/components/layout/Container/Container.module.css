@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  max-width: var(--max-width-prose);
+  margin: 0 auto;
+  padding: 0 var(--page-padding);
+}
+
+.wide {
+  max-width: var(--max-width-wide);
+}
