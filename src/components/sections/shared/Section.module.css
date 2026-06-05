@@ -1,0 +1,13 @@
+.section {
+  padding: 0 0 var(--section-gap);
+}
+
+.section:last-child {
+  padding-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding-bottom: 4rem;
+  }
+}
