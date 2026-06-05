@@ -1,0 +1,20 @@
+{
+  "hero": {
+    "title": "fatih guzel",
+    "subtitle": "solutions architect and software engineer from turkey. i speak in systems and build in style."
+  },
+  "about": {
+    "paragraphs": [
+      "i build stuff, break stuff, and somehow make it all work again—only better. figuring out the hard stuff and turning it into something clean, handy, and well-thought-out? that's my thing. whether it's crafting apis or tackling messy codebases, i enjoy transforming chaos into polished solutions.",
+      "over the years, i've learned that every problem has a simpler solution—you just have to dig deep enough (or break a few things first).",
+      "this website is my corner to share what i've built, learned, or found interesting. i also create content on youtube @fatihlovestosimplify."
+    ]
+  },
+  "featuredProjectSlugs": ["stack-over-papers", "fauthy", "vemi"],
+  "featuredArticleSlugs": [],
+  "workTeaser": {
+    "headline": "open to consulting, architecture work, and interesting collaborations.",
+    "description": "got something in mind or just want to talk? i'd love to hear from you.",
+    "cta": "work with me"
+  }
+}

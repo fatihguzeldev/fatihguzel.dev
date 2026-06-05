@@ -1,0 +1,101 @@
+{
+  "projects": [
+    {
+      "slug": "stack-over-papers",
+      "name": "stack over papers",
+      "description": "an open community and repository for exploring, discussing, and annotating computer science papers and technical readings, making research more accessible and collaborative.",
+      "links": [
+        {
+          "label": "twitter community",
+          "href": "https://x.com/i/communities/1957542341167784336",
+          "kind": "community"
+        },
+        {
+          "label": "repository",
+          "href": "https://github.com/fatihguzeldev/stack-over-papers",
+          "kind": "github"
+        }
+      ]
+    },
+    {
+      "slug": "vemi",
+      "name": "vemi",
+      "description": "a tiny, type-safe markdown compiler. plain text in, html out.",
+      "links": [
+        {
+          "label": "website",
+          "href": "https://vemi.fatihguzel.dev",
+          "kind": "web"
+        },
+        {
+          "label": "npm",
+          "href": "https://www.npmjs.com/package/@fatihguzeldev/vemi",
+          "kind": "npm"
+        },
+        {
+          "label": "repository",
+          "href": "https://github.com/fatihguzeldev/vemi",
+          "kind": "github"
+        }
+      ]
+    },
+    {
+      "slug": "nudge",
+      "name": "nudge",
+      "description": "lightweight self-motivation daemon that sends you randomized, time-blocked messages throughout the day.",
+      "links": [
+        {
+          "label": "repository",
+          "href": "https://github.com/fatihguzeldev/nudge",
+          "kind": "github"
+        }
+      ]
+    },
+    {
+      "slug": "fauthy",
+      "name": "fauthy",
+      "description": "an open-source and secure command-line totp manager with local encryption.",
+      "links": [
+        {
+          "label": "npm",
+          "href": "https://www.npmjs.com/package/fauthy",
+          "kind": "npm"
+        },
+        {
+          "label": "repository",
+          "href": "https://github.com/fatihguzeldev/fauthy",
+          "kind": "github"
+        }
+      ]
+    },
+    {
+      "slug": "campusnacks",
+      "name": "campusnacks",
+      "description": "a food delivery service for campus areas, focused on local vendors.",
+      "links": [
+        {
+          "label": "frontend repository",
+          "href": "https://github.com/fatihguzeldev/campusnacks-frontend",
+          "kind": "github"
+        },
+        {
+          "label": "backend repository",
+          "href": "https://github.com/fatihguzeldev/campusnacks-backend",
+          "kind": "github"
+        }
+      ]
+    },
+    {
+      "slug": "dependabot",
+      "name": "dependabot",
+      "description": "the dependency checker for git repositories automates the monitoring of composer.json and package.json files. it compares dependencies with their registries every 24 hours and emails a detailed report to recipients.",
+      "links": [
+        {
+          "label": "repository",
+          "href": "https://github.com/fatihguzeldev/dependency-checker",
+          "kind": "github"
+        }
+      ]
+    }
+  ]
+}
