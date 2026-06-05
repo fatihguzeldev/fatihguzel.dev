@@ -1,0 +1,54 @@
+import { Container } from '@/components/layout/Container'
+import { PageHeader } from '@/components/ui/PageHeader'
+import { TextLink } from '@/components/ui/TextLink'
+import { loadArticles } from '@/content/load-articles'
+import { createMetadata } from '@/lib/seo/metadata'
+import { BreadcrumbJsonLd } from '@/lib/seo/json-ld'
+import styles from './page.module.css'
+
+export const metadata = createMetadata({
+  title: 'articles',
+  description:
+    'articles and writing by fatih guzel on software, systems, and building.',
+  path: '/articles',
+})
+
+export default function ArticlesPage() {
+  const articles = loadArticles()
+
+  return (
+    <main className={styles.main}>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'home', path: '/' },
+          { name: 'articles', path: '/articles' },
+        ]}
+      />
+      <Container>
+        <PageHeader
+          eyebrow="writing"
+          title="articles"
+          description="thoughts on software, systems, and the craft of building."
+        />
+
+        {articles.length ? (
+          <ul className={styles.list}>
+            {articles.map((article) => (
+              <li key={article.slug} className={styles.item}>
+                <h2 className={styles.articleTitle}>
+                  <TextLink href={`/articles/${article.slug}`}>
+                    {article.title}
+                  </TextLink>
+                </h2>
+                <p className={styles.articleDescription}>{article.description}</p>
+                <p className={styles.articleMeta}>{article.publishedAt}</p>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className={styles.empty}>articles coming soon.</p>
+        )}
+      </Container>
+    </main>
+  )
+}
