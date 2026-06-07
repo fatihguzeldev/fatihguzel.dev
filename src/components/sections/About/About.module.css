@@ -1,10 +1,12 @@
 .paragraphs {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: clamp(0.875rem, 2vw, 1rem);
 }
 
 .paragraph {
   margin: 0;
   color: var(--text);
+  font-size: var(--text-body-large);
+  line-height: 1.6;
 }

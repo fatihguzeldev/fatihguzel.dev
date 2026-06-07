@@ -7,7 +7,7 @@
 .name {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: var(--text-section-title);
   font-weight: 400;
   letter-spacing: -0.01em;
 }
@@ -15,6 +15,8 @@
 .description {
   margin: 0;
   color: var(--text-muted);
+  font-size: var(--text-body-large);
+  line-height: 1.6;
 }
 
 .archived {
@@ -24,7 +26,7 @@
 .year {
   margin: 0;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--text-meta);
   letter-spacing: 0.04em;
   color: var(--text-faint);
 }

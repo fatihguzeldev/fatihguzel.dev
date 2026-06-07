@@ -1,8 +1,8 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin: 0 0 2rem;
+  gap: clamp(1.5rem, 4vw, 2rem);
+  margin: 0 0 clamp(1.5rem, 4vw, 2rem);
   padding: 0;
   list-style: none;
 }
@@ -16,20 +16,21 @@
 .title {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: var(--text-section-title);
   font-weight: 400;
 }
 
 .description {
   margin: 0;
   color: var(--text-muted);
-  font-size: 0.875rem;
+  font-size: var(--text-body-large);
+  line-height: 1.6;
 }
 
 .meta {
   margin: 0;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--text-meta);
   letter-spacing: 0.04em;
   color: var(--text-faint);
 }

@@ -1,13 +1,18 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter, JetBrains_Mono, Space_Grotesk } from 'next/font/google'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { loadSite } from '@/content/load-site'
 import { createMetadata } from '@/lib/seo/metadata'
 import { PersonJsonLd, WebSiteJsonLd } from '@/lib/seo/json-ld'
+import '@/styles/globals.css'
 
 const site = loadSite()
-import '@/styles/globals.css'
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],

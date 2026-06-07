@@ -1,18 +1,18 @@
 .main {
-  padding: 4rem 0 var(--section-gap);
+  padding: var(--page-top-padding) 0 var(--section-gap);
 }
 
 .header {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: clamp(2rem, 5vw, 2.5rem);
 }
 
 .title {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: var(--text-page-title);
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -21,12 +21,14 @@
 .meta {
   margin: 0;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--text-meta);
   letter-spacing: 0.04em;
   color: var(--text-faint);
 }
 
 .description {
   margin: 0;
+  font-size: var(--text-body-large);
   color: var(--text-muted);
+  line-height: 1.6;
 }
