@@ -1,5 +1,5 @@
 import { Container } from '@/components/layout/Container'
-import { LinkList } from '@/components/ui/LinkList'
+import { SocialIconList } from '@/components/ui/SocialIconList'
 import { PageHeader } from '@/components/ui/PageHeader'
 import { TextLink } from '@/components/ui/TextLink'
 import { loadSite } from '@/content/load-site'
@@ -57,7 +57,7 @@ export default function WorkPage() {
 
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>elsewhere</h2>
-          <LinkList links={socials} />
+          <SocialIconList socials={socials} />
         </section>
       </Container>
     </main>

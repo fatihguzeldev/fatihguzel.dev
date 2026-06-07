@@ -1,0 +1,33 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.25rem, 1.5vw, 0.375rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--touch-target);
+  height: var(--touch-target);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition:
+    color var(--transition),
+    background-color var(--transition);
+}
+
+.link svg {
+  display: block;
+  width: 15px;
+  height: 15px;
+}
+
+.link:hover {
+  color: var(--text);
+  background: var(--border);
+  text-decoration: none;
+}
