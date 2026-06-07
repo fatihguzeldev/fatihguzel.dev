@@ -1,0 +1,51 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--touch-target);
+  height: var(--touch-target);
+  border: none;
+  border-radius: 5px;
+  padding: 0;
+  color: var(--text-muted);
+  background: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition:
+    color 200ms ease,
+    background-color 200ms ease;
+}
+
+.button:hover {
+  color: var(--text);
+  background: color-mix(in srgb, var(--border) 65%, transparent);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: themeIconIn 220ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes themeIconIn {
+  from {
+    opacity: 0;
+    transform: rotate(-60deg) scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+
+  .icon {
+    animation: none;
+  }
+}

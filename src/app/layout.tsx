@@ -5,6 +5,7 @@ import { Footer } from '@/components/layout/Footer'
 import { loadSite } from '@/content/load-site'
 import { createMetadata } from '@/lib/seo/metadata'
 import { PersonJsonLd, WebSiteJsonLd } from '@/lib/seo/json-ld'
+import { getThemeScript } from '@/lib/theme/apply-theme'
 import '@/styles/globals.css'
 
 const site = loadSite()
@@ -42,9 +43,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-theme="light"
+      suppressHydrationWarning
       className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
       <body>
+        <script dangerouslySetInnerHTML={{ __html: getThemeScript() }} />
         <PersonJsonLd />
         <WebSiteJsonLd />
         <Header siteName={site.name} />

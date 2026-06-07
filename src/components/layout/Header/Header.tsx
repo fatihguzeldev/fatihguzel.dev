@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { NAV_LINKS } from '@/lib/constants'
 import styles from './Header.module.css'
 
@@ -31,6 +32,7 @@ export function Header({ siteName }: HeaderProps) {
               {link.label}
             </Link>
           ))}
+          <ThemeToggle />
         </nav>
       </div>
     </header>

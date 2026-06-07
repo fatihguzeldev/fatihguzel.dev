@@ -1,4 +1,5 @@
-:root {
+:root,
+html[data-theme='light'] {
   --bg: #f8f7f4;
   --bg-elevated: #ffffff;
   --text: #1a1a1a;
@@ -7,6 +8,22 @@
   --accent: #1a1a1a;
   --border: #e8e6e1;
 
+  color-scheme: light;
+}
+
+html[data-theme='dark'] {
+  --bg: #111110;
+  --bg-elevated: #1a1a19;
+  --text: #edebe6;
+  --text-muted: #9a9893;
+  --text-faint: #6b6a66;
+  --accent: #edebe6;
+  --border: #2a2a28;
+
+  color-scheme: dark;
+}
+
+:root {
   --font-display: var(--font-space-grotesk), system-ui, sans-serif;
   --font-body: var(--font-inter), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
@@ -26,18 +43,6 @@
 
   --touch-target: 2.75rem;
   --transition: 150ms ease;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #111110;
-    --bg-elevated: #1a1a19;
-    --text: #edebe6;
-    --text-muted: #9a9893;
-    --text-faint: #6b6a66;
-    --accent: #edebe6;
-    --border: #2a2a28;
-  }
 }
 
 *,
@@ -68,6 +73,9 @@ body {
   overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
 }
 
 a {
@@ -131,4 +139,10 @@ main {
   text-decoration: underline;
   text-underline-offset: 0.2em;
   overflow-wrap: anywhere;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    transition: none;
+  }
 }

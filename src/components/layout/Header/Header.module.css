@@ -5,7 +5,9 @@
   background: color-mix(in srgb, var(--bg) 92%, transparent);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid transparent;
-  transition: border-color var(--transition);
+  transition:
+    border-color var(--transition),
+    background-color 200ms ease;
 }
 
 .scrolled {
