@@ -1,3 +1,4 @@
+import { DecoratedTitle } from '@/components/ui/DecoratedTitle'
 import styles from './SectionHeader.module.css'
 
 type SectionHeaderProps = {
@@ -9,7 +10,7 @@ export function SectionHeader({ eyebrow, title }: SectionHeaderProps) {
   return (
     <header className={styles.header}>
       {eyebrow ? <span className={styles.eyebrow}>{eyebrow}</span> : null}
-      <h2 className={styles.title}>{title}</h2>
+      <DecoratedTitle as="h2" title={title} variant="section" />
     </header>
   )
 }

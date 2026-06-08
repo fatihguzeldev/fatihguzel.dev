@@ -3,3 +3,5 @@ export const NAV_LINKS = [
   { label: 'projects', href: '/projects' },
   { label: 'work & contact', href: '/work' },
 ] as const
+
+export const SECTION_TITLE_DECORATOR = '\\\\'

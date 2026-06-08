@@ -2,7 +2,7 @@
   margin: 0 0 1.5rem;
   font-family: var(--font-mono);
   font-size: var(--text-meta);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   color: var(--text-faint);
 }
 
@@ -17,7 +17,7 @@
 
 .item {
   margin: 0;
-  color: var(--text);
+  color: var(--text-muted);
   font-size: var(--text-body-large);
-  line-height: 1.6;
+  line-height: var(--leading-body);
 }

@@ -22,13 +22,16 @@
   font-family: var(--font-display);
   font-size: var(--text-section-title);
   font-weight: 400;
+  line-height: var(--leading-heading);
+  letter-spacing: -0.02em;
+  color: var(--text);
 }
 
 .articleDescription {
   margin: 0;
   color: var(--text-muted);
   font-size: var(--text-body-large);
-  line-height: 1.6;
+  line-height: var(--leading-body);
 }
 
 .articleMeta {

@@ -1,0 +1,33 @@
+.title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: var(--leading-heading);
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.section {
+  font-size: var(--text-section-title);
+}
+
+.page {
+  margin-bottom: 1rem;
+  font-size: var(--text-page-title);
+}
+
+.decorator {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 0.72em;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--accent);
+}
+
+.text {
+  min-width: 0;
+}

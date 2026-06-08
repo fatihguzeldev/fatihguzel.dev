@@ -1,6 +1,7 @@
 import { Container } from '@/components/layout/Container'
 import { SocialIconList } from '@/components/ui/SocialIconList'
 import { PageHeader } from '@/components/ui/PageHeader'
+import { SectionHeader } from '@/components/ui/SectionHeader'
 import { TextLink } from '@/components/ui/TextLink'
 import { loadSite } from '@/content/load-site'
 import { loadSocials } from '@/content/load-socials'
@@ -38,7 +39,7 @@ export default function WorkPage() {
         />
 
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>services</h2>
+          <SectionHeader title="services" />
           <ul className={styles.services}>
             {work.services.map((service) => (
               <li key={service} className={styles.service}>
@@ -49,14 +50,14 @@ export default function WorkPage() {
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>email</h2>
+          <SectionHeader title="email" />
           <TextLink href={`mailto:${site.email}`} mono>
             {site.email}
           </TextLink>
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>elsewhere</h2>
+          <SectionHeader title="elsewhere" />
           <SocialIconList socials={socials} />
         </section>
       </Container>

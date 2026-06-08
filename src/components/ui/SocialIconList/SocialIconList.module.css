@@ -13,6 +13,7 @@
   justify-content: center;
   width: var(--touch-target);
   height: var(--touch-target);
+  border-radius: var(--radius-control);
   color: var(--text-muted);
   text-decoration: none;
   transition:
@@ -27,7 +28,7 @@
 }
 
 .link:hover {
-  color: var(--text);
-  background: var(--border);
+  color: var(--accent);
+  background: var(--accent-muted);
   text-decoration: none;
 }

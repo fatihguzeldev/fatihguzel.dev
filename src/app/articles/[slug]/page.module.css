@@ -7,6 +7,8 @@
   flex-direction: column;
   gap: 0.75rem;
   margin-bottom: clamp(2rem, 5vw, 2.5rem);
+  padding-bottom: clamp(1rem, 3vw, 1.25rem);
+  border-bottom: 1px solid var(--border);
 }
 
 .title {
@@ -14,15 +16,16 @@
   font-family: var(--font-display);
   font-size: var(--text-page-title);
   font-weight: 400;
-  line-height: 1.2;
+  line-height: var(--leading-heading);
   letter-spacing: -0.02em;
+  color: var(--text);
 }
 
 .meta {
   margin: 0;
   font-family: var(--font-mono);
   font-size: var(--text-meta);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   color: var(--text-faint);
 }
 
@@ -30,5 +33,5 @@
   margin: 0;
   font-size: var(--text-body-large);
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: var(--leading-body);
 }

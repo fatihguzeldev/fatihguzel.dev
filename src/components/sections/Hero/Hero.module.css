@@ -17,5 +17,5 @@
   max-width: 36rem;
   font-size: var(--text-body-large);
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: var(--leading-body);
 }

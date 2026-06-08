@@ -6,6 +6,7 @@
 
 .link:hover {
   text-decoration: underline;
+  text-decoration-color: var(--accent);
   text-underline-offset: 0.2em;
 }
 
