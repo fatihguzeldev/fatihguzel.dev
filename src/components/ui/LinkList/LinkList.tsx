@@ -20,7 +20,7 @@ export function LinkList({ links, mono = true, external = true }: LinkListProps)
           </TextLink>
           {index < links.length - 1 ? (
             <span className={styles.separator} aria-hidden="true">
-              ·
+              •
             </span>
           ) : null}
         </li>
