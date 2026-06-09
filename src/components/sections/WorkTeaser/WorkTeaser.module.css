@@ -1,7 +1,7 @@
 .headline {
   margin: 0 0 0.75rem;
   font-family: var(--font-body);
-  font-size: var(--text-lead);
+  font-size: var(--text-body);
   font-weight: 400;
   line-height: var(--leading-body);
   color: var(--text);
@@ -10,7 +10,7 @@
 .description {
   margin: 0 0 1.5rem;
   color: var(--text-muted);
-  font-size: var(--text-body-large);
+  font-size: var(--text-body);
   line-height: var(--leading-body);
 }
 

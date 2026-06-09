@@ -16,7 +16,7 @@
 .description {
   margin: 0;
   max-width: 36rem;
-  font-size: var(--text-body-large);
+  font-size: var(--text-body);
   color: var(--text-muted);
   line-height: var(--leading-body);
 }

@@ -37,15 +37,14 @@ html[data-theme='dark'] {
   --section-gap: clamp(3.5rem, 8vw, 6rem);
   --page-top-padding: clamp(2.5rem, 8vw, 4rem);
 
-  --text-page-title: clamp(1.75rem, 4vw, 2rem);
-  --text-section-title: clamp(1.375rem, 3.25vw, 1.625rem);
-  --text-lead: clamp(1.0625rem, 2.5vw, 1.1875rem);
-  --text-hero-title: clamp(2.25rem, 5vw, 3.5rem);
-  --text-body-large: clamp(1rem, 2vw, 1.125rem);
-  --text-meta: clamp(0.6875rem, 1.5vw, 0.75rem);
+  --text-page-title: clamp(1.375rem, 2vw, 1.5rem);
+  --text-section-title: clamp(1.0625rem, 1.25vw, 1.1875rem);
+  --text-hero-title: clamp(1.75rem, 2.5vw, 2.25rem);
+  --text-body: 1rem;
+  --text-meta: 0.8125rem;
 
-  --leading-body: 1.65;
-  --leading-heading: 1.15;
+  --leading-body: 1.6;
+  --leading-heading: 1.2;
 
   --touch-target: 2.75rem;
   --radius-control: 5px;
