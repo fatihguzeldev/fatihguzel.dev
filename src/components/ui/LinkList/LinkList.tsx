@@ -19,9 +19,7 @@ export function LinkList({ links, mono = true, external = true }: LinkListProps)
             {link.label}
           </TextLink>
           {index < links.length - 1 ? (
-            <span className={styles.separator} aria-hidden="true">
-              •
-            </span>
+            <span className={styles.separator} aria-hidden="true" />
           ) : null}
         </li>
       ))}

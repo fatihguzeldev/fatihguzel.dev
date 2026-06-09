@@ -10,14 +10,15 @@
 .item {
   display: inline-flex;
   align-items: center;
+  gap: 0.625rem;
 }
 
 .separator {
   flex-shrink: 0;
-  margin-left: 0.625rem;
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  line-height: 1;
-  color: color-mix(in srgb, var(--accent) 55%, var(--text-faint));
+  display: block;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 55%, var(--text-faint));
   user-select: none;
 }
