@@ -6,6 +6,7 @@ type TextLinkProps = Omit<ComponentProps<'a'>, 'href'> & {
   href: string
   muted?: boolean
   mono?: boolean
+  cta?: boolean
   external?: boolean
 }
 
@@ -22,6 +23,7 @@ function isExternalHref(href: string): boolean {
 export function TextLink({
   muted = false,
   mono = false,
+  cta = false,
   external = false,
   className,
   children,
@@ -32,6 +34,7 @@ export function TextLink({
     styles.link,
     muted ? styles.muted : '',
     mono ? styles.mono : '',
+    cta ? styles.cta : '',
     className,
   ]
     .filter(Boolean)

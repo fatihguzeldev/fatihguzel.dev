@@ -19,3 +19,35 @@
   font-size: var(--text-meta);
   letter-spacing: 0.04em;
 }
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.cta:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.cta::before {
+  content: '';
+  width: 2px;
+  height: 0.8em;
+  border-radius: 999px;
+  background: var(--accent);
+  opacity: 0.75;
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+
+.cta:hover::before {
+  opacity: 1;
+}
