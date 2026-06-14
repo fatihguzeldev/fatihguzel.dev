@@ -43,19 +43,23 @@ export function WebSiteJsonLd() {
 }
 
 export function ArticleJsonLd({ article }: { article: Article }) {
+  const articleUrl = `${SITE_URL}/articles/${article.slug}`
+  const canonicalUrl = article.canonicalUrl ?? articleUrl
   const data = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: article.title,
     description: article.description,
     datePublished: article.publishedAt,
+    dateModified: article.updatedAt ?? article.publishedAt,
+    ...(article.tags.length ? { keywords: article.tags.join(', ') } : {}),
     author: {
       '@type': 'Person',
       name: site.name,
       url: SITE_URL,
     },
-    url: `${SITE_URL}/articles/${article.slug}`,
-    mainEntityOfPage: `${SITE_URL}/articles/${article.slug}`,
+    url: canonicalUrl,
+    mainEntityOfPage: canonicalUrl,
   }
 
   return (

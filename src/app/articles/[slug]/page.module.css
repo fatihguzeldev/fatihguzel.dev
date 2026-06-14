@@ -17,16 +17,35 @@
   font-size: var(--text-page-title);
   font-weight: 400;
   line-height: var(--leading-heading);
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   color: var(--text);
 }
 
 .meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
   margin: 0;
   font-family: var(--font-mono);
   font-size: var(--text-meta);
   letter-spacing: 0.06em;
   color: var(--text-faint);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.625rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag {
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  letter-spacing: 0.04em;
 }
 
 .description {

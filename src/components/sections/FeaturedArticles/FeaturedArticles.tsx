@@ -22,8 +22,23 @@ export function FeaturedArticles({ articles }: FeaturedArticlesProps) {
               <h3 className={styles.title}>
                 <TextLink href={`/articles/${article.slug}`}>{article.title}</TextLink>
               </h3>
-              <p className={styles.description}>{article.description}</p>
-              <p className={styles.meta}>{article.publishedAt}</p>
+              <p className={styles.description}>
+                {article.summary ?? article.description}
+              </p>
+              <p className={styles.meta}>
+                <time dateTime={article.publishedAt}>{article.publishedAt}</time>
+                <span aria-hidden="true">/</span>
+                <span>{article.readingTime} min read</span>
+              </p>
+              {article.tags.length > 0 ? (
+                <ul className={styles.tags} aria-label="article tags">
+                  {article.tags.map((tag) => (
+                    <li key={tag} className={styles.tag}>
+                      #{tag}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
             </li>
           ))}
         </ul>

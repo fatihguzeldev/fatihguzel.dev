@@ -40,8 +40,23 @@ export default function ArticlesPage() {
                     {article.title}
                   </TextLink>
                 </h2>
-                <p className={styles.articleDescription}>{article.description}</p>
-                <p className={styles.articleMeta}>{article.publishedAt}</p>
+                <p className={styles.articleDescription}>
+                  {article.summary ?? article.description}
+                </p>
+                <p className={styles.articleMeta}>
+                  <time dateTime={article.publishedAt}>{article.publishedAt}</time>
+                  <span aria-hidden="true">/</span>
+                  <span>{article.readingTime} min read</span>
+                </p>
+                {article.tags.length > 0 ? (
+                  <ul className={styles.tags} aria-label="article tags">
+                    {article.tags.map((tag) => (
+                      <li key={tag} className={styles.tag}>
+                        #{tag}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
               </li>
             ))}
           </ul>

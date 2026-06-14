@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { getArticleSlugs, loadArticles } from '@/content/load-articles'
+import { loadArticles } from '@/content/load-articles'
 import { SITE_URL } from '@/content/load-site'
 import { loadNow } from '@/content/load-now'
 
@@ -16,11 +16,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === '' ? 1 : 0.8,
   }))
 
-  const articleRoutes = getArticleSlugs().map((slug) => {
-    const article = articles.find((entry) => entry.slug === slug)
+  const articleRoutes = articles.map((article) => {
     return {
-      url: `${SITE_URL}/articles/${slug}`,
-      lastModified: article ? new Date(article.publishedAt) : nowUpdated,
+      url: `${SITE_URL}/articles/${article.slug}`,
+      lastModified: new Date(article.updatedAt ?? article.publishedAt),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     }

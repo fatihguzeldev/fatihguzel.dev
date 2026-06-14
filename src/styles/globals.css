@@ -115,57 +115,6 @@ main {
   flex: 1 0 auto;
 }
 
-.prose {
-  font-family: var(--font-body);
-  line-height: var(--leading-body);
-  color: var(--text-muted);
-}
-
-.prose h1,
-.prose h2,
-.prose h3,
-.prose h4 {
-  font-family: var(--font-display);
-  font-weight: 400;
-  line-height: var(--leading-heading);
-  letter-spacing: -0.02em;
-  color: var(--text);
-  margin: 2rem 0 1rem;
-}
-
-.prose p {
-  margin: 0 0 1rem;
-}
-
-.prose pre {
-  text-transform: none;
-  overflow-x: auto;
-  padding: 1rem;
-  border: 1px solid var(--border);
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  -webkit-overflow-scrolling: touch;
-}
-
-.prose code {
-  text-transform: none;
-  font-family: var(--font-mono);
-  font-size: 0.875em;
-  overflow-wrap: anywhere;
-}
-
-.prose a {
-  text-decoration: underline;
-  text-decoration-color: var(--border);
-  text-underline-offset: 0.2em;
-  overflow-wrap: anywhere;
-  transition: text-decoration-color var(--transition);
-}
-
-.prose a:hover {
-  text-decoration-color: var(--accent);
-}
-
 @media (prefers-reduced-motion: reduce) {
   body {
     transition: none;

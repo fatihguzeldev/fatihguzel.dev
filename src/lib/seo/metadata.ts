@@ -9,6 +9,9 @@ type PageMetadataOptions = {
   path?: string
   type?: 'website' | 'article'
   publishedAt?: string
+  updatedAt?: string
+  tags?: string[]
+  canonicalUrl?: string
 }
 
 export function createMetadata({
@@ -17,25 +20,31 @@ export function createMetadata({
   path = '',
   type = 'website',
   publishedAt,
+  updatedAt,
+  tags,
+  canonicalUrl,
 }: PageMetadataOptions = {}): Metadata {
   const pageTitle = title ? `${title} · ${site.name}` : site.name
   const url = `${SITE_URL}${path}`
+  const canonical = canonicalUrl ?? url
 
   return {
     title: pageTitle,
     description,
     metadataBase: new URL(SITE_URL),
     alternates: {
-      canonical: url,
+      canonical,
     },
     openGraph: {
       title: pageTitle,
       description,
-      url,
+      url: canonical,
       siteName: site.name,
       locale: 'en_US',
       type,
       ...(publishedAt ? { publishedTime: publishedAt } : {}),
+      ...(updatedAt ? { modifiedTime: updatedAt } : {}),
+      ...(tags?.length ? { tags } : {}),
     },
     twitter: {
       card: 'summary',

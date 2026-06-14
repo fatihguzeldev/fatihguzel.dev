@@ -44,6 +44,9 @@ export async function generateMetadata({ params }: ArticlePageProps) {
     path: `/articles/${article.slug}`,
     type: 'article',
     publishedAt: article.publishedAt,
+    updatedAt: article.updatedAt,
+    tags: article.tags,
+    canonicalUrl: article.canonicalUrl,
   })
 }
 
@@ -74,7 +77,28 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             articles
           </TextLink>
           <h1 className={styles.title}>{article.title}</h1>
-          <p className={styles.meta}>{article.publishedAt}</p>
+          <p className={styles.meta}>
+            <time dateTime={article.publishedAt}>{article.publishedAt}</time>
+            {article.updatedAt ? (
+              <>
+                <span aria-hidden="true">/</span>
+                <span>
+                  updated <time dateTime={article.updatedAt}>{article.updatedAt}</time>
+                </span>
+              </>
+            ) : null}
+            <span aria-hidden="true">/</span>
+            <span>{article.readingTime} min read</span>
+          </p>
+          {article.tags.length > 0 ? (
+            <ul className={styles.tags} aria-label="article tags">
+              {article.tags.map((tag) => (
+                <li key={tag} className={styles.tag}>
+                  #{tag}
+                </li>
+              ))}
+            </ul>
+          ) : null}
           <p className={styles.description}>{article.description}</p>
         </header>
         <Prose html={article.html} />
