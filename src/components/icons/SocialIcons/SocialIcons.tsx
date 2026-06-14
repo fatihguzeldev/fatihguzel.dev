@@ -50,18 +50,33 @@ export function YouTubeIcon({ size = 20 }: IconProps) {
   )
 }
 
+export function InstagramIcon({ size = 20 }: IconProps) {
+  const scaledSize = size * 1.2
+
+  return (
+    <svg
+      width={scaledSize}
+      height={scaledSize}
+      style={{ width: scaledSize, height: scaledSize }}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <rect width="18" height="18" x="3" y="3" rx="5" />
+      <circle cx="12" cy="12" r="3.6" />
+      <circle cx="17.25" cy="6.75" r="0.85" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
+
 export function WebsiteIcon({ size = 20 }: IconProps) {
   return (
     <IconShell size={size}>
       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-.61.08-1.21.21-1.78L8 14.25V15c0 1.1.9 2 2 2v1.93C7.05 18.44 4 15.48 4 12zm12.75 4.29c-.63-.87-1.5-1.29-2.25-1.29h-1.5v-2.25c0-.41-.34-.75-.75-.75H9v-1.5h1.5c.41 0 .75-.34.75-.75V9H13.5c1.24 0 2.25-1.01 2.25-2.25V6.09c2.35 1.2 4 3.65 4 6.41 0 1.53-.55 2.93-1.5 4.04z" />
-    </IconShell>
-  )
-}
-
-export function DevToIcon({ size = 20 }: IconProps) {
-  return (
-    <IconShell size={size}>
-      <path d="M7.42 10.19c-.18-.16-.46-.23-.7-.12L0 12.11l6.72 2.04c.24.11.52.04.7-.12l9.58-8.9V2.6H0v2.69l7.42 4.9zm8.69 2.7-6.72-2.04c-.24-.11-.52-.04-.7.12l-9.58 8.9V21.4h16.11v-2.69l-7.42-4.9c-.18-.16-.18-.43 0-.59l7.42-4.9V12.9h-7.42v2.69z" />
     </IconShell>
   )
 }

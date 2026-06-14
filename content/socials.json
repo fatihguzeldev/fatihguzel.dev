@@ -1,6 +1,12 @@
 {
   "socials": [
     {
+      "slug": "github",
+      "label": "github",
+      "href": "https://github.com/fatihguzeldev",
+      "kind": "github"
+    },
+    {
       "slug": "youtube",
       "label": "youtube",
       "href": "https://www.youtube.com/@fatihlovestosimplify",
@@ -19,17 +25,11 @@
       "kind": "web"
     },
     {
-      "slug": "github",
-      "label": "github",
-      "href": "https://github.com/fatihguzeldev",
-      "kind": "github"
-    },
-    {
-      "slug": "devto",
-      "label": "dev.to",
-      "href": "https://dev.to/fatihguzeldev",
+      "slug": "instagram",
+      "label": "instagram",
+      "href": "https://www.instagram.com/fatihguzeldev",
       "kind": "web"
     }
   ],
-  "footerSlugs": ["github", "youtube", "twitter", "linkedin"]
+  "footerSlugs": ["github", "youtube", "twitter", "linkedin", "instagram"]
 }

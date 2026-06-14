@@ -1,6 +1,6 @@
 export {
-  DevToIcon,
   GitHubIcon,
+  InstagramIcon,
   LinkedInIcon,
   WebsiteIcon,
   XIcon,

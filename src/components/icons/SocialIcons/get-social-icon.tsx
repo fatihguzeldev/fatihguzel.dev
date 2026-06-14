@@ -1,8 +1,8 @@
 import type { ComponentType } from 'react'
 import type { Social } from '@/content/schemas/socials'
 import {
-  DevToIcon,
   GitHubIcon,
+  InstagramIcon,
   LinkedInIcon,
   WebsiteIcon,
   XIcon,
@@ -18,7 +18,7 @@ const slugIconMap: Record<string, ComponentType<SocialIconProps>> = {
   github: GitHubIcon,
   linkedin: LinkedInIcon,
   youtube: YouTubeIcon,
-  devto: DevToIcon,
+  instagram: InstagramIcon,
 }
 
 const kindIconMap: Record<string, ComponentType<SocialIconProps>> = {
