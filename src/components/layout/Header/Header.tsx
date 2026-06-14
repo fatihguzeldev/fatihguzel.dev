@@ -1,30 +1,14 @@
-'use client'
-
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { NAV_LINKS } from '@/lib/constants'
 import styles from './Header.module.css'
 
-type HeaderProps = {
-  siteName: string
-}
-
-export function Header({ siteName }: HeaderProps) {
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
+export function Header() {
   return (
-    <header className={[styles.header, scrolled ? styles.scrolled : ''].join(' ')}>
+    <header className={styles.header}>
       <div className={styles.inner}>
-        <Link href="/" className={styles.logo}>
-          {siteName}
+        <Link href="/" className={styles.logo} aria-label="home">
+          home
         </Link>
         <nav className={styles.nav} aria-label="main">
           {NAV_LINKS.map((link) => (

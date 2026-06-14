@@ -19,3 +19,7 @@
   color: var(--text-muted);
   line-height: var(--leading-body);
 }
+
+.socials {
+  margin-top: clamp(1.25rem, 3vw, 1.75rem);
+}
