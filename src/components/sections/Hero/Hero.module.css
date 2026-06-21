@@ -9,7 +9,7 @@
   font-size: var(--text-hero-title);
   font-weight: 400;
   line-height: 1.2;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .subtitle {

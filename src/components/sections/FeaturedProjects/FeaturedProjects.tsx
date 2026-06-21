@@ -25,8 +25,8 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
           ))}
         </ul>
         <p className={styles.cta}>
-          <TextLink href="/projects" cta>
-            see all projects
+          <TextLink href="/projects" cta ctaVariant="route" routeLabel="/projects">
+            explore the projects
           </TextLink>
         </p>
       </Container>

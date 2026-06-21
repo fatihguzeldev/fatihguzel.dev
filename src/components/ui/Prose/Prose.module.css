@@ -127,7 +127,7 @@
   background: var(--bg-elevated);
   color: var(--text);
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: var(--text-ui);
   line-height: 1.6;
   text-transform: none;
   -webkit-overflow-scrolling: touch;

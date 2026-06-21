@@ -18,7 +18,7 @@ export function WorkTeaser({ headline, description, cta }: WorkTeaserProps) {
         <p className={styles.headline}>{headline}</p>
         <p className={styles.description}>{description}</p>
         <p className={styles.cta}>
-          <TextLink href="/work" cta>
+          <TextLink href="/work" cta ctaVariant="route" routeLabel="/work">
             {cta}
           </TextLink>
         </p>

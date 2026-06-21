@@ -15,17 +15,24 @@
 }
 
 .mono {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.5rem;
   font-family: var(--font-mono);
   font-size: var(--text-meta);
+  line-height: 1.2;
   letter-spacing: 0.04em;
 }
 
 .cta {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.625rem;
+  min-height: 1.5rem;
   font-family: var(--font-mono);
   font-size: var(--text-meta);
+  line-height: 1.2;
   letter-spacing: 0.04em;
   color: var(--text-muted);
   text-decoration: none;
@@ -50,4 +57,41 @@
 
 .cta:hover::before {
   opacity: 1;
+}
+
+.ctaRoute {
+  gap: 0.75rem;
+}
+
+.ctaRoute::before {
+  content: attr(data-route);
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: none;
+  color: var(--accent);
+  opacity: 0.9;
+}
+
+.ctaRoute:hover::before {
+  opacity: 1;
+}
+
+.ctaRoute::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  height: 1px;
+  width: var(--route-width, 0);
+  background: var(--accent);
+  opacity: 0.55;
+  transition:
+    opacity var(--transition),
+    width var(--transition);
+}
+
+.ctaRoute:hover::after {
+  opacity: 0.9;
+  width: 100%;
 }

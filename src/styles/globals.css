@@ -4,7 +4,7 @@ html[data-theme='light'] {
   --bg-elevated: #ffffff;
   --text: #1a1a1a;
   --text-muted: #6b6b6b;
-  --text-faint: #a3a3a3;
+  --text-faint: #707070;
   --accent: #c2410c;
   --accent-muted: rgba(194, 65, 12, 0.12);
   --border: #e8e6e1;
@@ -17,7 +17,7 @@ html[data-theme='dark'] {
   --bg-elevated: #1a1a19;
   --text: #edebe6;
   --text-muted: #9a9893;
-  --text-faint: #6b6a66;
+  --text-faint: #807e79;
   --accent: #fb923c;
   --accent-muted: rgba(251, 146, 60, 0.12);
   --border: #2a2a28;
@@ -33,17 +33,21 @@ html[data-theme='dark'] {
   --max-width-prose: 40rem;
   --max-width-wide: 56rem;
 
-  --page-padding: clamp(1.25rem, 4vw, 3rem);
+  --page-padding: clamp(1.5rem, 5vw, 3rem);
   --section-gap: clamp(3.5rem, 8vw, 6rem);
   --page-top-padding: clamp(2.5rem, 8vw, 4rem);
 
   --text-page-title: clamp(1.375rem, 2vw, 1.5rem);
-  --text-section-title: clamp(1.0625rem, 1.25vw, 1.1875rem);
+  --text-section-title: clamp(1.125rem, 1.3vw, 1.25rem);
+  --text-item-title: clamp(1.0625rem, 1.15vw, 1.125rem);
   --text-hero-title: clamp(1.75rem, 2.5vw, 2.25rem);
+  --text-ui: 0.875rem;
+  --text-preview: 0.9375rem;
   --text-body: 1rem;
   --text-meta: 0.8125rem;
 
   --leading-body: 1.6;
+  --leading-preview: 1.55;
   --leading-heading: 1.2;
 
   --touch-target: 2.75rem;
@@ -76,7 +80,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: var(--text-body);
   font-weight: 400;
   line-height: var(--leading-body);
   overflow-wrap: break-word;

@@ -6,7 +6,7 @@
   font-family: var(--font-display);
   font-weight: 400;
   line-height: var(--leading-heading);
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   color: var(--text);
 }
 
