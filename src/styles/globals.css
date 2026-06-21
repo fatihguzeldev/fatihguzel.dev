@@ -109,6 +109,11 @@ a:focus-visible {
   outline-offset: 2px;
 }
 
+html[data-focus-source='pointer'] button:focus-visible,
+html[data-focus-source='pointer'] a:focus-visible {
+  outline: none;
+}
+
 img {
   max-width: 100%;
   height: auto;

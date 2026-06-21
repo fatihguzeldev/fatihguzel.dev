@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Inter, JetBrains_Mono, Space_Grotesk } from 'next/font/google'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { getFocusSourceScript } from '@/lib/focus/apply-focus-source'
 import { createMetadata } from '@/lib/seo/metadata'
 import { PersonJsonLd, WebSiteJsonLd } from '@/lib/seo/json-ld'
 import { getThemeScript } from '@/lib/theme/apply-theme'
@@ -45,6 +46,7 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
       <body>
+        <script dangerouslySetInnerHTML={{ __html: getFocusSourceScript() }} />
         <script dangerouslySetInnerHTML={{ __html: getThemeScript() }} />
         <PersonJsonLd />
         <WebSiteJsonLd />
