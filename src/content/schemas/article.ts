@@ -13,18 +13,19 @@ const SlugSchema = z
   .min(1)
   .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'expected a lowercase slug')
 
+export const ArticleLanguageSchema = z.enum(['en', 'tr'])
+
 export const ArticleFrontmatterSchema = z.object({
   title: z.string().min(1),
   slug: SlugSchema,
   publishedAt: IsoDateSchema,
   description: z.string().min(1),
+  language: ArticleLanguageSchema.default('en'),
   updatedAt: IsoDateSchema.optional(),
   tags: z.array(z.string().min(1)).default([]),
   draft: z.boolean().default(false),
-  featured: z.boolean().default(false),
   canonicalUrl: z.string().url().optional(),
   readingTime: z.number().int().positive().optional(),
-  summary: z.string().min(1).optional(),
 })
 
 export type ArticleFrontmatter = z.infer<typeof ArticleFrontmatterSchema>

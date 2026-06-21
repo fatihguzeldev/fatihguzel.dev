@@ -105,9 +105,12 @@ export function loadArticles(): Article[] {
 
   articlesCache = loadedArticles
     .filter((article): article is Article => Boolean(article))
-    .sort(
-      (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
-    )
+    .sort((a, b) => {
+      const dateDifference =
+        new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+
+      return dateDifference || a.slug.localeCompare(b.slug)
+    })
 
   return articlesCache
 }

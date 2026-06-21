@@ -50,6 +50,7 @@ export function ArticleJsonLd({ article }: { article: Article }) {
     '@type': 'Article',
     headline: article.title,
     description: article.description,
+    inLanguage: article.language,
     datePublished: article.publishedAt,
     dateModified: article.updatedAt ?? article.publishedAt,
     ...(article.tags.length ? { keywords: article.tags.join(', ') } : {}),

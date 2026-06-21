@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { Container } from '@/components/layout/Container'
 import { Prose } from '@/components/ui/Prose'
 import { TextLink } from '@/components/ui/TextLink'
+import { formatArticleLanguage } from '@/content/format-article-language'
 import { getArticleSlugs, loadArticleBySlug } from '@/content/load-articles'
 import { createMetadata } from '@/lib/seo/metadata'
 import { ArticleJsonLd, BreadcrumbJsonLd } from '@/lib/seo/json-ld'
@@ -61,6 +62,16 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
   if (!article) notFound()
 
+  const language = formatArticleLanguage(article.language)
+  const metaLabel = [
+    article.publishedAt,
+    article.updatedAt ? `updated ${article.updatedAt}` : null,
+    `${article.readingTime} min read`,
+    language,
+  ]
+    .filter(Boolean)
+    .join(', ')
+
   return (
     <main className={styles.main}>
       <ArticleJsonLd article={article} />
@@ -77,7 +88,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             articles
           </TextLink>
           <h1 className={styles.title}>{article.title}</h1>
-          <p className={styles.meta}>
+          <p className={styles.meta} aria-label={metaLabel}>
             <time dateTime={article.publishedAt}>{article.publishedAt}</time>
             {article.updatedAt ? (
               <>
@@ -89,6 +100,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             ) : null}
             <span aria-hidden="true">/</span>
             <span>{article.readingTime} min read</span>
+            <span aria-hidden="true">/</span>
+            <span>{language}</span>
           </p>
           {article.tags.length > 0 ? (
             <ul className={styles.tags} aria-label="article tags">
