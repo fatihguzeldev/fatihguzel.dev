@@ -14,6 +14,18 @@ type ArticlePageProps = {
   params: Promise<{ slug: string }>
 }
 
+function getShownUpdatedAt({
+  publishedAt,
+  updatedAt,
+}: {
+  publishedAt: string
+  updatedAt?: string
+}): string | undefined {
+  return updatedAt && updatedAt.slice(0, 10) !== publishedAt.slice(0, 10)
+    ? updatedAt
+    : undefined
+}
+
 export const dynamicParams = false
 
 export function generateStaticParams(): { slug: string }[] {
@@ -45,7 +57,7 @@ export async function generateMetadata({ params }: ArticlePageProps) {
     path: `/articles/${article.slug}`,
     type: 'article',
     publishedAt: article.publishedAt,
-    updatedAt: article.updatedAt,
+    updatedAt: getShownUpdatedAt(article),
     tags: article.tags,
     canonicalUrl: article.canonicalUrl,
   })
@@ -63,9 +75,10 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   if (!article) notFound()
 
   const language = formatArticleLanguage(article.language)
+  const shownUpdatedAt = getShownUpdatedAt(article)
   const metaLabel = [
     article.publishedAt,
-    article.updatedAt ? `updated ${article.updatedAt}` : null,
+    shownUpdatedAt ? `updated ${shownUpdatedAt}` : null,
     `${article.readingTime} min read`,
     language,
   ]
@@ -84,30 +97,37 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       />
       <Container>
         <header className={styles.header}>
-          <TextLink href="/articles" muted>
-            articles
+          <TextLink
+            href="/articles"
+            cta
+            ctaVariant="route"
+            routeLabel="/articles"
+            aria-label="go back to articles"
+            className={styles.backLink}
+          >
+            go back
           </TextLink>
           <h1 className={styles.title}>{article.title}</h1>
           <p className={styles.meta} aria-label={metaLabel}>
             <time dateTime={article.publishedAt}>{article.publishedAt}</time>
-            {article.updatedAt ? (
+            {shownUpdatedAt ? (
               <>
-                <span aria-hidden="true">/</span>
+                <span className={styles.dot} aria-hidden="true" />
                 <span>
-                  updated <time dateTime={article.updatedAt}>{article.updatedAt}</time>
+                  updated <time dateTime={shownUpdatedAt}>{shownUpdatedAt}</time>
                 </span>
               </>
             ) : null}
-            <span aria-hidden="true">/</span>
+            <span className={styles.dot} aria-hidden="true" />
             <span>{article.readingTime} min read</span>
-            <span aria-hidden="true">/</span>
+            <span className={styles.dot} aria-hidden="true" />
             <span>{language}</span>
           </p>
           {article.tags.length > 0 ? (
             <ul className={styles.tags} aria-label="article tags">
               {article.tags.map((tag) => (
                 <li key={tag} className={styles.tag}>
-                  #{tag}
+                  {tag}
                 </li>
               ))}
             </ul>

@@ -45,6 +45,11 @@ export function WebSiteJsonLd() {
 export function ArticleJsonLd({ article }: { article: Article }) {
   const articleUrl = `${SITE_URL}/articles/${article.slug}`
   const canonicalUrl = article.canonicalUrl ?? articleUrl
+  const modifiedAt =
+    article.updatedAt &&
+    article.updatedAt.slice(0, 10) !== article.publishedAt.slice(0, 10)
+      ? article.updatedAt
+      : undefined
   const data = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -52,7 +57,7 @@ export function ArticleJsonLd({ article }: { article: Article }) {
     description: article.description,
     inLanguage: article.language,
     datePublished: article.publishedAt,
-    dateModified: article.updatedAt ?? article.publishedAt,
+    ...(modifiedAt ? { dateModified: modifiedAt } : {}),
     ...(article.tags.length ? { keywords: article.tags.join(', ') } : {}),
     author: {
       '@type': 'Person',

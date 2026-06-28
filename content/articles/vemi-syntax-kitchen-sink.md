@@ -2,7 +2,6 @@
 title: 'vemi syntax kitchen sink'
 slug: 'vemi-syntax-kitchen-sink'
 publishedAt: '2026-06-14'
-updatedAt: '2026-06-14'
 description: 'a temporary article that exercises the full vemi syntax surface in this site.'
 language: 'en'
 tags: ['vemi', 'markdown', 'review']
