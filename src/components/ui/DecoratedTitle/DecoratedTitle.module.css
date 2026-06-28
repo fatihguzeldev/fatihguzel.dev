@@ -1,7 +1,7 @@
 .title {
   display: flex;
   align-items: baseline;
-  gap: 0.5rem;
+  gap: var(--decorated-title-gap);
   margin: 0;
   font-family: var(--font-display);
   font-weight: 400;
@@ -15,15 +15,15 @@
 }
 
 .page {
-  margin-bottom: 1rem;
+  margin-bottom: var(--decorated-title-page-gap);
   font-size: var(--text-page-title);
 }
 
 .decorator {
   flex-shrink: 0;
   font-family: var(--font-mono);
-  font-size: 0.72em;
-  line-height: 1;
+  font-size: var(--decorated-title-mark-scale);
+  line-height: var(--leading-solid);
   letter-spacing: 0;
   color: var(--accent);
 }

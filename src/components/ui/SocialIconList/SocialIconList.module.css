@@ -1,7 +1,7 @@
 .list {
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(0.25rem, 1.5vw, 0.375rem);
+  gap: var(--social-icon-gap);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -23,8 +23,8 @@
 
 .link svg {
   display: block;
-  width: 15px;
-  height: 15px;
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
 }
 
 .link:hover {

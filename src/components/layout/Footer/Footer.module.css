@@ -1,14 +1,14 @@
 .footer {
-  margin-top: clamp(1.5rem, 4vw, 2.5rem);
-  padding: 0.75rem 0 1rem;
-  border-top: 1px solid var(--border);
+  margin-top: var(--footer-gap);
+  padding: var(--footer-padding);
+  border-top: var(--line-thin) solid var(--border);
 }
 
 .meta {
   margin: 0;
   font-family: var(--font-mono);
   font-size: var(--text-meta);
-  letter-spacing: 0.04em;
+  letter-spacing: var(--tracking-meta);
   text-align: center;
   color: var(--text-muted);
 }

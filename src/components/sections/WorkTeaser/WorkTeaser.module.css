@@ -1,5 +1,5 @@
 .headline {
-  margin: 0 0 0.75rem;
+  margin: 0 0 var(--content-card-gap);
   font-family: var(--font-body);
   font-size: var(--text-body);
   font-weight: 400;
@@ -8,7 +8,7 @@
 }
 
 .description {
-  margin: 0 0 1.5rem;
+  margin: 0 0 var(--content-body-gap-lg);
   color: var(--text-muted);
   font-size: var(--text-body);
   line-height: var(--leading-body);

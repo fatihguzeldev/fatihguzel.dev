@@ -21,42 +21,96 @@
 .root :global(.prose h1),
 .root :global(.prose h2),
 .root :global(.prose h3),
-.root :global(.prose h4) {
-  margin: clamp(2rem, 6vw, 3rem) 0 0.75rem;
+.root :global(.prose h4),
+.root :global(.prose h5),
+.root :global(.prose h6) {
+  margin: 0 0 var(--prose-heading-gap);
   color: var(--text);
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 500;
   line-height: var(--leading-heading);
   letter-spacing: 0;
 }
 
 .root :global(.prose h1) {
   font-size: var(--text-page-title);
+  margin-top: var(--prose-h1-gap-before);
+  margin-bottom: var(--prose-h1-gap-after);
 }
 
 .root :global(.prose h2) {
-  font-size: var(--text-section-title);
+  margin-top: var(--prose-h2-gap-before);
+  margin-bottom: var(--prose-h2-gap-after);
+  font-size: var(--text-prose-h2);
 }
 
-.root :global(.prose h3),
+.root :global(.prose h3) {
+  margin-top: var(--prose-h3-gap-before);
+  margin-bottom: var(--prose-h3-gap-after);
+  font-size: var(--text-prose-h3);
+}
+
 .root :global(.prose h4) {
-  font-size: var(--text-body);
+  margin-top: var(--prose-h4-gap-before);
+  margin-bottom: var(--prose-h4-gap-after);
+  font-size: var(--text-prose-h4);
+}
+
+.root :global(.prose h5) {
+  margin-top: var(--prose-h5-gap-before);
+  margin-bottom: var(--prose-h5-gap-after);
+  font-size: var(--text-prose-h5);
+}
+
+.root :global(.prose h6) {
+  margin-top: var(--prose-h6-gap-before);
+  margin-bottom: var(--prose-h6-gap-after);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: var(--text-prose-h6);
+  font-weight: 600;
+}
+
+.root :global(.prose h2),
+.root :global(.prose h3),
+.root :global(.prose h4),
+.root :global(.prose h5),
+.root :global(.prose h6) {
+  max-width: var(--prose-heading-measure);
+}
+
+.root :global(.prose h2 + p),
+.root :global(.prose h3 + p),
+.root :global(.prose h4 + p),
+.root :global(.prose h5 + p),
+.root :global(.prose h6 + p) {
+  margin-top: 0;
+}
+
+.root :global(.prose h4),
+.root :global(.prose h5),
+.root :global(.prose h6) {
+  line-height: var(--leading-heading-tight);
 }
 
 .root :global(.prose p) {
-  margin: 0 0 1rem;
+  margin: 0 0 var(--content-body-gap);
 }
 
 .root :global(.prose a) {
   color: var(--text);
   text-decoration: underline;
-  text-decoration-color: var(--border);
-  text-underline-offset: 0.2em;
+  text-decoration-color: color-mix(in srgb, var(--accent) 68%, transparent);
+  text-decoration-thickness: var(--underline-thickness);
+  text-underline-offset: var(--underline-offset);
   overflow-wrap: anywhere;
-  transition: text-decoration-color var(--transition);
+  transition:
+    color var(--transition),
+    text-decoration-color var(--transition);
 }
 
 .root :global(.prose a:hover) {
+  color: var(--accent);
   text-decoration-color: var(--accent);
 }
 
@@ -71,24 +125,30 @@
 
 .root :global(.prose ul),
 .root :global(.prose ol) {
-  margin: 0 0 1rem;
-  padding-left: 1.25rem;
+  margin: 0 0 var(--content-body-gap);
+  padding-left: var(--prose-list-indent);
 }
 
 .root :global(.prose li) {
-  margin: 0.25rem 0;
-  padding-left: 0.25rem;
+  margin: var(--prose-list-item-gap) 0;
+  padding-left: var(--prose-list-item-indent);
 }
 
 .root :global(.prose li::marker) {
-  color: var(--text-faint);
+  color: color-mix(in srgb, var(--accent) 72%, var(--text-faint));
 }
 
 .root :global(.prose blockquote) {
-  margin: clamp(1.5rem, 5vw, 2rem) 0;
-  padding: 0.125rem 0 0.125rem 1rem;
-  border-left: 2px solid var(--accent);
-  color: var(--text-muted);
+  margin: var(--prose-block-gap) 0;
+  padding: var(--prose-quote-padding);
+  border-left: var(--line-accent) solid var(--accent);
+  border-radius: 0 var(--radius-control) var(--radius-control) 0;
+  background: var(--quote-bg);
+  color: var(--text);
+}
+
+.root :global(.prose blockquote p) {
+  color: var(--text);
 }
 
 .root :global(.prose blockquote > *:last-child) {
@@ -97,68 +157,163 @@
 
 .root :global(.prose hr) {
   width: 100%;
-  height: 1px;
-  margin: clamp(2rem, 6vw, 3rem) 0;
+  height: var(--line-thin);
+  margin: var(--prose-divider-gap) 0;
   border: 0;
   background: var(--border);
 }
 
 .root :global(.prose code) {
   font-family: var(--font-mono);
-  font-size: 0.875em;
+  font-size: var(--prose-code-scale);
   text-transform: none;
   overflow-wrap: anywhere;
 }
 
 .root :global(.prose :not(pre) > code) {
-  padding: 0.1rem 0.25rem;
-  border: 1px solid var(--border);
+  padding: var(--prose-inline-code-padding);
+  border: var(--line-thin) solid
+    color-mix(in srgb, var(--code-accent) 38%, var(--code-border));
   border-radius: var(--radius-control);
-  background: var(--bg-elevated);
+  background: color-mix(in srgb, var(--accent) 7%, var(--bg-elevated));
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
   color: var(--text);
+  box-shadow: inset 0 calc(-1 * var(--line-thin)) 0
+    color-mix(in srgb, var(--code-accent) 70%, transparent);
 }
 
 .root :global(.prose pre) {
-  margin: clamp(1.25rem, 4vw, 1.5rem) 0;
-  padding: 1rem;
+  position: relative;
+  margin: var(--prose-code-block-gap) 0;
+  padding: var(--prose-code-block-padding);
   overflow-x: auto;
-  border: 1px solid var(--border);
+  border: var(--line-thin) solid var(--code-border);
+  border-top: var(--line-accent) solid var(--code-accent);
   border-radius: var(--radius-control);
-  background: var(--bg-elevated);
+  background: var(--code-bg);
   color: var(--text);
   font-family: var(--font-mono);
   font-size: var(--text-ui);
-  line-height: 1.6;
+  line-height: var(--prose-code-line-height);
   text-transform: none;
   -webkit-overflow-scrolling: touch;
 }
 
+.root :global(.prose pre::before) {
+  content: 'text';
+  position: absolute;
+  top: var(--prose-code-label-offset);
+  right: var(--prose-code-label-inline-offset);
+  color: var(--code-label);
+  font-family: var(--font-mono);
+  font-size: var(--text-code-label);
+  line-height: var(--leading-ui);
+  letter-spacing: var(--tracking-tight);
+  pointer-events: none;
+}
+
+.root :global(.prose pre::after) {
+  content: none;
+}
+
+.root :global(.prose pre:has(> code.language-ts)::before),
+.root :global(.prose pre:has(> code.language-typescript)::before) {
+  content: 'typescript';
+}
+
+.root :global(.prose pre:has(> code.language-tsx)::before) {
+  content: 'tsx';
+}
+
+.root :global(.prose pre:has(> code.language-js)::before),
+.root :global(.prose pre:has(> code.language-javascript)::before) {
+  content: 'javascript';
+}
+
+.root :global(.prose pre:has(> code.language-jsx)::before) {
+  content: 'jsx';
+}
+
+.root :global(.prose pre:has(> code.language-sh)::before),
+.root :global(.prose pre:has(> code.language-bash)::before),
+.root :global(.prose pre:has(> code.language-shell)::before) {
+  content: 'shell';
+}
+
+.root :global(.prose pre:has(> code.language-json)::before) {
+  content: 'json';
+}
+
+.root :global(.prose pre:has(> code.language-css)::before) {
+  content: 'css';
+}
+
+.root :global(.prose pre:has(> code.language-html)::before) {
+  content: 'html';
+}
+
+.root :global(.prose pre:has(> code.language-md)::before),
+.root :global(.prose pre:has(> code.language-markdown)::before) {
+  content: 'markdown';
+}
+
 .root :global(.prose pre code) {
+  display: block;
+  min-width: max-content;
   padding: 0;
   border: 0;
   background: transparent;
+  box-shadow: none;
+}
+
+.root :global(.prose .vemi-code-line) {
+  display: grid;
+  grid-template-columns: var(--prose-code-line-number-width) minmax(0, 1fr);
+  column-gap: var(--code-line-gap);
+  min-height: var(--prose-code-line-min-height);
+  padding-right: var(--prose-code-line-padding-right);
+}
+
+.root :global(.prose .vemi-code-line-number) {
+  padding-left: var(--prose-code-number-padding-left);
+  padding-right: var(--prose-code-number-padding-right);
+  border-right: var(--line-thin) solid var(--code-border);
+  color: var(--code-label);
+  font-size: var(--text-code-label);
+  text-align: left;
+  user-select: none;
+}
+
+.root :global(.prose .vemi-code-line-number::before) {
+  content: attr(data-line);
+}
+
+.root :global(.prose .vemi-code-line-content) {
+  min-width: 0;
+  white-space: pre;
 }
 
 .root :global(.prose img) {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: clamp(1.5rem, 5vw, 2rem) 0;
-  border: 1px solid var(--border);
+  margin: var(--prose-block-gap) 0;
+  border: var(--line-thin) solid var(--border);
   border-radius: var(--radius-control);
 }
 
 .root :global(.prose table) {
   width: 100%;
-  margin: clamp(1.5rem, 5vw, 2rem) 0;
+  margin: var(--prose-block-gap) 0;
   border-collapse: collapse;
   font-size: var(--text-meta);
 }
 
 .root :global(.prose th),
 .root :global(.prose td) {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--border);
+  padding: var(--prose-table-cell-padding);
+  border-bottom: var(--line-thin) solid var(--border);
   text-align: left;
   vertical-align: top;
 }

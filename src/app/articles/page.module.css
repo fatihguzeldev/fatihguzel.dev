@@ -5,7 +5,7 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: clamp(2rem, 5vw, 3rem);
+  gap: var(--content-list-gap);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -14,7 +14,7 @@
 .item {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--content-item-gap);
 }
 
 .articleTitle {
@@ -29,17 +29,17 @@
 
 .articleMarker {
   flex: 0 0 auto;
-  width: 2px;
-  height: 0.95em;
-  border-radius: 999px;
+  width: var(--meta-marker-width);
+  height: var(--meta-marker-height);
+  border-radius: var(--radius-pill);
   background: var(--accent);
-  opacity: 0.75;
-  transform: translateY(0.02em);
+  opacity: var(--opacity-muted);
+  transform: translateY(var(--meta-offset-subtle));
 }
 
 .articleDescription {
   margin: 0;
-  max-width: 36rem;
+  max-width: var(--measure-readable);
   color: var(--text-muted);
   font-size: var(--text-preview);
   line-height: var(--leading-preview);
@@ -49,27 +49,27 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.35rem 0.625rem;
+  gap: var(--meta-gap-row) var(--meta-gap-item);
   margin: 0;
   font-family: var(--font-mono);
   font-size: var(--text-meta);
-  letter-spacing: 0.04em;
+  letter-spacing: var(--tracking-meta);
   color: var(--text-faint);
 }
 
 .dot {
-  width: 0.375rem;
-  height: 0.375rem;
+  width: var(--meta-dot-size);
+  height: var(--meta-dot-size);
   border-radius: 50%;
   background: color-mix(in srgb, var(--accent) 55%, var(--text-faint));
-  transform: translateY(0.02em);
+  transform: translateY(var(--meta-offset-subtle));
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem 0.75rem;
-  margin: 0.1rem 0 0;
+  gap: var(--meta-gap-row) var(--meta-gap-item);
+  margin: var(--meta-gap-row) 0 0;
   padding: 0;
   list-style: none;
 }
@@ -78,13 +78,13 @@
   color: var(--text-faint);
   font-family: var(--font-mono);
   font-size: var(--text-meta);
-  letter-spacing: 0.04em;
+  letter-spacing: var(--tracking-meta);
 }
 
 .tag::before {
   content: '#';
   color: color-mix(in srgb, var(--accent) 70%, var(--text-faint));
-  margin-right: 0.2rem;
+  margin-right: var(--tag-prefix-gap);
 }
 
 .empty {

@@ -1,30 +1,30 @@
 .header {
-  margin-bottom: clamp(2rem, 5vw, 3rem);
-  padding-bottom: clamp(1.25rem, 3vw, 1.5rem);
-  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--page-header-content-gap);
+  padding-bottom: var(--page-header-padding-bottom);
+  border-bottom: var(--line-thin) solid var(--border);
 }
 
 .eyebrow {
   display: block;
-  margin-bottom: 0.625rem;
+  margin-bottom: var(--eyebrow-gap);
   font-family: var(--font-mono);
   font-size: var(--text-meta);
-  letter-spacing: 0.06em;
+  letter-spacing: var(--tracking-wide);
   color: var(--text-faint);
 }
 
 .description {
   margin: 0;
-  max-width: 36rem;
+  max-width: var(--measure-readable);
   font-size: var(--text-body);
   color: var(--text-muted);
   line-height: var(--leading-body);
 }
 
 .availability {
-  margin: 0 0 1rem;
+  margin: 0 0 var(--content-body-gap);
   font-family: var(--font-mono);
   font-size: var(--text-meta);
-  letter-spacing: 0.06em;
+  letter-spacing: var(--tracking-wide);
   color: var(--text-muted);
 }

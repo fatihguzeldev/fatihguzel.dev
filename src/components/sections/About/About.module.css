@@ -1,7 +1,7 @@
 .paragraphs {
   display: flex;
   flex-direction: column;
-  gap: clamp(0.875rem, 2vw, 1rem);
+  gap: var(--content-text-gap);
 }
 
 .paragraph {
