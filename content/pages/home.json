@@ -1,13 +1,13 @@
 {
   "hero": {
     "title": "fatih guzel",
-    "subtitle": "solutions architect and software engineer from turkey. i speak in systems and build in style."
+    "subtitle": "software engineer from turkey.\ni design and build reliable, high-performance software systems."
   },
   "about": {
     "paragraphs": [
-      "i build stuff, break stuff, and somehow make it all work again—only better. figuring out the hard stuff and turning it into something clean, handy, and well-thought-out? that's my thing. whether it's crafting apis or tackling messy codebases, i enjoy transforming chaos into polished solutions.",
-      "over the years, i've learned that every problem has a simpler solution—you just have to dig deep enough (or break a few things first).",
-      "this website is my corner to share what i've built, learned, or found interesting. i also create content on youtube @fatihlovestosimplify."
+      "i’m a software engineer interested in systems.",
+      "i spend a lot of time thinking about distributed systems, simplicity, abstractions, and the fundamentals behind good engineering. i enjoy working close to the core of a system. behavior, complexity, trade-offs, and decisions over time.",
+      "i write about engineering, computer science, systems, technology, work, and thoughts on the industry."
     ]
   },
   "featuredProjectSlugs": ["stack-over-papers", "fauthy", "vemi"],
