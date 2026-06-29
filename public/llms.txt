@@ -1,10 +1,22 @@
 # fatih guzel
 
-> solutions architect and software engineer from turkey. content creator on youtube @fatihlovestosimplify.
+> software engineer from turkey. i design and build reliable, high-performance software systems.
 
 ## about
 
-fatih guzel builds systems, writes about software, and creates educational content. known in the turkish it community.
+fatih guzel is a software engineer interested in systems, distributed systems,
+simplicity, abstractions, performance, product engineering, and the fundamentals
+behind good engineering.
+
+the site contains personal notes, project references, work/contact information,
+and writing on engineering, systems, technology, work, and the software industry.
+
+## projects
+
+- vemi: a tiny, type-safe markdown compiler used by this site's article pipeline.
+- chrome dino learns to run: a neural-network demo project for chrome's offline dino game.
+- mips processor from first principles: a single-cycle mips processor implementation.
+- stack over papers: an open repository and community around computer science papers.
 
 ## links
 
@@ -16,6 +28,7 @@ fatih guzel builds systems, writes about software, and creates educational conte
 - youtube: https://www.youtube.com/@fatihlovestosimplify
 - twitter: https://x.com/fatihguzeldev
 - linkedin: https://www.linkedin.com/in/fatihguzeldev
+- instagram: https://www.instagram.com/fatihguzeldev
 
 ## contact
 

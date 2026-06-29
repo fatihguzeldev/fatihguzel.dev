@@ -3,7 +3,7 @@ import { PageHeader } from '@/components/ui/PageHeader'
 import { ProjectList } from '@/components/ui/ProjectList'
 import { loadProjects } from '@/content/load-projects'
 import { createMetadata } from '@/lib/seo/metadata'
-import { BreadcrumbJsonLd } from '@/lib/seo/json-ld'
+import { BreadcrumbJsonLd, ProjectsCollectionJsonLd } from '@/lib/seo/json-ld'
 import styles from './page.module.css'
 
 export const metadata = createMetadata({
@@ -18,6 +18,7 @@ export default function ProjectsPage() {
 
   return (
     <main className={styles.main}>
+      <ProjectsCollectionJsonLd projects={projects} />
       <BreadcrumbJsonLd
         items={[
           { name: 'home', path: '/' },

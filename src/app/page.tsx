@@ -6,14 +6,10 @@ import { Now } from '@/components/sections/Now'
 import { WorkTeaser } from '@/components/sections/WorkTeaser'
 import { loadHome } from '@/content/load-home'
 import { loadNow } from '@/content/load-now'
-import { loadSite } from '@/content/load-site'
 import { createMetadata } from '@/lib/seo/metadata'
+import { ProfilePageJsonLd } from '@/lib/seo/json-ld'
 
-const site = loadSite()
-
-export const metadata = createMetadata({
-  description: `${site.tagline}. ${site.description}`,
-})
+export const metadata = createMetadata()
 
 export default function HomePage() {
   const home = loadHome()
@@ -21,6 +17,7 @@ export default function HomePage() {
 
   return (
     <main>
+      <ProfilePageJsonLd />
       <Hero title={home.hero.title} subtitle={home.hero.subtitle} />
       <About paragraphs={home.about.paragraphs} />
       <Now now={now} />

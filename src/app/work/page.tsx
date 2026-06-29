@@ -7,7 +7,7 @@ import { loadSite } from '@/content/load-site'
 import { loadSocials } from '@/content/load-socials'
 import { loadWork } from '@/content/load-work'
 import { createMetadata } from '@/lib/seo/metadata'
-import { BreadcrumbJsonLd } from '@/lib/seo/json-ld'
+import { BreadcrumbJsonLd, ContactPageJsonLd } from '@/lib/seo/json-ld'
 import styles from './page.module.css'
 
 export const metadata = createMetadata({
@@ -24,6 +24,7 @@ export default function WorkPage() {
 
   return (
     <main className={styles.main}>
+      <ContactPageJsonLd description={work.description} />
       <BreadcrumbJsonLd
         items={[
           { name: 'home', path: '/' },

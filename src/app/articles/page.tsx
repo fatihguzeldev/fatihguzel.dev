@@ -4,7 +4,7 @@ import { TextLink } from '@/components/ui/TextLink'
 import { formatArticleLanguage } from '@/content/format-article-language'
 import { loadArticles } from '@/content/load-articles'
 import { createMetadata } from '@/lib/seo/metadata'
-import { BreadcrumbJsonLd } from '@/lib/seo/json-ld'
+import { ArticlesCollectionJsonLd, BreadcrumbJsonLd } from '@/lib/seo/json-ld'
 import styles from './page.module.css'
 
 export const metadata = createMetadata({
@@ -19,6 +19,7 @@ export default function ArticlesPage() {
 
   return (
     <main className={styles.main}>
+      <ArticlesCollectionJsonLd articles={articles} />
       <BreadcrumbJsonLd
         items={[
           { name: 'home', path: '/' },

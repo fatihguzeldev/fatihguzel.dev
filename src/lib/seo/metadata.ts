@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { loadSite, SITE_URL } from '@/content/load-site'
 
 const site = loadSite()
+const siteDescription = `${site.tagline}. ${site.description}`
 
 type PageMetadataOptions = {
   title?: string
@@ -16,7 +17,7 @@ type PageMetadataOptions = {
 
 export function createMetadata({
   title,
-  description = site.description,
+  description = siteDescription,
   path = '',
   type = 'website',
   publishedAt,
@@ -29,9 +30,18 @@ export function createMetadata({
   const canonical = canonicalUrl ?? url
 
   return {
-    title: pageTitle,
+    title: {
+      default: site.name,
+      template: `%s · ${site.name}`,
+      absolute: pageTitle,
+    },
     description,
     metadataBase: new URL(SITE_URL),
+    applicationName: site.name,
+    authors: [{ name: site.name, url: SITE_URL }],
+    creator: site.name,
+    publisher: site.name,
+    keywords: tags,
     alternates: {
       canonical,
     },
