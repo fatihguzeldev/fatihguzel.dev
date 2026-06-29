@@ -1,11 +1,15 @@
 {
   "title": "work & contact",
-  "availability": "open to consulting and collaborations",
-  "description": "got something in mind or just want to talk? feel free to reach out. you can send a mail at any time, i'll get back to you as soon as possible.",
+  "availability": "open to software engineering roles and projects.",
+  "description": "i work on products, systems, and technical problems that need more than routine execution. roles, projects, product ideas, or problems without a clear shape yet are all welcome.",
   "services": [
-    "solutions architecture",
-    "backend and api design",
-    "codebase audits and refactoring",
-    "technical content and workshops"
-  ]
+    "hard software problems",
+    "systems design",
+    "distributed systems",
+    "product engineering",
+    "performance and reliability",
+    "architecture for growing products",
+    "from zero to production"
+  ],
+  "servicesNote": "not sure if it fits? email me anyway."
 }

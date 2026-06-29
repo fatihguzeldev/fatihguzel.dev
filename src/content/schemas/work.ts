@@ -5,6 +5,7 @@ export const WorkSchema = z.object({
   availability: z.string().min(1),
   description: z.string().min(1),
   services: z.array(z.string().min(1)),
+  servicesNote: z.string().min(1),
 })
 
 export type Work = z.infer<typeof WorkSchema>

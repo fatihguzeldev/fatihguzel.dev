@@ -39,7 +39,7 @@ export default function WorkPage() {
         />
 
         <section className={styles.section}>
-          <SectionHeader title="services" />
+          <SectionHeader title="ways i can help" />
           <ul className={styles.services}>
             {work.services.map((service) => (
               <li key={service} className={styles.service}>
@@ -47,6 +47,7 @@ export default function WorkPage() {
               </li>
             ))}
           </ul>
+          <p className={styles.servicesNote}>{work.servicesNote}</p>
         </section>
 
         <section className={styles.section}>

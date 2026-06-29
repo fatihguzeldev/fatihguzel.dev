@@ -10,11 +10,16 @@
       "i write about engineering, computer science, systems, technology, work, and thoughts on the industry."
     ]
   },
-  "featuredProjectSlugs": ["stack-over-papers", "fauthy", "vemi"],
+  "featuredProjectSlugs": [
+    "vemi",
+    "dino-neural-network",
+    "single-cycle-mips-cpu",
+    "stack-over-papers"
+  ],
   "featuredArticleSlugs": [],
   "workTeaser": {
-    "headline": "open to consulting, architecture work, and interesting collaborations.",
-    "description": "got something in mind or just want to talk? i'd love to hear from you.",
+    "headline": "open to good software work, serious ideas, and problems worth building around.",
+    "description": "building something, hiring, or thinking through an idea? reach out.",
     "cta": "work with me"
   }
 }

@@ -1,7 +1,5 @@
 .header {
   margin-bottom: var(--page-header-content-gap);
-  padding-bottom: var(--page-header-padding-bottom);
-  border-bottom: var(--line-thin) solid var(--border);
 }
 
 .eyebrow {

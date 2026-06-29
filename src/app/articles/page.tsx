@@ -10,7 +10,7 @@ import styles from './page.module.css'
 export const metadata = createMetadata({
   title: 'articles',
   description:
-    'articles and writing by fatih guzel on software, systems, and building.',
+    'notes on engineering, systems, technology, work, and the software industry.',
   path: '/articles',
 })
 
@@ -29,7 +29,7 @@ export default function ArticlesPage() {
         <PageHeader
           eyebrow="writing"
           title="articles"
-          description="thoughts on software, systems, and the craft of building."
+          description="notes on engineering, systems, technology, work, and the software industry."
         />
 
         {articles.length ? (

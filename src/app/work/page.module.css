@@ -21,3 +21,10 @@
   font-size: var(--text-body);
   line-height: var(--leading-body);
 }
+
+.servicesNote {
+  margin: var(--content-list-gap) 0 0;
+  color: var(--text-muted);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+}
