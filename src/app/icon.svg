@@ -1,0 +1,15 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="64"
+  height="64"
+  viewBox="0 0 64 64"
+  role="img"
+  aria-label="fatih guzel"
+>
+  <rect width="64" height="64" rx="14" fill="#ffffff" />
+  <path
+    fill="#e85d1f"
+    d="M35 12c-7.2 0-11 4.7-11 12.7V29h-5v6h5v17h7V35h11v-6H31v-3.7c0-4 1.8-6.3 5.6-6.3H43v-7h-8Z"
+    transform="translate(2 0)"
+  />
+</svg>
