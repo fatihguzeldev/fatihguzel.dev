@@ -1,0 +1,111 @@
+.root {
+  position: sticky;
+  top: var(--article-toc-top);
+  align-self: start;
+  min-width: 0;
+  max-width: 100%;
+  max-height: calc(100dvh - var(--article-toc-top) - var(--content-body-gap));
+  overflow-y: auto;
+  overflow-x: clip;
+  scrollbar-width: thin;
+}
+
+.eyebrow {
+  margin: 0 0 var(--article-toc-heading-gap);
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  line-height: var(--leading-ui);
+  letter-spacing: var(--tracking-wide);
+  color: var(--text-faint);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--article-toc-item-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list > li {
+  min-width: 0;
+}
+
+.link {
+  display: grid;
+  grid-template-columns: var(--article-toc-marker-width) minmax(0, 1fr);
+  align-items: center;
+  gap: var(--article-toc-marker-gap);
+  max-width: 100%;
+  padding: var(--article-toc-link-padding-block) 0;
+  overflow: clip;
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  line-height: var(--leading-ui);
+  letter-spacing: var(--tracking-meta);
+  cursor: pointer;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.link::before {
+  content: '';
+  width: var(--line-accent);
+  height: var(--article-toc-marker-height);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  opacity: 0;
+  transition:
+    background-color var(--transition),
+    opacity var(--transition);
+}
+
+.label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.link:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.link:hover::before {
+  background: var(--accent);
+  opacity: var(--opacity-soft);
+}
+
+.active {
+  color: var(--accent);
+}
+
+.active::before {
+  background: var(--accent);
+  opacity: var(--opacity-strong);
+}
+
+.levelThree {
+  padding-left: var(--article-toc-nested-indent);
+  color: color-mix(in srgb, var(--text-faint) 82%, transparent);
+}
+
+.levelThree.active {
+  color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link,
+  .link::before {
+    transition: none;
+  }
+}
+
+@media (max-width: 68rem) {
+  .root {
+    display: none;
+  }
+}

@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import { Container } from '@/components/layout/Container'
+import { ArticleTableOfContents } from '@/components/ui/ArticleTableOfContents'
 import { Prose } from '@/components/ui/Prose'
 import { TextLink } from '@/components/ui/TextLink'
 import { formatArticleLanguage } from '@/content/format-article-language'
@@ -95,7 +96,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           { name: article.title, path: `/articles/${article.slug}` },
         ]}
       />
-      <Container>
+      <Container article className={styles.container}>
         <header className={styles.header}>
           <TextLink
             href="/articles"
@@ -134,7 +135,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           ) : null}
           <p className={styles.description}>{article.description}</p>
         </header>
-        <Prose html={article.html} />
+        <ArticleTableOfContents
+          items={article.tableOfContents}
+          className={styles.toc}
+        />
+        <Prose html={article.html} className={styles.prose} />
       </Container>
     </main>
   )

@@ -57,7 +57,7 @@
   width: var(--meta-dot-size);
   height: var(--meta-dot-size);
   border-radius: 50%;
-  background: color-mix(in srgb, var(--accent) 55%, var(--text-faint));
+  background: var(--accent);
   transform: translateY(var(--meta-offset-subtle));
 }
 
@@ -79,7 +79,7 @@
 
 .tag::before {
   content: '#';
-  color: color-mix(in srgb, var(--accent) 70%, var(--text-faint));
+  color: var(--accent);
   margin-right: var(--tag-prefix-gap);
 }
 

@@ -19,6 +19,6 @@
   width: var(--meta-dot-size);
   height: var(--meta-dot-size);
   border-radius: var(--radius-pill);
-  background: color-mix(in srgb, var(--accent) 55%, var(--text-faint));
+  background: var(--accent);
   user-select: none;
 }

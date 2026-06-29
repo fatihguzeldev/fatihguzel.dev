@@ -30,8 +30,15 @@ export const ArticleFrontmatterSchema = z.object({
 
 export type ArticleFrontmatter = z.infer<typeof ArticleFrontmatterSchema>
 
+export type ArticleTableOfContentsItem = {
+  id: string
+  text: string
+  level: 2 | 3
+}
+
 export type Article = Omit<ArticleFrontmatter, 'readingTime'> & {
   readingTime: number
   body: string
   html: string
+  tableOfContents: ArticleTableOfContentsItem[]
 }

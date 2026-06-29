@@ -5,8 +5,8 @@ html[data-theme='light'] {
   --text: #1a1a1a;
   --text-muted: #6b6b6b;
   --text-faint: #707070;
-  --accent: #c2410c;
-  --accent-muted: rgba(194, 65, 12, 0.12);
+  --accent: #e85d1f;
+  --accent-muted: rgba(232, 93, 31, 0.12);
   --border: #e8e6e1;
   --code-bg: color-mix(in srgb, var(--bg) 96%, var(--text) 2%);
   --code-border: color-mix(in srgb, var(--border) 82%, var(--text-faint) 18%);
@@ -42,6 +42,7 @@ html[data-theme='dark'] {
 
   --max-width-prose: 40rem;
   --max-width-wide: 56rem;
+  --max-width-article: 74rem;
   --measure-readable: 36rem;
   --measure-prose-heading: 34rem;
 
@@ -54,6 +55,19 @@ html[data-theme='dark'] {
   --section-header-content-gap: clamp(1.125rem, 2.5vw, 1.5rem);
   --section-header-padding-bottom: clamp(0.875rem, 2.5vw, 1rem);
   --article-header-content-gap: var(--page-header-content-gap);
+  --article-layout-gap: clamp(1.5rem, 4vw, 2.25rem);
+  --article-side-rail-width: 11rem;
+  --article-toc-top: clamp(4rem, 9vw, 5.5rem);
+  --article-toc-heading-gap: var(--content-item-gap);
+  --article-toc-item-gap: 0.1875rem;
+  --article-toc-link-padding-block: 0.25rem;
+  --article-toc-marker-width: 0.375rem;
+  --article-toc-marker-height: 0.9em;
+  --article-toc-marker-gap: var(--content-item-gap);
+  --article-toc-nested-indent: var(--content-card-gap);
+  --article-heading-scroll-margin: calc(
+    var(--article-toc-top) + var(--content-body-gap)
+  );
   --section-item-gap: clamp(2rem, 5vw, 2.5rem);
   --section-list-action-gap: clamp(1.5rem, 4vw, 2rem);
   --footer-gap: clamp(1.5rem, 4vw, 2.5rem);
@@ -80,9 +94,11 @@ html[data-theme='dark'] {
   --nav-gap: clamp(0.75rem, 3vw, 1.5rem);
   --social-icon-gap: clamp(0.25rem, 1.5vw, 0.375rem);
   --icon-size-sm: 0.9375rem;
+  --icon-size-star: 1rem;
   --inline-control-height: 1.5rem;
   --meta-gap-row: 0.35rem;
   --meta-gap-item: 0.875rem;
+  --project-title-meta-gap: var(--content-item-gap);
   --meta-dot-size: 0.375rem;
   --meta-marker-width: 2px;
   --meta-marker-height: 0.95em;

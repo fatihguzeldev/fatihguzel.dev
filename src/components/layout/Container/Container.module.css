@@ -8,3 +8,7 @@
 .wide {
   max-width: var(--max-width-wide);
 }
+
+.article {
+  max-width: var(--max-width-article);
+}

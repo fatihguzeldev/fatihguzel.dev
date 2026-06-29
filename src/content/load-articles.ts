@@ -55,6 +55,10 @@ function loadArticleFromFile(filePath: string): LoadedArticle {
     }
 
     const body = content.trim()
+    const compiledBody = compileArticleBody(body, {
+      filePath: getArticlePath(filePath),
+      slug: frontmatter.slug,
+    })
 
     return {
       slug: frontmatter.slug,
@@ -62,10 +66,8 @@ function loadArticleFromFile(filePath: string): LoadedArticle {
         ...frontmatter,
         body,
         readingTime: frontmatter.readingTime ?? estimateReadingTime(body),
-        html: compileArticleBody(body, {
-          filePath: getArticlePath(filePath),
-          slug: frontmatter.slug,
-        }),
+        html: compiledBody.html,
+        tableOfContents: compiledBody.tableOfContents,
       },
     }
   } catch (error) {
