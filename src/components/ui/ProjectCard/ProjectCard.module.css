@@ -4,6 +4,13 @@
   gap: var(--content-card-gap);
 }
 
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--meta-gap-row) var(--project-title-meta-gap);
+}
+
 .name {
   margin: 0;
   font-family: var(--font-display);

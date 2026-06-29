@@ -1,26 +1,9 @@
 {
   "projects": [
     {
-      "slug": "stack-over-papers",
-      "name": "stack over papers",
-      "description": "an open community and repository for exploring, discussing, and annotating computer science papers and technical readings, making research more accessible and collaborative.",
-      "links": [
-        {
-          "label": "twitter community",
-          "href": "https://x.com/i/communities/1957542341167784336",
-          "kind": "community"
-        },
-        {
-          "label": "repository",
-          "href": "https://github.com/fatihguzeldev/stack-over-papers",
-          "kind": "github"
-        }
-      ]
-    },
-    {
       "slug": "vemi",
       "name": "vemi",
-      "description": "a tiny, type-safe markdown compiler. plain text in, html out.",
+      "description": "a tiny, type-safe markdown compiler. plain text in, html out; it powers the article pipeline on this site.",
       "links": [
         {
           "label": "website",
@@ -35,6 +18,47 @@
         {
           "label": "repository",
           "href": "https://github.com/fatihguzeldev/vemi",
+          "kind": "github"
+        }
+      ]
+    },
+    {
+      "slug": "dino-neural-network",
+      "name": "chrome dino learns to run",
+      "description": "a neural network trained to play chrome's offline dino game, built as the demo project for an in-depth computer science video on neural networks.",
+      "links": [
+        {
+          "label": "video",
+          "href": "https://www.youtube.com/watch?v=NuBnuAP4ehE",
+          "kind": "demo"
+        },
+        {
+          "label": "repository",
+          "href": "https://github.com/fatihguzeldev/google-dino-neural-network",
+          "kind": "github"
+        }
+      ]
+    },
+    {
+      "slug": "single-cycle-mips-cpu",
+      "name": "mips processor from first principles",
+      "description": "a single-cycle mips processor implementation that walks through datapath, control, and instruction execution from the ground up.",
+      "links": [
+        {
+          "label": "repository",
+          "href": "https://github.com/fatihguzeldev/single-cycle-mips-cpu",
+          "kind": "github"
+        }
+      ]
+    },
+    {
+      "slug": "stack-over-papers",
+      "name": "stack over papers",
+      "description": "an open community and repository for exploring, discussing, and annotating computer science papers and technical readings, making research more accessible and collaborative.",
+      "links": [
+        {
+          "label": "repository",
+          "href": "https://github.com/fatihguzeldev/stack-over-papers",
           "kind": "github"
         }
       ]
@@ -64,35 +88,6 @@
         {
           "label": "repository",
           "href": "https://github.com/fatihguzeldev/fauthy",
-          "kind": "github"
-        }
-      ]
-    },
-    {
-      "slug": "campusnacks",
-      "name": "campusnacks",
-      "description": "a food delivery service for campus areas, focused on local vendors.",
-      "links": [
-        {
-          "label": "frontend repository",
-          "href": "https://github.com/fatihguzeldev/campusnacks-frontend",
-          "kind": "github"
-        },
-        {
-          "label": "backend repository",
-          "href": "https://github.com/fatihguzeldev/campusnacks-backend",
-          "kind": "github"
-        }
-      ]
-    },
-    {
-      "slug": "dependabot",
-      "name": "dependabot",
-      "description": "the dependency checker for git repositories automates the monitoring of composer.json and package.json files. it compares dependencies with their registries every 24 hours and emails a detailed report to recipients.",
-      "links": [
-        {
-          "label": "repository",
-          "href": "https://github.com/fatihguzeldev/dependency-checker",
           "kind": "github"
         }
       ]

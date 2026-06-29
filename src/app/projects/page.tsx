@@ -32,7 +32,7 @@ export default function ProjectsPage() {
             "things i've built, shipped, or maintain. open source where possible."
           }
         />
-        <ProjectList projects={projects} />
+        <ProjectList projects={projects} className={styles.list} />
       </Container>
     </main>
   )

@@ -1,3 +1,7 @@
 .main {
   padding: var(--page-top-padding) 0 var(--section-gap);
 }
+
+.list {
+  margin-top: var(--section-list-action-gap);
+}
