@@ -3,5 +3,5 @@
 }
 
 .list {
-  margin-top: var(--section-list-action-gap);
+  margin-top: var(--page-list-start-gap);
 }
