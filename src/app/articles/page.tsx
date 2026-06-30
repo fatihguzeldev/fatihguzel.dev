@@ -32,6 +32,11 @@ export default function ArticlesPage() {
           title="articles"
           description="notes on engineering, systems, technology, work, and the software industry."
         />
+        <p className={styles.feed}>
+          <TextLink href="/atom.xml" cta ctaVariant="route" routeLabel="/atom.xml">
+            follow the writing
+          </TextLink>
+        </p>
 
         {articles.length ? (
           <ul className={styles.list}>

@@ -44,6 +44,14 @@ export function createMetadata({
     keywords: tags,
     alternates: {
       canonical,
+      types: {
+        'application/atom+xml': [
+          {
+            title: `${site.name} atom feed`,
+            url: '/atom.xml',
+          },
+        ],
+      },
     },
     openGraph: {
       title: pageTitle,
