@@ -27,7 +27,6 @@ export default function ProjectsPage() {
       />
       <Container>
         <PageHeader
-          eyebrow="work"
           title="projects"
           description={
             "things i've built, shipped, or maintain. open source where possible."

@@ -16,7 +16,7 @@ export function FeaturedArticles({ articles }: FeaturedArticlesProps) {
   return (
     <section className={sectionStyles.section} id="articles">
       <Container>
-        <SectionHeader eyebrow="writing" title="featured articles" />
+        <SectionHeader title="featured articles" />
         <ul className={styles.list}>
           {articles.map((article) => {
             const language = formatArticleLanguage(article.language)

@@ -12,7 +12,7 @@ export function Now({ now }: NowProps) {
   return (
     <section className={sectionStyles.section} id="now">
       <Container>
-        <SectionHeader eyebrow="now" title="what i'm focused on" />
+        <SectionHeader title="what i'm focused on" />
         <p className={styles.meta}>updated {now.updatedAt}</p>
         <ul className={styles.list}>
           {now.items.map((item, index) => (

@@ -28,7 +28,6 @@ export default function ArticlesPage() {
       />
       <Container>
         <PageHeader
-          eyebrow="writing"
           title="articles"
           description="notes on engineering, systems, technology, work, and the software industry."
         />

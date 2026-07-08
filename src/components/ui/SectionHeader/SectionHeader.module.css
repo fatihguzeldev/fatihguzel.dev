@@ -3,12 +3,3 @@
   padding-bottom: var(--section-header-padding-bottom);
   border-bottom: var(--line-thin) solid var(--border);
 }
-
-.eyebrow {
-  display: block;
-  margin: 0 0 var(--eyebrow-gap);
-  font-family: var(--font-mono);
-  font-size: var(--text-meta);
-  letter-spacing: var(--tracking-wide);
-  color: var(--text-faint);
-}

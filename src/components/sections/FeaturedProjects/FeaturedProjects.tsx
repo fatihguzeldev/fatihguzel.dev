@@ -16,7 +16,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
   return (
     <section className={sectionStyles.section} id="projects">
       <Container>
-        <SectionHeader eyebrow="work" title="featured projects" />
+        <SectionHeader title="featured projects" />
         <ul className={styles.list}>
           {projects.map((project) => (
             <li key={project.slug}>

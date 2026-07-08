@@ -11,7 +11,7 @@ export function About({ paragraphs }: AboutProps) {
   return (
     <section className={sectionStyles.section} id="about">
       <Container>
-        <SectionHeader eyebrow="about" title="about me" />
+        <SectionHeader title="about me" />
         <div className={styles.paragraphs}>
           {paragraphs.map((paragraph, index) => (
             <p key={index} className={styles.paragraph}>

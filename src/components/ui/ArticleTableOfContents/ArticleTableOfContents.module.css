@@ -10,15 +10,6 @@
   scrollbar-width: thin;
 }
 
-.eyebrow {
-  margin: 0 0 var(--article-toc-heading-gap);
-  font-family: var(--font-mono);
-  font-size: var(--text-meta);
-  line-height: var(--leading-ui);
-  letter-spacing: var(--tracking-wide);
-  color: var(--text-faint);
-}
-
 .list {
   display: flex;
   flex-direction: column;
@@ -35,11 +26,11 @@
 .link {
   display: grid;
   grid-template-columns: var(--article-toc-marker-width) minmax(0, 1fr);
-  align-items: center;
+  align-items: stretch;
   gap: var(--article-toc-marker-gap);
   max-width: 100%;
   padding: var(--article-toc-link-padding-block) 0;
-  overflow: clip;
+  overflow: visible;
   color: var(--text-faint);
   font-family: var(--font-mono);
   font-size: var(--text-meta);
@@ -52,8 +43,9 @@
 
 .link::before {
   content: '';
+  align-self: stretch;
   width: var(--line-accent);
-  height: var(--article-toc-marker-height);
+  min-height: var(--article-toc-marker-height);
   border-radius: var(--radius-pill);
   background: transparent;
   opacity: 0;
@@ -63,10 +55,13 @@
 }
 
 .label {
+  align-self: center;
   min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow: visible;
+  overflow-wrap: normal;
+  text-overflow: clip;
+  white-space: normal;
+  word-break: normal;
 }
 
 .link:hover {

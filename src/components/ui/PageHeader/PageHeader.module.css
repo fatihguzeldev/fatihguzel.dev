@@ -2,15 +2,6 @@
   margin-bottom: var(--page-header-content-gap);
 }
 
-.eyebrow {
-  display: block;
-  margin-bottom: var(--eyebrow-gap);
-  font-family: var(--font-mono);
-  font-size: var(--text-meta);
-  letter-spacing: var(--tracking-wide);
-  color: var(--text-faint);
-}
-
 .description {
   margin: 0;
   max-width: var(--measure-readable);

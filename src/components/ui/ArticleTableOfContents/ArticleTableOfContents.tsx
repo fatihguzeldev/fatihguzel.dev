@@ -130,7 +130,6 @@ export function ArticleTableOfContents({
       className={[styles.root, className].filter(Boolean).join(' ')}
       aria-label="table of contents"
     >
-      <p className={styles.eyebrow}>contents</p>
       <ol className={styles.list}>
         {items.map((item) => {
           const isActive = item.id === activeId

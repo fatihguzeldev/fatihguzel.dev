@@ -4,10 +4,11 @@
 
 .root :global(.prose) {
   margin: 0;
-  color: var(--text-muted);
+  color: var(--prose-text);
   font-family: var(--font-body);
   font-size: var(--text-body);
   line-height: var(--leading-body);
+  text-transform: none;
 }
 
 .root :global(.prose > *:first-child) {

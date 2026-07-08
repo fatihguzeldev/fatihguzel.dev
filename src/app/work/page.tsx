@@ -33,7 +33,6 @@ export default function WorkPage() {
       />
       <Container>
         <PageHeader
-          eyebrow="contact"
           title={work.title}
           availability={work.availability}
           description={work.description}

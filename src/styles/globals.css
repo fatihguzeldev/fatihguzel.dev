@@ -56,9 +56,8 @@ html[data-theme='dark'] {
   --section-header-padding-bottom: clamp(0.875rem, 2.5vw, 1rem);
   --article-header-content-gap: var(--page-header-content-gap);
   --article-layout-gap: clamp(1.5rem, 4vw, 2.25rem);
-  --article-side-rail-width: 11rem;
+  --article-side-rail-width: 12.5rem;
   --article-toc-top: clamp(4rem, 9vw, 5.5rem);
-  --article-toc-heading-gap: var(--content-item-gap);
   --article-toc-item-gap: 0.1875rem;
   --article-toc-link-padding-block: 0.25rem;
   --article-toc-marker-width: 0.375rem;
@@ -76,7 +75,7 @@ html[data-theme='dark'] {
   --header-padding-block: clamp(0.875rem, 2.5vw, 1rem);
   --hero-title-gap: clamp(1rem, 3vw, 1.5rem);
   --hero-social-gap: clamp(1.25rem, 3vw, 1.75rem);
-  --eyebrow-gap: 0.625rem;
+  --compact-heading-gap: 0.625rem;
   --content-list-gap: clamp(2.75rem, 6vw, 3.5rem);
   --content-item-gap: 0.5rem;
   --content-card-gap: 0.75rem;
@@ -145,6 +144,7 @@ html[data-theme='dark'] {
 
   --prose-heading-gap: var(--content-card-gap);
   --prose-heading-measure: var(--measure-prose-heading);
+  --prose-text: color-mix(in srgb, var(--text-muted) 82%, var(--text) 18%);
   --prose-h1-gap-before: clamp(2rem, 6vw, 3rem);
   --prose-h1-gap-after: 0.875rem;
   --prose-h2-gap-before: clamp(3rem, 9vw, 4.5rem);
@@ -152,7 +152,7 @@ html[data-theme='dark'] {
   --prose-h3-gap-before: clamp(2.25rem, 7vw, 3.25rem);
   --prose-h3-gap-after: var(--content-card-gap);
   --prose-h4-gap-before: clamp(1.75rem, 5vw, 2.5rem);
-  --prose-h4-gap-after: var(--eyebrow-gap);
+  --prose-h4-gap-after: var(--compact-heading-gap);
   --prose-h5-gap-before: clamp(1.5rem, 4vw, 2rem);
   --prose-h5-gap-after: var(--content-item-gap);
   --prose-h6-gap-before: clamp(1.25rem, 3vw, 1.75rem);

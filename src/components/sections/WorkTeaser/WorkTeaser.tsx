@@ -14,7 +14,7 @@ export function WorkTeaser({ headline, description, cta }: WorkTeaserProps) {
   return (
     <section className={sectionStyles.section} id="work">
       <Container>
-        <SectionHeader eyebrow="contact" title="work & contact" />
+        <SectionHeader title="work & contact" />
         <p className={styles.headline}>{headline}</p>
         <p className={styles.description}>{description}</p>
         <p className={styles.cta}>
