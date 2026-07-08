@@ -6,7 +6,7 @@ import type { Article } from './schemas/article'
 import { compileArticleBody } from '@/lib/vemi/compile-article'
 
 const ARTICLES_DIR = path.join(process.cwd(), 'content/articles')
-const WORDS_PER_MINUTE = 220
+const WORDS_PER_MINUTE = 200
 const SHOULD_CACHE_ARTICLES = process.env.NODE_ENV === 'production'
 
 let articlesCache: Article[] | null = null
