@@ -2,6 +2,9 @@
   "name": "fatihguzel.dev",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "^20.9.0 || >=22.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -18,7 +21,7 @@
   "dependencies": {
     "@fatihguzeldev/vemi": "0.0.2",
     "gray-matter": "4.0.3",
-    "next": "15.5.18",
+    "next": "15.5.21",
     "react": "19.2.6",
     "react-dom": "19.2.6",
     "zod": "3.25.67"
@@ -31,7 +34,7 @@
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "eslint": "9.29.0",
-    "eslint-config-next": "15.5.18",
+    "eslint-config-next": "15.5.21",
     "eslint-config-prettier": "10.1.5",
     "husky": "9.1.7",
     "lint-staged": "16.2.7",
@@ -42,7 +45,8 @@
     "gray-matter": {
       "js-yaml": "3.15.0"
     },
-    "postcss": "8.5.16"
+    "postcss": "8.5.23",
+    "sharp": "0.35.3"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
