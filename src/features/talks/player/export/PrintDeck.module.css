@@ -1,0 +1,29 @@
+.deck {
+  display: none;
+}
+@media print {
+  .deck {
+    display: block;
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: max-content;
+    background: white;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  .page {
+    width: max-content;
+    break-after: page;
+    page-break-after: always;
+  }
+  .page:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+  .deck :global(.lecture) {
+    animation: none;
+  }
+  .deck a {
+    text-decoration: none;
+  }
+}
