@@ -1,0 +1,4 @@
+.main {
+  padding-top: var(--page-top-padding);
+  padding-bottom: var(--section-gap);
+}
