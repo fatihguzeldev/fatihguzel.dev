@@ -80,8 +80,7 @@ export function Header() {
           </div>
         </div>
         <details className={styles.mobileMenu} ref={menu}>
-          <summary className={styles.menuToggle} ref={trigger}>
-            <span>menu</span>
+          <summary className={styles.menuToggle} ref={trigger} aria-label="menu">
             <MenuIcon className={styles.menuIcon} />
           </summary>
           <HeaderNavigation

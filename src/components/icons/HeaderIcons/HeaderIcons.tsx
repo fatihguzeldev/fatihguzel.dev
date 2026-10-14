@@ -15,8 +15,9 @@ export function MenuIcon({ className }: MenuIconProps) {
       strokeLinecap="round"
       aria-hidden="true"
     >
-      <path data-line="top" d="M4 8h16" />
-      <path data-line="bottom" d="M4 16h16" />
+      <path data-line="top" d="M4 6h16" />
+      <path data-line="middle" d="M4 12h16" />
+      <path data-line="bottom" d="M4 18h16" />
     </svg>
   )
 }
