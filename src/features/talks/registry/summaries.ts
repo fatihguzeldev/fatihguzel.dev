@@ -7,7 +7,6 @@ export const talkSummaries: readonly TalkSummary[] = [
     title: distributedThinking.title,
     description: distributedThinking.description ?? '',
     language: distributedThinking.language ?? 'en',
-    durationMinutes: 30,
     appearances: [
       {
         name: 'Devnot Developer Summit',

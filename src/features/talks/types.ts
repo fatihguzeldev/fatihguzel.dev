@@ -9,6 +9,5 @@ export interface TalkSummary {
   title: string
   description: string
   language: string
-  durationMinutes: number
   appearances: readonly TalkAppearance[]
 }
