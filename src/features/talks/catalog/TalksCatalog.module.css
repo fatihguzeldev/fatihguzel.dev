@@ -81,18 +81,6 @@
   font-size: var(--text-preview);
   line-height: var(--leading-preview);
 }
-.meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--meta-gap-row) var(--meta-gap-item);
-  margin: var(--content-item-gap) 0 0;
-  font-family: var(--font-mono);
-  font-size: var(--text-meta);
-  line-height: var(--leading-body);
-  letter-spacing: var(--tracking-meta);
-  color: var(--text-faint);
-}
 .appearances {
   display: grid;
   grid-template-columns: max-content minmax(0, 1fr);
