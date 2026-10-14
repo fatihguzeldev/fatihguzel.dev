@@ -2,7 +2,7 @@ import type { ArticleFrontmatter } from './schemas/article'
 
 const languageLabels: Record<ArticleFrontmatter['language'], string> = {
   en: 'english',
-  tr: 'türkçe',
+  tr: 'turkish',
 }
 
 export function formatArticleLanguage(
