@@ -2,7 +2,6 @@ export interface TalkAppearance {
   name: string
   url: string
   date: string
-  organizer?: string
 }
 
 export interface TalkSummary {

@@ -10,8 +10,7 @@ export const talkSummaries: readonly TalkSummary[] = [
     durationMinutes: 30,
     appearances: [
       {
-        name: 'Developer Summit 2026',
-        organizer: 'Devnot',
+        name: 'Devnot Developer Summit',
         url: 'https://summit.devnot.com/',
         date: '2026-10-17',
       },
