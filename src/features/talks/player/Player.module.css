@@ -2,6 +2,7 @@
   --player-control-space: 4.75rem;
   position: fixed;
   inset: 0;
+  height: 100dvh;
   overflow: hidden;
   background: var(--bg);
   isolation: isolate;
@@ -73,6 +74,13 @@
 @media (max-width: 40rem) and (orientation: landscape) {
   .player {
     --player-control-space: 4.75rem;
+  }
+}
+@media (hover: none), (pointer: coarse) {
+  .stage {
+    padding: max(0.5rem, env(safe-area-inset-top))
+      max(0.5rem, env(safe-area-inset-right)) max(0.5rem, env(safe-area-inset-bottom))
+      max(0.5rem, env(safe-area-inset-left));
   }
 }
 @media print {

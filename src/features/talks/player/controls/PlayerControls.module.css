@@ -4,6 +4,7 @@
   z-index: 10;
   height: var(--player-control-space);
   padding: max(0.75rem, env(safe-area-inset-top)) 1rem 0;
+  -webkit-tap-highlight-color: transparent;
 }
 .trigger {
   position: absolute;
@@ -38,6 +39,9 @@
   align-items: center;
   gap: 1rem;
   max-width: 80rem;
+  max-height: calc(100dvh - max(0.75rem, env(safe-area-inset-top)) - 0.75rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
   margin: 0 auto;
   padding: 0.375rem 0.5rem;
   border: 1px solid var(--border);
@@ -85,6 +89,7 @@
     color var(--transition);
 }
 .back {
+  min-width: var(--touch-target);
   padding: 0.5rem 0.75rem;
 }
 .iconButton {
@@ -199,6 +204,13 @@
     border: none;
     padding: 0;
   }
+  .export {
+    width: var(--touch-target);
+    padding-inline: 0;
+  }
+  .export span {
+    display: none;
+  }
   .pages {
     order: 2;
     flex-basis: 100%;
@@ -219,7 +231,7 @@
   }
 }
 
-@media (max-width: 40rem) and (orientation: landscape) {
+@media (orientation: landscape) and (max-height: 32rem) {
   .panel {
     flex-wrap: nowrap;
     gap: 0.5rem;
@@ -248,5 +260,35 @@
   .export {
     width: var(--touch-target);
     padding-inline: 0;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .region {
+    height: auto;
+    pointer-events: none;
+    padding-inline: max(0.5rem, env(safe-area-inset-left))
+      max(0.5rem, env(safe-area-inset-right));
+  }
+  .trigger,
+  .region[data-open='true'] .panel {
+    pointer-events: auto;
+  }
+  .actions :global(button) {
+    min-width: var(--touch-target);
+    min-height: var(--touch-target);
+  }
+}
+
+@media (hover: none) and (orientation: landscape) and (max-height: 32rem),
+  (pointer: coarse) and (orientation: landscape) and (max-height: 32rem) {
+  .trigger {
+    left: max(0.5rem, env(safe-area-inset-left));
+    transform: none;
+    width: var(--touch-target);
+    padding: 0;
+  }
+  .trigger span {
+    display: none;
   }
 }

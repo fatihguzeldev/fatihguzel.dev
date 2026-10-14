@@ -56,3 +56,11 @@ export function ControlsIcon() {
     </svg>
   )
 }
+
+export function CloseIcon() {
+  return (
+    <svg {...base}>
+      <path d="m6 6 12 12M18 6 6 18" />
+    </svg>
+  )
+}

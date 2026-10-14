@@ -11,6 +11,7 @@ import {
   CollapseIcon,
   ExportIcon,
   ControlsIcon,
+  CloseIcon,
 } from '../icons/PlayerIcons'
 import styles from './PlayerControls.module.css'
 
@@ -37,6 +38,11 @@ export function PlayerControls({
   const focusPanel = useRef(false)
   const panelId = 'presentation-controls'
 
+  const closePanel = () => {
+    setOpen(false)
+    requestAnimationFrame(() => trigger.current?.focus())
+  }
+
   useEffect(() => {
     const dismiss = (event: PointerEvent) => {
       if (!region.current?.contains(event.target as Node)) setOpen(false)
@@ -62,19 +68,23 @@ export function PlayerControls({
       onPointerEnter={(event) => {
         if (event.pointerType === 'mouse') setOpen(true)
       }}
-      onPointerLeave={() => {
-        if (!document.activeElement?.matches(':focus-visible')) setOpen(false)
+      onPointerLeave={(event) => {
+        if (
+          event.pointerType === 'mouse' &&
+          !document.activeElement?.matches(':focus-visible')
+        )
+          setOpen(false)
       }}
       onFocus={(event) => {
         if (!trigger.current?.contains(event.target as Node)) setOpen(true)
       }}
       onBlur={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false)
+        if (event.relatedTarget && !event.currentTarget.contains(event.relatedTarget))
+          setOpen(false)
       }}
       onKeyDown={(event) => {
         if (event.key === 'Escape') {
-          setOpen(false)
-          requestAnimationFrame(() => trigger.current?.focus())
+          closePanel()
         }
       }}
     >
@@ -85,6 +95,7 @@ export function PlayerControls({
         aria-label={open ? 'hide presentation controls' : 'show presentation controls'}
         aria-expanded={open}
         aria-controls={panelId}
+        aria-hidden={open}
         tabIndex={open ? -1 : 0}
         onClick={() => {
           focusPanel.current = true
@@ -170,10 +181,20 @@ export function PlayerControls({
             className={styles.export}
             disabled={exporting}
             onClick={onExport}
+            aria-label={exporting ? 'preparing export' : 'export'}
             title="export all slides as pdf"
           >
             <ExportIcon />
             <span>{exporting ? 'preparing…' : 'export'}</span>
+          </button>
+          <button
+            type="button"
+            className={styles.iconButton}
+            aria-label="hide presentation controls"
+            title="hide presentation controls"
+            onClick={closePanel}
+          >
+            <CloseIcon />
           </button>
         </div>
       </nav>
