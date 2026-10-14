@@ -1,1 +1,1 @@
-export { TalksCatalog } from './TalksCatalog'
+export { TalksCatalog, talksDescription } from './TalksCatalog'
