@@ -12,11 +12,29 @@
   margin-top: var(--page-list-start-gap);
 }
 .item {
+  position: relative;
   padding-block: var(--content-body-gap-lg);
   border-top: var(--line-thin) solid var(--border);
 }
 .item:last-child {
   border-bottom: var(--line-thin) solid var(--border);
+}
+.separatorMark {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  display: grid;
+  place-items: center;
+  width: calc(var(--content-body-gap-lg) * 2);
+  height: calc(var(--content-body-gap-lg) + var(--content-item-gap));
+  transform: translateY(-50%);
+  background: var(--bg);
+  color: var(--text-faint);
+}
+.separatorMark svg {
+  display: block;
+  width: calc(var(--content-body-gap-lg) + var(--content-item-gap));
+  height: auto;
 }
 
 .title {
