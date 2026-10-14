@@ -63,11 +63,12 @@
     --header-gap: 0.75rem;
     --nav-gap: 0.625rem;
 
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 
   .nav {
-    flex: 1 1 auto;
-    flex-wrap: nowrap;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 }
