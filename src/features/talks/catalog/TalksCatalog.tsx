@@ -26,10 +26,10 @@ export function TalksCatalog({ talks }: { talks: readonly TalkSummary[] }) {
         <ol className={styles.list}>
           {talks.map((talk) => (
             <li key={talk.slug} className={styles.item}>
-              <span className={styles.separatorMark} aria-hidden="true">
+              <span className={styles.itemMark} aria-hidden="true">
                 <PresentationMark />
               </span>
-              <article aria-labelledby={`talk-${talk.slug}`}>
+              <article className={styles.body} aria-labelledby={`talk-${talk.slug}`}>
                 <h2 id={`talk-${talk.slug}`} className={styles.title}>
                   <Link href={`/talks/${talk.slug}`} className={styles.titleLink}>
                     <span>{talk.title}</span>
@@ -39,8 +39,6 @@ export function TalksCatalog({ talks }: { talks: readonly TalkSummary[] }) {
                 <p className={styles.description}>{talk.description}</p>
                 <p className={styles.meta}>
                   <span>{languageName(talk.language)}</span>
-                  <span className={styles.dot} aria-hidden="true" />
-                  <span>{talk.durationMinutes} min</span>
                 </p>
 
                 {talk.appearances.length ? (
