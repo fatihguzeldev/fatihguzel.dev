@@ -13,10 +13,6 @@ const eventDate = new Intl.DateTimeFormat('en-US', {
   timeZone: 'UTC',
 })
 
-function languageName(language: string) {
-  return language === 'tr' ? 'turkish' : language === 'en' ? 'english' : language
-}
-
 export function TalksCatalog({ talks }: { talks: readonly TalkSummary[] }) {
   return (
     <section className={styles.catalog} aria-label="talks">
@@ -37,9 +33,6 @@ export function TalksCatalog({ talks }: { talks: readonly TalkSummary[] }) {
                   </Link>
                 </h2>
                 <p className={styles.description}>{talk.description}</p>
-                <p className={styles.meta}>
-                  <span>{languageName(talk.language)}</span>
-                </p>
 
                 {talk.appearances.length ? (
                   <div className={styles.appearances}>
