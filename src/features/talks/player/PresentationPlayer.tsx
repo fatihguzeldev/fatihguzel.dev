@@ -7,11 +7,13 @@ import { PrintDeck } from './export/PrintDeck'
 import { exportPdf } from './export/export-pdf'
 import { useFullscreen } from './navigation/use-fullscreen'
 import { useSlideNavigation } from './navigation/use-slide-navigation'
+import { useSwipeNavigation } from './navigation/use-swipe-navigation'
 import { SlideViewport } from './slides/SlideViewport'
 import styles from './Player.module.css'
 
 export function PresentationPlayer({ presentation }: { presentation: Presentation }) {
   const { index, go } = useSlideNavigation(presentation.slides.length)
+  const swipe = useSwipeNavigation(index, go)
   const fullscreen = useFullscreen()
   const [exporting, setExporting] = useState(false)
   const [error, setError] = useState('')
@@ -43,7 +45,7 @@ export function PresentationPlayer({ presentation }: { presentation: Presentatio
           exporting={exporting}
           onExport={() => void onExport()}
         />
-        <div className={styles.stage}>
+        <div className={styles.stage} {...swipe}>
           <SlideViewport presentation={presentation} index={index} />
         </div>
         <span className={styles.announcement} aria-live="polite">
