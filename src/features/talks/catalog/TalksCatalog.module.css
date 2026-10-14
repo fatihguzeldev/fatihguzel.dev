@@ -14,7 +14,7 @@
 .item {
   display: grid;
   grid-template-columns:
-    calc(var(--content-body-gap-lg) + var(--content-item-gap))
+    calc(var(--content-body-gap-lg) * 2)
     minmax(0, 1fr);
   column-gap: var(--content-card-gap);
   padding-block: var(--content-body-gap-lg);
@@ -153,7 +153,9 @@
 
 @media (max-width: 32rem) {
   .item {
-    grid-template-columns: var(--content-body-gap-lg) minmax(0, 1fr);
+    grid-template-columns:
+      calc(var(--content-body-gap-lg) + var(--content-item-gap))
+      minmax(0, 1fr);
   }
   .event {
     display: grid;
