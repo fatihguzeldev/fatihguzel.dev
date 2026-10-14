@@ -8,3 +8,44 @@
     sans-serif;
   letter-spacing: -5px;
 }
+.thanks-layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: 96px;
+}
+.thanks-share {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.thanks-qr {
+  display: block;
+  width: 560px;
+  height: 560px;
+  border-radius: 28px;
+}
+.thanks-address {
+  max-width: 100%;
+  font:
+    26px/1.4 'IBM Plex Mono',
+    monospace;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.thanks-share:hover {
+  text-decoration: none;
+}
+.thanks-share:hover .thanks-address {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 8px;
+}
+.thanks-share:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 16px;
+}
