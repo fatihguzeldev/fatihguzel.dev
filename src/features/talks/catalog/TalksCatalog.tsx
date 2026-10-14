@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { PageHeader } from '@/components/ui/PageHeader'
 import type { TalkSummary } from '../types'
-import { PresentationArrow } from './icons/presentation-icons'
+import { PresentationArrow, PresentationMark } from './icons/presentation-icons'
 import styles from './TalksCatalog.module.css'
 
 export const talksDescription = "a few things i can't stop thinking about."
@@ -26,6 +26,9 @@ export function TalksCatalog({ talks }: { talks: readonly TalkSummary[] }) {
         <ol className={styles.list}>
           {talks.map((talk) => (
             <li key={talk.slug} className={styles.item}>
+              <span className={styles.separatorMark} aria-hidden="true">
+                <PresentationMark />
+              </span>
               <article aria-labelledby={`talk-${talk.slug}`}>
                 <h2 id={`talk-${talk.slug}`} className={styles.title}>
                   <Link href={`/talks/${talk.slug}`} className={styles.titleLink}>
