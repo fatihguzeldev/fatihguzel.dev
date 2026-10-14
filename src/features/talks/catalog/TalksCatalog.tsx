@@ -49,14 +49,19 @@ export function TalksCatalog({ talks }: { talks: readonly TalkSummary[] }) {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <span>{appearance.name}</span>
-                            <PresentationArrow external />
+                            <span className={styles.eventName}>
+                              {appearance.name}
+                              <PresentationArrow external />
+                            </span>
+                            <time
+                              className={styles.eventDate}
+                              dateTime={appearance.date}
+                            >
+                              {eventDate
+                                .format(new Date(`${appearance.date}T12:00:00Z`))
+                                .toLowerCase()}
+                            </time>
                           </a>
-                          <time className={styles.eventDate} dateTime={appearance.date}>
-                            {eventDate
-                              .format(new Date(`${appearance.date}T12:00:00Z`))
-                              .toLowerCase()}
-                          </time>
                         </li>
                       ))}
                     </ul>
