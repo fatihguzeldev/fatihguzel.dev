@@ -1,0 +1,10 @@
+.thanks-scene .lecture-content {
+  align-items: center;
+  justify-content: center;
+}
+.thanks-scene h1 {
+  font:
+    500 116px/1.12 'Space Grotesk',
+    sans-serif;
+  letter-spacing: -5px;
+}

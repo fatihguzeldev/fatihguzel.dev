@@ -1,0 +1,29 @@
+/* Complete, unmodified IBM Plex fonts, licensed under SIL OFL 1.1.
+ * Source: github.com/IBM/plex/tree/78cd4223d8de9fcb78cba84eadecb269c56093c5
+ * See fonts/LICENSE.txt. Kept local so preview and PDF use the same faces.
+ */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url('./fonts/IBMPlexSans-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  font-feature-settings: 'ss02' 1;
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url('./fonts/IBMPlexSans-Medium.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+  font-feature-settings: 'ss02' 1;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('./fonts/IBMPlexMono-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+}
