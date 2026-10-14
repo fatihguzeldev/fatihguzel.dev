@@ -9,6 +9,8 @@
   list-style: none;
 }
 .list {
+  display: grid;
+  gap: var(--content-list-gap);
   margin-top: var(--page-list-start-gap);
 }
 .item {
@@ -17,11 +19,6 @@
     calc(var(--content-body-gap-lg) * 2)
     minmax(0, 1fr);
   column-gap: var(--content-card-gap);
-  padding-block: var(--content-body-gap-lg);
-  border-top: var(--line-thin) solid var(--border);
-}
-.item:last-child {
-  border-bottom: var(--line-thin) solid var(--border);
 }
 .itemMark {
   display: flex;
@@ -135,7 +132,6 @@
 .empty {
   margin: 0;
   padding-block: var(--section-item-gap);
-  border-block: var(--line-thin) solid var(--border);
   color: var(--text-muted);
 }
 
