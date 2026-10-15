@@ -1,5 +1,5 @@
-import { Header } from '@/components/layout/Header'
-import { Footer } from '@/components/layout/Footer'
+import { Header } from '@/site/components/Header'
+import { Footer } from '@/site/components/Footer'
 import { Container } from '@/components/layout/Container'
 import { TextLink } from '@/components/ui/TextLink'
 import styles from './not-found.module.css'

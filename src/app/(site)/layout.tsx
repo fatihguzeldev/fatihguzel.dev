@@ -1,5 +1,5 @@
-import { Header } from '@/components/layout/Header'
-import { Footer } from '@/components/layout/Footer'
+import { Header } from '@/site/components/Header'
+import { Footer } from '@/site/components/Footer'
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (

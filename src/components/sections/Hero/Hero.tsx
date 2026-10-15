@@ -1,6 +1,6 @@
 import { Container } from '@/components/layout/Container'
-import { SocialIconList } from '@/components/ui/SocialIconList'
-import { loadFooterSocials } from '@/content/load-socials'
+import { SocialIconList } from '@/site/components/SocialIconList'
+import { loadFooterSocials } from '@/site/content/socials/loader'
 import styles from './Hero.module.css'
 import sectionStyles from '../shared/Section.module.css'
 

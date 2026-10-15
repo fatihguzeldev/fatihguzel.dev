@@ -1,6 +1,6 @@
-import { loadSite } from '@/content/load-site'
-import { loadSocials } from '@/content/load-socials'
-import { SITE_URL } from '@/content/load-site'
+import { loadSite } from '@/site/content/identity/loader'
+import { loadSocials } from '@/site/content/socials/loader'
+import { SITE_URL } from '@/site/content/identity/loader'
 import type { Article } from '@/content/schemas/article'
 import type { Project } from '@/content/schemas/project'
 

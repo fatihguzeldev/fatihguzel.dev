@@ -1,5 +1,5 @@
-import type { Social } from '@/content/schemas/socials'
-import { getSocialIcon } from '@/components/icons/SocialIcons'
+import type { Social } from '@/site/content/socials/schema'
+import { getSocialIcon } from '@/site/icons/SocialIcons'
 import styles from './SocialIconList.module.css'
 
 type SocialIconListProps = {

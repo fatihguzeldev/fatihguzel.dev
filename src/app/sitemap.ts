@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import fs from 'fs'
 import path from 'path'
 import { loadArticles } from '@/content/load-articles'
-import { SITE_URL } from '@/content/load-site'
+import { SITE_URL } from '@/site/content/identity/loader'
 import { talkSummaries } from '@/features/talks/registry/summaries'
 import { loadNow } from '@/content/load-now'
 

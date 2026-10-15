@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef } from 'react'
-import { MenuIcon } from '@/components/icons/HeaderIcons'
+import { MenuIcon } from '@/site/icons/HeaderIcons'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { HeaderNavigation } from './HeaderNavigation'
 import styles from './Header.module.css'

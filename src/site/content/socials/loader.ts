@@ -1,5 +1,5 @@
-import socialsData from '../../content/socials.json'
-import { SocialsFileSchema } from './schemas/socials'
+import socialsData from '../../../../content/socials.json'
+import { SocialsFileSchema } from './schema'
 
 export function loadSocials() {
   return SocialsFileSchema.parse(socialsData)

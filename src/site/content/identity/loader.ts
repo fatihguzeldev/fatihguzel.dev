@@ -1,5 +1,5 @@
-import siteData from '../../content/site.json'
-import { SiteSchema } from './schemas/site'
+import siteData from '../../../../content/site.json'
+import { SiteSchema } from './schema'
 
 const site = SiteSchema.parse(siteData)
 

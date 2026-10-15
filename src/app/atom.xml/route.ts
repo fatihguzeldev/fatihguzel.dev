@@ -1,5 +1,5 @@
 import { loadArticles } from '@/content/load-articles'
-import { loadSite, SITE_URL } from '@/content/load-site'
+import { loadSite, SITE_URL } from '@/site/content/identity/loader'
 import { buildAtomFeed } from '@/lib/feed/atom'
 
 export const dynamic = 'force-static'

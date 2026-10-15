@@ -38,3 +38,6 @@ planning/
 
 # private presentation preparation
 /src/presentations/*/docs/
+
+# private repository context
+/context/

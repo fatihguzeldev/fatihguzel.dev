@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
-import type { Link } from '@/content/schemas/link'
+import type { Link } from '@/lib/links/schema'
 import styles from './GitHubStars.module.css'
 
 type GitHubRepo = {

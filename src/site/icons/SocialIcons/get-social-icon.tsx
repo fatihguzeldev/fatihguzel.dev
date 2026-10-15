@@ -1,5 +1,5 @@
 import type { ComponentType } from 'react'
-import type { Social } from '@/content/schemas/socials'
+import type { Social } from '@/site/content/socials/schema'
 import {
   GitHubIcon,
   InstagramIcon,

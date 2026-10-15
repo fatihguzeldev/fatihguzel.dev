@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { loadSite, SITE_URL } from '@/content/load-site'
+import { loadSite, SITE_URL } from '@/site/content/identity/loader'
 
 const site = loadSite()
 const siteDescription = `${site.tagline}. ${site.description}`

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { LinkSchema } from './link'
+import { LinkSchema } from '@/lib/links/schema'
 
 export const ProjectSchema = z.object({
   slug: z.string().min(1),

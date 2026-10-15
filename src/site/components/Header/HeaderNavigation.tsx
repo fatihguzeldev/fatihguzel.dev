@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { NAV_LINKS } from '@/lib/constants'
+import { NAV_LINKS } from '@/site/navigation/links'
 import styles from './Header.module.css'
 
 type HeaderNavigationProps = {

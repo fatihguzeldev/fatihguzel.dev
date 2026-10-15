@@ -1,4 +1,4 @@
-import type { Link } from '@/content/schemas/link'
+import type { Link } from '@/lib/links/schema'
 import { TextLink } from '@/components/ui/TextLink'
 import styles from './LinkList.module.css'
 

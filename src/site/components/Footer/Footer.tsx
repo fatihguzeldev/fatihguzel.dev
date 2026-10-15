@@ -1,4 +1,4 @@
-import { loadSite } from '@/content/load-site'
+import { loadSite } from '@/site/content/identity/loader'
 import { Container } from '@/components/layout/Container'
 import styles from './Footer.module.css'
 

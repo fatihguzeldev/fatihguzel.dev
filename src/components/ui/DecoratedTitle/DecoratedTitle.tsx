@@ -1,4 +1,4 @@
-import { SECTION_TITLE_DECORATOR } from '@/lib/constants'
+import { SECTION_TITLE_DECORATOR } from './constants'
 import styles from './DecoratedTitle.module.css'
 
 type DecoratedTitleProps = {
