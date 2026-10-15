@@ -1,8 +1,8 @@
 import { Container } from '@/components/layout/Container'
-import { ProjectCard } from '@/components/ui/ProjectCard'
+import { ProjectCard } from '@/features/projects/components/ProjectCard'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { TextLink } from '@/components/ui/TextLink'
-import type { Project } from '@/content/schemas/project'
+import type { Project } from '@/features/projects/content/schema'
 import styles from './FeaturedProjects.module.css'
 import sectionStyles from '../shared/Section.module.css'
 

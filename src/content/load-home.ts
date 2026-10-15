@@ -1,6 +1,6 @@
 import homeData from '../../content/pages/home.json'
 import { HomeSchema } from './schemas/home'
-import { loadProjects, loadProjectsBySlugs } from './load-projects'
+import { loadProjects, loadProjectsBySlugs } from '@/features/projects/content/loader'
 import { loadArticles, loadArticlesBySlugs } from '@/features/articles/content/loader'
 
 const RECENT_ARTICLE_COUNT = 3

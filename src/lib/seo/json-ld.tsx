@@ -3,7 +3,7 @@ import { loadSite } from '@/site/content/identity/loader'
 import { loadSocials } from '@/site/content/socials/loader'
 import { SITE_URL } from '@/site/content/identity/loader'
 import type { Article } from '@/features/articles/content/schema'
-import type { Project } from '@/content/schemas/project'
+import type { Project } from '@/features/projects/content/schema'
 
 const site = loadSite()
 const { socials } = loadSocials()

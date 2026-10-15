@@ -1,5 +1,5 @@
-import type { Project } from '@/content/schemas/project'
-import { ProjectCard } from '@/components/ui/ProjectCard'
+import type { Project } from '../../content/schema'
+import { ProjectCard } from '../ProjectCard'
 import styles from './ProjectList.module.css'
 
 type ProjectListProps = {

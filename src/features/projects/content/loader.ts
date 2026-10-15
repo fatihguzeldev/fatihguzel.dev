@@ -1,6 +1,6 @@
-import projectsData from '../../content/projects.json'
-import { ProjectsFileSchema } from './schemas/project'
-import type { Project } from './schemas/project'
+import projectsData from '../../../../content/projects.json'
+import { ProjectsFileSchema } from './schema'
+import type { Project } from './schema'
 
 export function loadProjects(): Project[] {
   return ProjectsFileSchema.parse(projectsData).projects

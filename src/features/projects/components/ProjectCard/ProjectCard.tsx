@@ -1,6 +1,6 @@
 import { LinkList } from '@/components/ui/LinkList'
-import { GitHubStars } from '@/components/ui/GitHubStars'
-import type { Project } from '@/content/schemas/project'
+import { GitHubStars } from '../GitHubStars'
+import type { Project } from '../../content/schema'
 import styles from './ProjectCard.module.css'
 
 type ProjectCardProps = {
