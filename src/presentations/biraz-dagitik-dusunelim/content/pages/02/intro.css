@@ -1,0 +1,88 @@
+.profile-layout {
+  display: grid;
+  grid-template-columns: 0.94fr 1.12fr;
+  align-items: center;
+  gap: 128px;
+}
+
+.profile-person h1 {
+  font:
+    500 120px/1.12 'Space Grotesk',
+    sans-serif;
+  letter-spacing: -5px;
+  white-space: nowrap;
+}
+
+.profile-name::after {
+  left: 0;
+  right: 0;
+}
+
+.profile-interests {
+  display: grid;
+  gap: 12px;
+  margin: 64px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 40px;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+.profile-interests li:first-child {
+  color: var(--ink);
+}
+
+.profile-links {
+  display: grid;
+  gap: 44px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-links a {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  align-items: center;
+  gap: 28px;
+  font:
+    29px/1.35 'IBM Plex Mono',
+    monospace;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.profile-icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+}
+.profile-icon img {
+  display: block;
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+.profile-icon-youtube img {
+  width: 64px;
+  height: 64px;
+}
+.profile-icon-linkedin img {
+  width: 48px;
+  height: 48px;
+}
+.profile-icon-mail img {
+  width: 60px;
+  height: 60px;
+}
+.profile-links a:hover > span:last-child {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 8px;
+}
+.profile-links a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 12px;
+}

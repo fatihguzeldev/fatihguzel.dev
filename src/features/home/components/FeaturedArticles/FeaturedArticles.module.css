@@ -1,0 +1,7 @@
+.list {
+  --article-list-margin: 0 0 var(--section-list-action-gap);
+}
+
+.cta {
+  margin: 0;
+}

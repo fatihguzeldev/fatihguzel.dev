@@ -1,0 +1,42 @@
+:root,
+html[data-theme='light'] {
+  --bg: #eeede8;
+  --bg-elevated: #ffffff;
+  --text: #1a1a1a;
+  --text-muted: #5e5e5e;
+  --text-faint: #686862;
+  --accent: #e85d1f;
+  --accent-ink: #b54816;
+  --accent-muted: rgba(232, 93, 31, 0.12);
+  --border: #d7d5ce;
+  --prose-text: #51514e;
+  --toc-text: #62615d;
+  --code-bg: color-mix(in srgb, var(--bg) 96%, var(--text) 2%);
+  --code-border: color-mix(in srgb, var(--border) 82%, var(--text-faint) 18%);
+  --code-accent: color-mix(in srgb, var(--accent) 70%, var(--text-faint));
+  --code-label: color-mix(in srgb, var(--accent-ink) 90%, var(--text));
+  --quote-bg: color-mix(in srgb, var(--bg) 94%, var(--text) 3%);
+
+  color-scheme: light;
+}
+
+html[data-theme='dark'] {
+  --bg: #111110;
+  --bg-elevated: #1a1a19;
+  --text: #edebe6;
+  --text-muted: #9a9893;
+  --text-faint: #807e79;
+  --accent: #fb923c;
+  --accent-ink: #fb923c;
+  --accent-muted: rgba(251, 146, 60, 0.12);
+  --border: #2a2a28;
+  --prose-text: color-mix(in srgb, var(--text-muted) 82%, var(--text) 18%);
+  --toc-text: #9a9893;
+  --code-bg: color-mix(in srgb, var(--bg) 92%, var(--text) 3%);
+  --code-border: color-mix(in srgb, var(--border) 82%, var(--text-faint) 18%);
+  --code-accent: color-mix(in srgb, var(--accent) 70%, var(--text-faint));
+  --code-label: color-mix(in srgb, var(--accent) 78%, var(--text));
+  --quote-bg: color-mix(in srgb, var(--bg) 88%, var(--text) 4%);
+
+  color-scheme: dark;
+}

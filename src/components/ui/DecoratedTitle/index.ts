@@ -1,1 +1,0 @@
-export { DecoratedTitle } from './DecoratedTitle'

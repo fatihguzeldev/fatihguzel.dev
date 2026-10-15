@@ -1,0 +1,16 @@
+.catalog {
+  min-width: 0;
+}
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--content-list-gap);
+  margin-top: var(--page-list-start-gap);
+}
+.empty {
+  margin: 0;
+  padding-block: var(--section-item-gap);
+  color: var(--text-muted);
+}

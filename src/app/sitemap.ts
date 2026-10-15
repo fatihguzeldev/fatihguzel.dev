@@ -1,9 +1,10 @@
 import type { MetadataRoute } from 'next'
 import fs from 'fs'
 import path from 'path'
-import { loadArticles } from '@/content/load-articles'
-import { SITE_URL } from '@/content/load-site'
-import { loadNow } from '@/content/load-now'
+import { loadArticles } from '@/features/articles/content/loader'
+import { SITE_URL } from '@/site/content/identity/loader'
+import { talkSummaries } from '@/features/talks/content/summaries'
+import { loadNow } from '@/features/home/content/now/loader'
 
 export const dynamic = 'force-static'
 
@@ -45,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '', lastModified: homeUpdated, priority: 1 },
     { path: '/articles', lastModified: articlesUpdated, priority: 0.8 },
     { path: '/projects', lastModified: projectsUpdated, priority: 0.8 },
+    { path: '/talks', lastModified: siteUpdated, priority: 0.8 },
     { path: '/work', lastModified: workUpdated, priority: 0.8 },
   ].map((route) => ({
     url: `${SITE_URL}${route.path}`,
@@ -62,5 +64,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   })
 
-  return [...staticRoutes, ...articleRoutes]
+  const talkRoutes = talkSummaries.map((talk) => ({
+    url: `${SITE_URL}/talks/${talk.slug}`,
+    lastModified: getContentLastModified(
+      `src/presentations/${talk.slug}/talk.ts`,
+      siteUpdated,
+    ),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  return [...staticRoutes, ...articleRoutes, ...talkRoutes]
 }

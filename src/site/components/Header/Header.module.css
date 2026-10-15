@@ -1,0 +1,207 @@
+.header {
+  background: var(--bg);
+}
+
+.inner {
+  --header-menu-width: var(--touch-target);
+  position: relative;
+  padding: var(--header-padding-block) var(--page-padding);
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: var(--header-gap);
+  min-height: var(--touch-target);
+}
+
+.logo,
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  font-family: var(--font-body);
+  font-size: var(--text-ui);
+  line-height: var(--leading-ui);
+  color: var(--text-muted);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.logo:hover,
+.navLink:hover {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+}
+
+.logo[aria-current],
+.navLink[aria-current] {
+  color: var(--text);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: calc(var(--header-menu-width) + var(--content-item-gap));
+}
+
+.desktopNav {
+  display: none;
+}
+
+.menuToggle {
+  position: absolute;
+  top: var(--header-padding-block);
+  right: var(--page-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--header-menu-width);
+  min-height: var(--touch-target);
+  padding: 0;
+  border-radius: var(--radius-control);
+  color: var(--text-muted);
+  cursor: pointer;
+  list-style: none;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    color var(--transition),
+    background-color var(--transition);
+}
+
+.menuToggle::-webkit-details-marker {
+  display: none;
+}
+.menuToggle::marker {
+  content: '';
+}
+.menuToggle:hover {
+  color: var(--accent-ink);
+  background: var(--accent-muted);
+}
+.menuToggle:focus-visible {
+  outline: var(--focus-ring-width) solid var(--accent-ink);
+  outline-offset: var(--focus-ring-offset);
+}
+:global(html[data-focus-source='pointer']) .menuToggle:focus-visible {
+  outline: none;
+}
+
+.menuIcon {
+  flex-shrink: 0;
+}
+.menuIcon path {
+  transition:
+    transform 180ms ease,
+    opacity 120ms ease;
+}
+.menuIcon [data-line='top'] {
+  transform-origin: 12px 6px;
+}
+.menuIcon [data-line='middle'] {
+  transform-origin: 12px 12px;
+}
+.menuIcon [data-line='bottom'] {
+  transform-origin: 12px 18px;
+}
+.mobileMenu[open] .menuIcon [data-line='top'] {
+  transform: translateY(6px) rotate(45deg);
+}
+.mobileMenu[open] .menuIcon [data-line='middle'] {
+  opacity: 0;
+  transform: scaleX(0.5);
+}
+.mobileMenu[open] .menuIcon [data-line='bottom'] {
+  transform: translateY(-6px) rotate(-45deg);
+}
+.mobileMenu[open] .menuToggle {
+  color: var(--text);
+}
+.mobileMenu:not([open]) .mobileNav {
+  display: none;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding-top: var(--content-card-gap);
+  padding-bottom: var(--content-body-gap);
+  border-bottom: var(--line-thin) solid var(--border);
+  animation: navigation-in 160ms ease-out;
+}
+
+.mobileNav .navLink {
+  gap: var(--content-card-gap);
+  min-height: calc(var(--touch-target) + var(--content-item-gap));
+  font-size: var(--text-body);
+}
+
+.mobileNav .navLink[aria-current]::after {
+  content: '';
+  width: var(--content-card-gap);
+  height: var(--line-accent);
+  background: var(--accent);
+}
+
+@keyframes navigation-in {
+  from {
+    opacity: 0;
+    transform: translateY(-0.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 32rem) {
+  .bar {
+    gap: var(--nav-gap);
+  }
+  .desktopNav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--nav-gap);
+    margin-left: auto;
+  }
+  .desktopNav .navLink {
+    position: relative;
+  }
+  .desktopNav .navLink[aria-current]:hover {
+    text-decoration: none;
+  }
+  .desktopNav .navLink[aria-current]::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 var(--content-item-gap);
+    height: var(--line-thin);
+    background: var(--accent);
+  }
+  .actions {
+    flex: none;
+    margin: 0;
+  }
+  .mobileMenu {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobileNav {
+    animation: none;
+  }
+  .menuToggle,
+  .menuIcon path {
+    transition: none;
+  }
+}

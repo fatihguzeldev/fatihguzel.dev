@@ -1,0 +1,191 @@
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../../assets/fonts/space-grotesk-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../../assets/fonts/space-grotesk-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+.lecture {
+  --paper: #f7f8fa;
+  --ink: #1e2329;
+  --muted: #636b75;
+  --line: #c7cdd4;
+  --accent: #ff5c35;
+  --accent-ink: #b9361c;
+  --tint: #ffe5dd;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 64px 96px 80px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  overflow-wrap: normal;
+}
+.lecture *,
+.lecture *::before,
+.lecture *::after {
+  box-sizing: border-box;
+}
+.lecture h1,
+.lecture h2,
+.lecture p,
+.lecture pre {
+  margin: 0;
+}
+.lecture-header {
+  flex: none;
+  margin-bottom: 42px;
+}
+.lecture-header h1 {
+  max-width: 1690px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 82px;
+  line-height: 1.12;
+  font-weight: 500;
+  letter-spacing: -3.4px;
+}
+.lecture-chapter {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  color: var(--muted);
+  font:
+    400 27px/1.2 'Space Grotesk',
+    sans-serif;
+}
+.lecture-chapter-number {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 46px;
+  flex: none;
+  color: var(--accent-ink);
+  font:
+    25px 'IBM Plex Mono',
+    monospace;
+}
+.lecture-chapter-number svg {
+  position: absolute;
+  inset: -4px -6px;
+  width: 70px;
+  height: 56px;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2.5px;
+  stroke-linecap: round;
+}
+/* Reserve the same title and metadata space even when a page has no subtitle. */
+.lecture[data-chapter] .lecture-header {
+  flex: 0 0 148px;
+  height: 148px;
+  margin-bottom: 8px;
+}
+.lecture-metadata {
+  height: 56px;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.lecture-lead {
+  max-width: 1550px;
+  font-size: 32px;
+  line-height: 1.3;
+  color: var(--muted);
+}
+.lecture-term {
+  font:
+    28px/1.3 'IBM Plex Mono',
+    monospace;
+  color: var(--accent-ink);
+}
+.lecture-content {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  padding-bottom: 16px;
+}
+.lecture-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.14em;
+  white-space: nowrap;
+}
+.lecture-underline::after {
+  content: '';
+  position: absolute;
+  left: -0.02em;
+  right: -0.04em;
+  bottom: -0.14em;
+  height: 0.24em;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 36' preserveAspectRatio='none'%3E%3Cpath d='M5 17 C112 4 217 29 495 10' fill='none' stroke='%23ff5c35' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E")
+    center / 100% 100% no-repeat;
+}
+.lecture-conclusion {
+  flex: none;
+  max-width: 1650px;
+  font-size: 40px;
+  line-height: 1.25;
+}
+/* Diagram scale and origin never depend on the amount of text below them. */
+.lecture-content:has(> .lecture-diagram) {
+  justify-content: flex-start;
+  gap: 16px;
+  padding-bottom: 8px;
+}
+.lecture-diagram {
+  flex: 0 0 576px;
+  width: 1536px;
+  height: 576px;
+  align-self: center;
+}
+.lecture-diagram > svg {
+  width: 100%;
+  height: 100%;
+}
+.lecture a {
+  color: inherit;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 7px;
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+  .lecture {
+    animation: lecture-appear 180ms ease-out both;
+  }
+  @keyframes lecture-appear {
+    from {
+      opacity: 0.65;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+@media print {
+  .lecture {
+    animation: none;
+  }
+}

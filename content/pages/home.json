@@ -10,12 +10,7 @@
       "i write about engineering, computer science, systems, technology, work, and thoughts on the industry."
     ]
   },
-  "featuredProjectSlugs": [
-    "vemi",
-    "dino-neural-network",
-    "single-cycle-mips-cpu",
-    "stack-over-papers"
-  ],
+  "featuredProjectSlugs": ["ring3", "doom-threejs", "vemi", "dino-neural-network"],
   "featuredArticleSlugs": [],
   "workTeaser": {
     "headline": "open to good software work, serious ideas, and problems worth building around.",

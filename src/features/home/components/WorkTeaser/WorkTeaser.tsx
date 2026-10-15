@@ -1,0 +1,28 @@
+import { Container } from '@/components/layout/Container/Container'
+import { SectionHeader } from '@/components/ui/SectionHeader/SectionHeader'
+import { TextLink } from '@/components/ui/TextLink/TextLink'
+import styles from './WorkTeaser.module.css'
+import sectionStyles from '../shared/Section.module.css'
+
+type WorkTeaserProps = {
+  headline: string
+  description: string
+  cta: string
+}
+
+export function WorkTeaser({ headline, description, cta }: WorkTeaserProps) {
+  return (
+    <section className={sectionStyles.section} id="work">
+      <Container>
+        <SectionHeader title="work & contact" />
+        <p className={styles.headline}>{headline}</p>
+        <p className={styles.description}>{description}</p>
+        <p className={styles.cta}>
+          <TextLink href="/work" cta ctaVariant="route" routeLabel="/work">
+            {cta}
+          </TextLink>
+        </p>
+      </Container>
+    </section>
+  )
+}

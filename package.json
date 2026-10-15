@@ -9,19 +9,21 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "new-article": "node scripts/new-article.mjs",
+    "new-article": "node scripts/articles/new-article.mjs",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
-    "audit:prod": "npm audit --omit=dev --audit-level=high",
-    "prepare": "husky"
+    "audit:prod": "npm audit --omit=dev --audit-level=moderate",
+    "prepare": "husky",
+    "test": "tsx --test \"src/**/*.test.{ts,mts}\""
   },
   "dependencies": {
     "@fatihguzeldev/vemi": "0.0.2",
     "gray-matter": "4.0.3",
-    "next": "15.5.21",
+    "js-yaml": "4.3.2",
+    "next": "15.5.27",
     "react": "19.2.6",
     "react-dom": "19.2.6",
     "zod": "3.25.67"
@@ -30,23 +32,25 @@
     "@commitlint/cli": "20.4.2",
     "@commitlint/config-conventional": "20.4.2",
     "@eslint/eslintrc": "3.3.1",
+    "@types/js-yaml": "4.0.9",
     "@types/node": "22.15.32",
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "eslint": "9.29.0",
-    "eslint-config-next": "15.5.21",
+    "eslint-config-next": "15.5.27",
     "eslint-config-prettier": "10.1.5",
     "husky": "9.1.7",
     "lint-staged": "16.2.7",
     "prettier": "3.5.3",
+    "tsx": "4.23.15",
     "typescript": "5.8.3"
   },
   "overrides": {
     "gray-matter": {
-      "js-yaml": "3.15.0"
+      "js-yaml": "$js-yaml"
     },
     "postcss": "8.5.23",
-    "sharp": "0.35.3"
+    "sharp": "0.35.5"
   },
   "lint-staged": {
     "*.{ts,tsx}": [

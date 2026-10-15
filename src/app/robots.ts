@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { SITE_URL } from '@/content/load-site'
+import { SITE_URL } from '@/site/content/identity/loader'
 
 export const dynamic = 'force-static'
 

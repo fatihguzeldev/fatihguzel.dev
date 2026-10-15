@@ -1,0 +1,26 @@
+import { Container } from '@/components/layout/Container/Container'
+import { SocialIconList } from '@/site/components/SocialIconList/SocialIconList'
+import { loadFooterSocials } from '@/site/content/socials/loader'
+import styles from './Hero.module.css'
+import sectionStyles from '../shared/Section.module.css'
+
+type HeroProps = {
+  title: string
+  subtitle: string
+}
+
+export function Hero({ title, subtitle }: HeroProps) {
+  const socials = loadFooterSocials()
+
+  return (
+    <section className={`${sectionStyles.section} ${styles.hero}`}>
+      <Container>
+        <h1 className={styles.title}>{title}</h1>
+        <p className={styles.subtitle}>{subtitle}</p>
+        <nav className={styles.socials} aria-label="social">
+          <SocialIconList socials={socials} />
+        </nav>
+      </Container>
+    </section>
+  )
+}

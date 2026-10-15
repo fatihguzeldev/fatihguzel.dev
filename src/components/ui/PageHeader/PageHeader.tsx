@@ -1,4 +1,4 @@
-import { DecoratedTitle } from '@/components/ui/DecoratedTitle'
+import { DecoratedTitle } from '@/components/ui/DecoratedTitle/DecoratedTitle'
 import styles from './PageHeader.module.css'
 
 type PageHeaderProps = {
