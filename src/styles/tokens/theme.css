@@ -1,0 +1,36 @@
+:root,
+html[data-theme='light'] {
+  --bg: #f8f7f4;
+  --bg-elevated: #ffffff;
+  --text: #1a1a1a;
+  --text-muted: #6b6b6b;
+  --text-faint: #707070;
+  --accent: #e85d1f;
+  --accent-muted: rgba(232, 93, 31, 0.12);
+  --border: #e8e6e1;
+  --code-bg: color-mix(in srgb, var(--bg) 96%, var(--text) 2%);
+  --code-border: color-mix(in srgb, var(--border) 82%, var(--text-faint) 18%);
+  --code-accent: color-mix(in srgb, var(--accent) 70%, var(--text-faint));
+  --code-label: color-mix(in srgb, var(--accent) 76%, var(--text));
+  --quote-bg: color-mix(in srgb, var(--bg) 94%, var(--text) 3%);
+
+  color-scheme: light;
+}
+
+html[data-theme='dark'] {
+  --bg: #111110;
+  --bg-elevated: #1a1a19;
+  --text: #edebe6;
+  --text-muted: #9a9893;
+  --text-faint: #807e79;
+  --accent: #fb923c;
+  --accent-muted: rgba(251, 146, 60, 0.12);
+  --border: #2a2a28;
+  --code-bg: color-mix(in srgb, var(--bg) 92%, var(--text) 3%);
+  --code-border: color-mix(in srgb, var(--border) 82%, var(--text-faint) 18%);
+  --code-accent: color-mix(in srgb, var(--accent) 70%, var(--text-faint));
+  --code-label: color-mix(in srgb, var(--accent) 78%, var(--text));
+  --quote-bg: color-mix(in srgb, var(--bg) 88%, var(--text) 4%);
+
+  color-scheme: dark;
+}
