@@ -1,4 +1,5 @@
 import { Stage, ChapterMarker, chapters } from '../../components/stage/stage'
+import './contents.css'
 
 export const title = 'içerik'
 export default function Contents() {

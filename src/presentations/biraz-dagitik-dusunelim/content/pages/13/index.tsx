@@ -1,4 +1,5 @@
 import { Stage, Underline } from '../../components/stage/stage'
+import './invariants.css'
 
 export const title = 'b’den nasıl devam edeceğiz?'
 

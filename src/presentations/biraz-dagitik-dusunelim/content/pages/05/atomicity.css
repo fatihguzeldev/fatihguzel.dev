@@ -1,0 +1,20 @@
+.lecture-code {
+  font:
+    44px/1.65 'IBM Plex Mono',
+    monospace;
+  padding: 0;
+}
+.lecture-code .hot {
+  color: var(--accent-ink);
+}
+.lecture-results {
+  display: flex;
+  gap: 100px;
+  margin-top: 24px;
+  font-size: 37px;
+  line-height: 1.35;
+  color: var(--muted);
+}
+.lecture-results strong {
+  font-weight: 500;
+}

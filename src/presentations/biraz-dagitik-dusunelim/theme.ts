@@ -1,4 +1,4 @@
-import { createTheme } from '../common/theme'
+import { createTheme } from '../common/theme/theme'
 
 export const talkTheme = createTheme({
   background: '#f7f8fa',

@@ -1,5 +1,5 @@
 import { Stage, Conclusion, Underline } from '../../components/stage/stage'
-import { SeatingMap } from '../../components/graphics/seating'
+import { SeatingMap } from '../../components/graphics/seating/seating-map'
 
 export const title = 'iki kişi. aynı koltuk.'
 export default function Reservation() {

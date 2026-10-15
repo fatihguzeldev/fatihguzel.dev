@@ -1,5 +1,5 @@
 import { colors, Label } from '../primitives'
-import { Topology } from '../topology'
+import { Topology } from '../topology/topology'
 
 export function RecoveryScene({ phase }: { phase: 'acknowledged' | 'election' }) {
   const election = phase === 'election'

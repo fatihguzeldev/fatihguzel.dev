@@ -1,5 +1,6 @@
 import { Stage, Underline } from '../../components/stage/stage'
-import { SeatingMap } from '../../components/graphics/seating'
+import { SeatingMap } from '../../components/graphics/seating/seating-map'
+import './cover.css'
 
 export const title = 'biraz dağıtık düşünelim'
 export default function Cover() {

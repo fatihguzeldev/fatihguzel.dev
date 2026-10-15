@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import type { Presentation } from '@/presentations/common/types'
+import type { Presentation } from '@/presentations/common/model/types'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import {
   BackIcon,

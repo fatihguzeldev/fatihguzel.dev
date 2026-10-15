@@ -1,4 +1,4 @@
-import type { Presentation } from '@/presentations/common/types'
+import type { Presentation } from '@/presentations/common/model/types'
 import { Slide } from '../slides/Slide'
 import styles from './PrintDeck.module.css'
 

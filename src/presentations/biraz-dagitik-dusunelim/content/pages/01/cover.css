@@ -1,0 +1,29 @@
+.lecture-cover .lecture-underline::after {
+  left: -0.025em;
+  right: -0.1em;
+  bottom: -0.19em;
+  height: 0.3em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 48' preserveAspectRatio='none'%3E%3Cpath d='M7 22 C135 0 284 35 490 12' fill='none' stroke='%23ff5c35' stroke-width='10' stroke-linecap='round'/%3E%3Cpath d='M93 41 C229 25 361 44 458 30' fill='none' stroke='%23ff5c35' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+.lecture-cover {
+  padding-top: 68px;
+}
+.lecture-cover-layout {
+  display: grid;
+  grid-template-columns: 1.16fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+.lecture-cover h1 {
+  font:
+    500 134px/1.03 'Space Grotesk',
+    sans-serif;
+  letter-spacing: -7px;
+}
+.lecture-cover .lecture-author {
+  font-size: 34px;
+  margin-top: 64px;
+}
+.lecture-cover-art {
+  height: 510px;
+}

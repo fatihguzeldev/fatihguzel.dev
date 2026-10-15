@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import type { Presentation } from '@/presentations/common/types'
+import type { Presentation } from '@/presentations/common/model/types'
 import { loadPresentation } from '../content/load-presentation'
 import { PresentationPlayer } from './PresentationPlayer'
 import styles from './Player.module.css'

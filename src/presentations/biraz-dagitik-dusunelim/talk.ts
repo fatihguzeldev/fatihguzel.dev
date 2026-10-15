@@ -1,4 +1,4 @@
-import { defineTalk } from '../common/types'
+import { defineTalk } from '../common/model/define-talk'
 import { talkTheme } from './theme'
 
 export default defineTalk({

@@ -72,7 +72,3 @@ export function Underline({ children }: { children: ReactNode }) {
 export function Conclusion({ children }: { children: ReactNode }) {
   return <p className="lecture-conclusion">{children}</p>
 }
-
-export function Aside({ children }: { children: ReactNode }) {
-  return <p className="lecture-aside">{children}</p>
-}

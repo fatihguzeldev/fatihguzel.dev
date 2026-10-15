@@ -1,0 +1,15 @@
+.lecture-banner {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 110px;
+  line-height: 1.1;
+  letter-spacing: -4px;
+  font-weight: 400;
+  max-width: 1600px;
+}
+.lecture-reset .lecture-banner {
+  font-size: 90px;
+}
+.lecture-reset strong {
+  color: var(--ink);
+  font-weight: 500;
+}

@@ -1,5 +1,5 @@
-import type { Presentation } from '../common/types'
-import '../common/fonts.css'
+import type { Presentation } from '../common/model/types'
+import '../common/fonts/fonts.css'
 import talk from './talk'
 import Page01, { title as title01 } from './content/pages/01'
 import Page02, { title as title02 } from './content/pages/02'

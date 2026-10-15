@@ -1,5 +1,6 @@
 import { Stage } from '../../components/stage/stage'
 import { InlineArrows } from '../../components/typography/inline-arrows/inline-arrows'
+import './atomicity.css'
 
 export const title = 'tek bir karar noktası'
 export default function AtomicDecision() {
