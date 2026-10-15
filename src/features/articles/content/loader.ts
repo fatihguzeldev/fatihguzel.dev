@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import matter from 'gray-matter'
+import { parseArticleSource } from './frontmatter'
 import { ArticleFrontmatterSchema } from './schema'
 import type { Article } from './schema'
 import { compileArticleBody } from './compile-article'
@@ -37,7 +37,7 @@ function estimateReadingTime(source: string): number {
 function loadArticleFromFile(filePath: string): LoadedArticle {
   try {
     const raw = fs.readFileSync(filePath, 'utf8')
-    const { data, content } = matter(raw)
+    const { data, content } = parseArticleSource(raw)
     const frontmatter = ArticleFrontmatterSchema.parse(data)
     const fileSlug = getArticleFileSlug(filePath)
 
