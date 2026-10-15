@@ -16,7 +16,8 @@
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
     "audit:prod": "npm audit --omit=dev --audit-level=high",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "tsx --test \"src/**/*.test.{ts,mts}\""
   },
   "dependencies": {
     "@fatihguzeldev/vemi": "0.0.2",
@@ -39,6 +40,7 @@
     "husky": "9.1.7",
     "lint-staged": "16.2.7",
     "prettier": "3.5.3",
+    "tsx": "4.23.15",
     "typescript": "5.8.3"
   },
   "overrides": {

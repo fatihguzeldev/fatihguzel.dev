@@ -1,4 +1,4 @@
-name: security audit
+name: quality checks
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  audit:
+  quality:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,6 +17,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run audit:prod
+      - run: npm test
       - run: npm run typecheck
       - run: npm run lint
       - run: npm run format:check
