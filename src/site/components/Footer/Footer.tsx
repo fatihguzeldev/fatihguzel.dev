@@ -1,5 +1,5 @@
 import { loadSite } from '@/site/content/identity/loader'
-import { Container } from '@/components/layout/Container'
+import { Container } from '@/components/layout/Container/Container'
 import styles from './Footer.module.css'
 
 const site = loadSite()

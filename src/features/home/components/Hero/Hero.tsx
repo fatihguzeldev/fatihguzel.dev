@@ -1,5 +1,5 @@
-import { Container } from '@/components/layout/Container'
-import { SocialIconList } from '@/site/components/SocialIconList'
+import { Container } from '@/components/layout/Container/Container'
+import { SocialIconList } from '@/site/components/SocialIconList/SocialIconList'
 import { loadFooterSocials } from '@/site/content/socials/loader'
 import styles from './Hero.module.css'
 import sectionStyles from '../shared/Section.module.css'

@@ -1,4 +1,4 @@
-import { TextLink } from '@/components/ui/TextLink'
+import { TextLink } from '@/components/ui/TextLink/TextLink'
 import type { Article } from '../../content/schema'
 import { ArticleMetadata } from '../ArticleMetadata/ArticleMetadata'
 import { ArticleTags } from '../ArticleTags/ArticleTags'

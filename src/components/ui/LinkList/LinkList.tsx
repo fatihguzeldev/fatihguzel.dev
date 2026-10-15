@@ -1,5 +1,5 @@
 import type { Link } from '@/lib/links/schema'
-import { TextLink } from '@/components/ui/TextLink'
+import { TextLink } from '@/components/ui/TextLink/TextLink'
 import styles from './LinkList.module.css'
 
 type LinkListProps = {

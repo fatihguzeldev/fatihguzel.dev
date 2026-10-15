@@ -1,5 +1,5 @@
-import { LinkList } from '@/components/ui/LinkList'
-import { GitHubStars } from '../GitHubStars'
+import { LinkList } from '@/components/ui/LinkList/LinkList'
+import { GitHubStars } from '../GitHubStars/GitHubStars'
 import type { Project } from '../../content/schema'
 import styles from './ProjectCard.module.css'
 

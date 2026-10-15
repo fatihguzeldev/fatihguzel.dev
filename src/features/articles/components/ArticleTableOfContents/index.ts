@@ -1,1 +1,0 @@
-export { ArticleTableOfContents } from './ArticleTableOfContents'

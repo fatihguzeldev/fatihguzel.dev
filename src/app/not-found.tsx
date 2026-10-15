@@ -1,7 +1,7 @@
-import { Header } from '@/site/components/Header'
-import { Footer } from '@/site/components/Footer'
-import { Container } from '@/components/layout/Container'
-import { TextLink } from '@/components/ui/TextLink'
+import { Header } from '@/site/components/Header/Header'
+import { Footer } from '@/site/components/Footer/Footer'
+import { Container } from '@/components/layout/Container/Container'
+import { TextLink } from '@/components/ui/TextLink/TextLink'
 import styles from './not-found.module.css'
 
 export default function NotFound() {

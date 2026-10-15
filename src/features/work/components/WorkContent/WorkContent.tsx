@@ -1,8 +1,8 @@
-import { Container } from '@/components/layout/Container'
-import { SocialIconList } from '@/site/components/SocialIconList'
-import { PageHeader } from '@/components/ui/PageHeader'
-import { SectionHeader } from '@/components/ui/SectionHeader'
-import { TextLink } from '@/components/ui/TextLink'
+import { Container } from '@/components/layout/Container/Container'
+import { SocialIconList } from '@/site/components/SocialIconList/SocialIconList'
+import { PageHeader } from '@/components/ui/PageHeader/PageHeader'
+import { SectionHeader } from '@/components/ui/SectionHeader/SectionHeader'
+import { TextLink } from '@/components/ui/TextLink/TextLink'
 import styles from './WorkContent.module.css'
 
 import type { Work } from '../../content/schema'

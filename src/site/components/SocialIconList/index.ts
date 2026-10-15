@@ -1,1 +1,0 @@
-export { SocialIconList } from './SocialIconList'

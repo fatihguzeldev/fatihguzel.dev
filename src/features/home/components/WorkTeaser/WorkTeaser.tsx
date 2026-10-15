@@ -1,6 +1,6 @@
-import { Container } from '@/components/layout/Container'
-import { SectionHeader } from '@/components/ui/SectionHeader'
-import { TextLink } from '@/components/ui/TextLink'
+import { Container } from '@/components/layout/Container/Container'
+import { SectionHeader } from '@/components/ui/SectionHeader/SectionHeader'
+import { TextLink } from '@/components/ui/TextLink/TextLink'
 import styles from './WorkTeaser.module.css'
 import sectionStyles from '../shared/Section.module.css'
 

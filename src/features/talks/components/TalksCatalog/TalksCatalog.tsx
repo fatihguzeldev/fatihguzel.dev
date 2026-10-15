@@ -1,4 +1,4 @@
-import { PageHeader } from '@/components/ui/PageHeader'
+import { PageHeader } from '@/components/ui/PageHeader/PageHeader'
 import { talksPage } from '../../content/page'
 import type { TalkSummary } from '../../content/types'
 import { TalkItem } from '../TalkItem/TalkItem'

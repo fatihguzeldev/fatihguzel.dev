@@ -1,4 +1,4 @@
-import { Container } from '@/components/layout/Container'
+import { Container } from '@/components/layout/Container/Container'
 import { TalksCatalog } from '@/features/talks/components/TalksCatalog/TalksCatalog'
 import { talksPage } from '@/features/talks/content/page'
 import { talkSummaries } from '@/features/talks/content/summaries'
