@@ -8,21 +8,30 @@ fatih guzel is a software engineer interested in systems, distributed systems,
 simplicity, abstractions, performance, product engineering, and the fundamentals
 behind good engineering.
 
-the site contains personal notes, project references, work/contact information,
+the site contains personal notes, project references, talks, work/contact information,
 and writing on engineering, systems, technology, work, and the software industry.
 
 ## projects
 
+- doom in typescript: a browser port of doom, written in typescript with three.js.
+- ring3: a runtime for windows games in the browser, written in rust. it loads exe and dll files, translates x86 machine code into webassembly, and provides its own windows api layer.
 - vemi: a tiny, type-safe markdown compiler used by this site's article pipeline.
 - chrome dino learns to run: a neural-network demo project for chrome's offline dino game.
 - mips processor from first principles: a single-cycle mips processor implementation.
 - stack over papers: an open repository and community around computer science papers.
+- nudge: a lightweight self-motivation daemon that sends randomized, time-blocked messages throughout the day.
+- fauthy: an open-source command-line totp manager with local encryption.
+
+## talks
+
+- [biraz dağıtık düşünelim](https://fatihguzel.dev/talks/biraz-dagitik-dusunelim): a talk in turkish on the theoretical foundations of distributed systems.
 
 ## links
 
 - home: https://fatihguzel.dev
 - articles: https://fatihguzel.dev/articles
 - projects: https://fatihguzel.dev/projects
+- talks: https://fatihguzel.dev/talks
 - work & contact: https://fatihguzel.dev/work
 - github: https://github.com/fatihguzeldev
 - youtube: https://www.youtube.com/@fatihlovestosimplify
