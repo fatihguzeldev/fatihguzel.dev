@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { MouseEvent } from 'react'
 import type { ArticleTableOfContentsItem } from '../../content/schema'
+import { headingIdFromHash } from './heading-hash'
 
 function prefersReducedMotion(): boolean {
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -87,17 +88,17 @@ export function useActiveHeading(items: ArticleTableOfContentsItem[]) {
     }
 
     const syncHashId = () => {
-      const hashId = decodeURIComponent(window.location.hash.slice(1))
+      const hashId = headingIdFromHash(window.location.hash)
 
-      if (!ids.includes(hashId)) return
+      if (!hashId || !ids.includes(hashId)) return
 
       lockedIdRef.current = hashId
       setActiveId(hashId)
       requestUpdateActiveId()
     }
 
-    const hashId = decodeURIComponent(window.location.hash.slice(1))
-    if (ids.includes(hashId)) {
+    const hashId = headingIdFromHash(window.location.hash)
+    if (hashId && ids.includes(hashId)) {
       lockedIdRef.current = hashId
       setActiveId(hashId)
     }
