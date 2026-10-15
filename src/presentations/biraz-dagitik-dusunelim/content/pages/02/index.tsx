@@ -59,6 +59,7 @@ export default function Intro() {
             <li key={contact.platform}>
               <a href={contact.href}>
                 <span className={`profile-icon profile-icon-${contact.platform}`}>
+                  {/* eslint-disable-next-line @next/next/no-img-element -- Keep slide SVG artwork native for browser print. */}
                   <img src={contact.icon.src} alt={contact.platform} />
                 </span>
                 <span>{contact.text}</span>
