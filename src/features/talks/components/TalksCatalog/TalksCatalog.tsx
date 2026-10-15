@@ -1,5 +1,5 @@
 import { PageHeader } from '@/components/ui/PageHeader'
-import { talksDescription } from '../../content/page'
+import { talksPage } from '../../content/page'
 import type { TalkSummary } from '../../content/types'
 import { TalkItem } from '../TalkItem/TalkItem'
 import styles from './TalksCatalog.module.css'
@@ -7,7 +7,7 @@ import styles from './TalksCatalog.module.css'
 export function TalksCatalog({ talks }: { talks: readonly TalkSummary[] }) {
   return (
     <section className={styles.catalog} aria-label="talks">
-      <PageHeader title="talks" description={talksDescription} />
+      <PageHeader title={talksPage.title} description={talksPage.description} />
       {talks.length ? (
         <ol className={styles.list}>
           {talks.map((talk) => (

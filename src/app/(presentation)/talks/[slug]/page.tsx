@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import { TalkPlayer } from '@/features/talks/player/TalkPlayer'
 import { findTalk, talkSummaries } from '@/features/talks/content/summaries'
-import { createMetadata } from '@/lib/seo/metadata'
+import { createMetadata } from '@/site/seo/metadata'
 
 type TalkPageProps = { params: Promise<{ slug: string }> }
 

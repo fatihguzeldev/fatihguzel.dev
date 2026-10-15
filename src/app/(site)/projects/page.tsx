@@ -1,16 +1,16 @@
+import { projectsPage } from '@/features/projects/content/page'
 import { Container } from '@/components/layout/Container'
 import { PageHeader } from '@/components/ui/PageHeader'
 import { ProjectList } from '@/features/projects/components/ProjectList'
 import { loadProjects } from '@/features/projects/content/loader'
-import { createMetadata } from '@/lib/seo/metadata'
-import { BreadcrumbJsonLd, ProjectsCollectionJsonLd } from '@/lib/seo/json-ld'
+import { createMetadata } from '@/site/seo/metadata'
+import { BreadcrumbJsonLd } from '@/site/seo/structured-data/BreadcrumbJsonLd'
+import { ProjectsCollectionJsonLd } from '@/features/projects/seo/ProjectsCollectionJsonLd'
 import styles from './page.module.css'
 
 export const metadata = createMetadata({
-  title: 'projects',
-  description:
-    'selected projects by fatih guzel — open source tools, communities, and products.',
-  path: '/projects',
+  ...projectsPage,
+  description: projectsPage.metadataDescription,
 })
 
 export default function ProjectsPage() {
@@ -26,12 +26,7 @@ export default function ProjectsPage() {
         ]}
       />
       <Container>
-        <PageHeader
-          title="projects"
-          description={
-            "things i've built, shipped, or maintain. open source where possible."
-          }
-        />
+        <PageHeader title={projectsPage.title} description={projectsPage.description} />
         <ProjectList projects={projects} className={styles.list} />
       </Container>
     </main>

@@ -6,8 +6,8 @@ import { Now } from '@/features/home/components/Now'
 import { WorkTeaser } from '@/features/home/components/WorkTeaser'
 import { loadHome } from '@/features/home/content/loader'
 import { loadNow } from '@/features/home/content/now/loader'
-import { createMetadata } from '@/lib/seo/metadata'
-import { ProfilePageJsonLd } from '@/lib/seo/json-ld'
+import { createMetadata } from '@/site/seo/metadata'
+import { ProfilePageJsonLd } from '@/features/home/seo/ProfilePageJsonLd'
 
 export const metadata = createMetadata()
 

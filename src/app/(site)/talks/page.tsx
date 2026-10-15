@@ -1,14 +1,12 @@
 import { Container } from '@/components/layout/Container'
 import { TalksCatalog } from '@/features/talks/components/TalksCatalog/TalksCatalog'
-import { talksDescription } from '@/features/talks/content/page'
+import { talksPage } from '@/features/talks/content/page'
 import { talkSummaries } from '@/features/talks/content/summaries'
-import { createMetadata } from '@/lib/seo/metadata'
+import { createMetadata } from '@/site/seo/metadata'
 import styles from './page.module.css'
 
 export const metadata = createMetadata({
-  title: 'talks',
-  description: talksDescription,
-  path: '/talks',
+  ...talksPage,
 })
 
 export default function TalksPage() {

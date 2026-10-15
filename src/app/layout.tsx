@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, JetBrains_Mono, Space_Grotesk } from 'next/font/google'
 import { getFocusSourceScript } from '@/lib/focus/apply-focus-source'
-import { createMetadata } from '@/lib/seo/metadata'
-import { PersonJsonLd, WebSiteJsonLd } from '@/lib/seo/json-ld'
+import { createMetadata } from '@/site/seo/metadata'
+import { PersonJsonLd, WebSiteJsonLd } from '@/site/seo/structured-data/SiteJsonLd'
 import { getThemeScript } from '@/lib/theme/apply-theme'
 import '@/styles/globals.css'
 

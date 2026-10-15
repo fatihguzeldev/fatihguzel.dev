@@ -1,18 +1,15 @@
+import { articlesPage } from '@/features/articles/content/page'
 import { Container } from '@/components/layout/Container'
 import { PageHeader } from '@/components/ui/PageHeader'
 import { TextLink } from '@/components/ui/TextLink'
 import { ArticleList } from '@/features/articles/components/ArticleList/ArticleList'
 import { loadArticles } from '@/features/articles/content/loader'
-import { createMetadata } from '@/lib/seo/metadata'
-import { ArticlesCollectionJsonLd, BreadcrumbJsonLd } from '@/lib/seo/json-ld'
+import { createMetadata } from '@/site/seo/metadata'
+import { ArticlesCollectionJsonLd } from '@/features/articles/seo/ArticlesCollectionJsonLd'
+import { BreadcrumbJsonLd } from '@/site/seo/structured-data/BreadcrumbJsonLd'
 import styles from './page.module.css'
 
-export const metadata = createMetadata({
-  title: 'articles',
-  description:
-    'notes on engineering, systems, technology, work, and the software industry.',
-  path: '/articles',
-})
+export const metadata = createMetadata(articlesPage)
 
 export default function ArticlesPage() {
   const articles = loadArticles()
@@ -27,10 +24,7 @@ export default function ArticlesPage() {
         ]}
       />
       <Container>
-        <PageHeader
-          title="articles"
-          description="notes on engineering, systems, technology, work, and the software industry."
-        />
+        <PageHeader title={articlesPage.title} description={articlesPage.description} />
         <p className={styles.feed}>
           <TextLink href="/atom.xml" cta ctaVariant="route" routeLabel="/atom.xml">
             follow the writing

@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
-import { loadSite, SITE_URL } from '@/site/content/identity/loader'
-
-const site = loadSite()
-const siteDescription = `${site.tagline}. ${site.description}`
+import { SITE_URL } from '@/site/content/identity/loader'
+import { siteIdentity as site, siteDescription } from './identity'
 
 type PageMetadataOptions = {
   title?: string
@@ -74,8 +72,4 @@ export function createMetadata({
       follow: true,
     },
   }
-}
-
-export function getSite() {
-  return site
 }
