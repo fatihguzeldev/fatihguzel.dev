@@ -4,7 +4,7 @@ import path from 'path'
 import { loadArticles } from '@/features/articles/content/loader'
 import { SITE_URL } from '@/site/content/identity/loader'
 import { talkSummaries } from '@/features/talks/registry/summaries'
-import { loadNow } from '@/content/load-now'
+import { loadNow } from '@/features/home/content/now/loader'
 
 export const dynamic = 'force-static'
 

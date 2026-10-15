@@ -1,6 +1,6 @@
 import { Container } from '@/components/layout/Container'
 import { SectionHeader } from '@/components/ui/SectionHeader'
-import type { Now as NowContent } from '@/content/schemas/now'
+import type { Now as NowContent } from '@/features/home/content/now/schema'
 import styles from './Now.module.css'
 import sectionStyles from '../shared/Section.module.css'
 

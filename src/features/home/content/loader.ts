@@ -1,5 +1,5 @@
-import homeData from '../../content/pages/home.json'
-import { HomeSchema } from './schemas/home'
+import homeData from '../../../../content/pages/home.json'
+import { HomeSchema } from './schema'
 import { loadProjects, loadProjectsBySlugs } from '@/features/projects/content/loader'
 import { loadArticles, loadArticlesBySlugs } from '@/features/articles/content/loader'
 

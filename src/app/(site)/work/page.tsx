@@ -1,11 +1,7 @@
-import { Container } from '@/components/layout/Container'
-import { SocialIconList } from '@/site/components/SocialIconList'
-import { PageHeader } from '@/components/ui/PageHeader'
-import { SectionHeader } from '@/components/ui/SectionHeader'
-import { TextLink } from '@/components/ui/TextLink'
+import { WorkContent } from '@/features/work/components/WorkContent/WorkContent'
 import { loadSite } from '@/site/content/identity/loader'
 import { loadSocials } from '@/site/content/socials/loader'
-import { loadWork } from '@/content/load-work'
+import { loadWork } from '@/features/work/content/loader'
 import { createMetadata } from '@/lib/seo/metadata'
 import { BreadcrumbJsonLd, ContactPageJsonLd } from '@/lib/seo/json-ld'
 import styles from './page.module.css'
@@ -31,37 +27,7 @@ export default function WorkPage() {
           { name: 'work & contact', path: '/work' },
         ]}
       />
-      <Container>
-        <PageHeader
-          title={work.title}
-          availability={work.availability}
-          description={work.description}
-        />
-
-        <section className={styles.section}>
-          <SectionHeader title="ways i can help" />
-          <ul className={styles.services}>
-            {work.services.map((service) => (
-              <li key={service} className={styles.service}>
-                {service}
-              </li>
-            ))}
-          </ul>
-          <p className={styles.servicesNote}>{work.servicesNote}</p>
-        </section>
-
-        <section className={styles.section}>
-          <SectionHeader title="email" />
-          <TextLink href={`mailto:${site.email}`} mono>
-            {site.email}
-          </TextLink>
-        </section>
-
-        <section className={styles.section}>
-          <SectionHeader title="elsewhere" />
-          <SocialIconList socials={socials} />
-        </section>
-      </Container>
+      <WorkContent work={work} site={site} socials={socials} />
     </main>
   )
 }
