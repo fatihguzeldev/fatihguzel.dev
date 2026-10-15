@@ -14,11 +14,13 @@ export function ArticleItem({ article, headingLevel }: ArticleItemProps) {
 
   return (
     <li className={styles.item}>
-      <Heading className={styles.title}>
+      <Heading className={styles.title} lang={article.language}>
         <TextLink href={`/articles/${article.slug}`}>{article.title}</TextLink>
       </Heading>
       <ArticleMetadata article={article} />
-      <p className={styles.description}>{article.description}</p>
+      <p className={styles.description} lang={article.language}>
+        {article.description}
+      </p>
       <ArticleTags tags={article.tags} />
     </li>
   )
