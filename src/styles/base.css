@@ -48,7 +48,7 @@ a:hover {
 
 button:focus-visible,
 a:focus-visible {
-  outline: var(--focus-ring-width) solid var(--accent);
+  outline: var(--focus-ring-width) solid var(--accent-ink);
   outline-offset: var(--focus-ring-offset);
 }
 

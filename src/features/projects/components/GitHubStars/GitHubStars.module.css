@@ -30,12 +30,12 @@
 }
 
 .link:hover {
-  color: var(--accent);
+  color: var(--accent-ink);
   text-decoration: none;
 }
 
 .link:hover .icon {
-  color: var(--accent);
+  color: var(--accent-ink);
   transform: translateY(var(--meta-offset-subtle)) scale(1.08);
 }
 

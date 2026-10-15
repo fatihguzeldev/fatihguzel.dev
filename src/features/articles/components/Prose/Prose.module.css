@@ -6,8 +6,8 @@
   margin: 0;
   color: var(--prose-text);
   font-family: var(--font-body);
-  font-size: var(--text-body);
-  line-height: var(--leading-body);
+  font-size: var(--text-prose);
+  line-height: var(--leading-prose);
   text-transform: none;
 }
 
@@ -96,7 +96,7 @@
 }
 
 .root :global(.prose p) {
-  margin: 0 0 var(--content-body-gap);
+  margin: 0 0 var(--prose-paragraph-gap);
 }
 
 .root :global(.prose a) {
@@ -112,7 +112,7 @@
 }
 
 .root :global(.prose a:hover) {
-  color: var(--accent);
+  color: var(--accent-ink);
   text-decoration-color: var(--accent);
 }
 
@@ -127,7 +127,7 @@
 
 .root :global(.prose ul),
 .root :global(.prose ol) {
-  margin: 0 0 var(--content-body-gap);
+  margin: 0 0 var(--prose-paragraph-gap);
   padding-left: var(--prose-list-indent);
 }
 

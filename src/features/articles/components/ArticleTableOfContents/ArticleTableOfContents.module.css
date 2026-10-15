@@ -31,10 +31,10 @@
   max-width: 100%;
   padding: var(--article-toc-link-padding-block) 0;
   overflow: visible;
-  color: var(--text-faint);
+  color: var(--toc-text);
   font-family: var(--font-mono);
   font-size: var(--text-meta);
-  line-height: var(--leading-ui);
+  line-height: var(--leading-toc);
   letter-spacing: var(--tracking-meta);
   cursor: pointer;
   text-decoration: none;
@@ -75,7 +75,7 @@
 }
 
 .active {
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .active::before {
@@ -85,11 +85,10 @@
 
 .levelThree {
   padding-left: var(--article-toc-nested-indent);
-  color: color-mix(in srgb, var(--text-faint) 82%, transparent);
 }
 
 .levelThree.active {
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 @media (prefers-reduced-motion: reduce) {

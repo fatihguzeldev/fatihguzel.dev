@@ -69,8 +69,8 @@
   height: auto;
   border-radius: 0;
   background: none;
-  color: var(--accent);
-  opacity: var(--opacity-strong);
+  color: var(--accent-ink);
+  opacity: 1;
 }
 
 .ctaRoute:hover::before {

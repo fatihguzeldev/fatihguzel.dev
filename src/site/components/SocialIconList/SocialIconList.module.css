@@ -28,7 +28,7 @@
 }
 
 .link:hover {
-  color: var(--accent);
+  color: var(--accent-ink);
   background: var(--accent-muted);
   text-decoration: none;
 }

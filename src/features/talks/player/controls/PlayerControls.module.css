@@ -28,7 +28,7 @@
     color var(--transition);
 }
 .trigger:hover {
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 .countDivider {
   padding-inline: 0.5rem;
@@ -100,7 +100,7 @@
 .iconButton:hover:not(:disabled),
 .export:hover:not(:disabled) {
   background: var(--accent-muted);
-  color: var(--accent);
+  color: var(--accent-ink);
   text-decoration: none;
 }
 .iconButton:disabled,
@@ -154,7 +154,7 @@
   pointer-events: none;
 }
 .picker select:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--accent-ink);
   outline-offset: 2px;
 }
 .count {
@@ -172,7 +172,7 @@
   border-left: 1px solid var(--border);
 }
 .export {
-  color: var(--accent);
+  color: var(--accent-ink);
   padding-inline: 0.75rem;
 }
 @media (max-width: 64rem) {

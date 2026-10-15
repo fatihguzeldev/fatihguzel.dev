@@ -90,15 +90,18 @@
   --text-prose-h2: clamp(1.25rem, 1.8vw, 1.375rem);
   --text-prose-h3: clamp(1.125rem, 1.35vw, 1.1875rem);
   --text-prose-h4: clamp(1.03125rem, 1.1vw, 1.0625rem);
-  --text-prose-h5: var(--text-body);
+  --text-prose-h5: var(--text-prose);
   --text-prose-h6: var(--text-preview);
   --text-code-label: 0.6875rem;
   --text-ui: 0.875rem;
   --text-preview: 0.9375rem;
   --text-body: 1rem;
+  --text-prose: 1.0625rem;
   --text-meta: 0.8125rem;
 
   --leading-body: 1.6;
+  --leading-prose: 1.65;
+  --leading-toc: 1.45;
   --leading-preview: 1.55;
   --leading-heading: 1.2;
   --leading-heading-tight: 1.25;
@@ -107,7 +110,7 @@
 
   --prose-heading-gap: var(--content-card-gap);
   --prose-heading-measure: var(--measure-prose-heading);
-  --prose-text: color-mix(in srgb, var(--text-muted) 82%, var(--text) 18%);
+  --prose-paragraph-gap: 2rem;
   --prose-h1-gap-before: clamp(2rem, 6vw, 3rem);
   --prose-h1-gap-after: 0.875rem;
   --prose-h2-gap-before: clamp(3rem, 9vw, 4.5rem);

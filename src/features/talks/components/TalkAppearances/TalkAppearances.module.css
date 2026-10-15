@@ -1,6 +1,6 @@
 .eventLink svg {
   flex: none;
-  color: var(--accent);
+  color: var(--accent-ink);
   stroke: currentColor;
   stroke-width: 1.5;
   stroke-linecap: square;

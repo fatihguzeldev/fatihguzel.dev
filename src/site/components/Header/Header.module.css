@@ -84,11 +84,11 @@
   content: '';
 }
 .menuToggle:hover {
-  color: var(--accent);
+  color: var(--accent-ink);
   background: var(--accent-muted);
 }
 .menuToggle:focus-visible {
-  outline: var(--focus-ring-width) solid var(--accent);
+  outline: var(--focus-ring-width) solid var(--accent-ink);
   outline-offset: var(--focus-ring-offset);
 }
 :global(html[data-focus-source='pointer']) .menuToggle:focus-visible {
