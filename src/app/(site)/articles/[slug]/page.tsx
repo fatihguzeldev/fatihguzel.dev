@@ -88,16 +88,21 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           >
             go back
           </TextLink>
-          <h1 className={styles.title}>{article.title}</h1>
+          <h1 className={styles.title} lang={article.language}>
+            {article.title}
+          </h1>
           <ArticleMetadata article={article} variant="detail" />
           <ArticleTags tags={article.tags} variant="detail" />
-          <p className={styles.description}>{article.description}</p>
+          <p className={styles.description} lang={article.language}>
+            {article.description}
+          </p>
         </header>
         <ArticleTableOfContents
           items={article.tableOfContents}
+          lang={article.language}
           className={styles.toc}
         />
-        <Prose html={article.html} className={styles.prose} />
+        <Prose html={article.html} lang={article.language} className={styles.prose} />
       </Container>
     </main>
   )

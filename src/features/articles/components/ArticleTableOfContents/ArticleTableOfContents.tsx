@@ -6,11 +6,13 @@ import styles from './ArticleTableOfContents.module.css'
 
 type ArticleTableOfContentsProps = {
   items: ArticleTableOfContentsItem[]
+  lang: string
   className?: string
 }
 
 export function ArticleTableOfContents({
   items,
+  lang,
   className,
 }: ArticleTableOfContentsProps) {
   const { activeId, navigateToHeading } = useActiveHeading(items)
@@ -22,7 +24,7 @@ export function ArticleTableOfContents({
       className={[styles.root, className].filter(Boolean).join(' ')}
       aria-label="table of contents"
     >
-      <ol className={styles.list}>
+      <ol className={styles.list} lang={lang}>
         {items.map((item) => {
           const isActive = item.id === activeId
 
