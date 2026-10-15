@@ -1,6 +1,35 @@
 {
   "projects": [
     {
+      "slug": "doom-threejs",
+      "name": "doom in typescript",
+      "description": "a browser port of doom, written in typescript with three.js.",
+      "links": [
+        {
+          "label": "play",
+          "href": "https://doom.fatihguzel.dev",
+          "kind": "demo"
+        },
+        {
+          "label": "repository",
+          "href": "https://github.com/fatihguzeldev/doom-threejs",
+          "kind": "github"
+        }
+      ]
+    },
+    {
+      "slug": "ring3",
+      "name": "ring3",
+      "description": "a runtime for windows games in the browser, written in rust. it loads exe and dll files, translates x86 machine code into webassembly, and provides its own windows api layer.",
+      "links": [
+        {
+          "label": "repository",
+          "href": "https://github.com/fatihguzeldev/ring3",
+          "kind": "github"
+        }
+      ]
+    },
+    {
       "slug": "vemi",
       "name": "vemi",
       "description": "a tiny, type-safe markdown compiler. plain text in, html out; it powers the article pipeline on this site.",
