@@ -3,5 +3,5 @@
 }
 
 .list {
-  margin-top: var(--page-list-start-gap);
+  --project-list-margin: var(--page-list-start-gap) 0 0;
 }
