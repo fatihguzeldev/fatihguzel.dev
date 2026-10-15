@@ -1,13 +1,8 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
-import type { ArticleTableOfContentsItem } from '@/content/schemas/article'
-import styles from './ArticleTableOfContents.module.css'
-
-type ArticleTableOfContentsProps = {
-  items: ArticleTableOfContentsItem[]
-  className?: string
-}
+import type { MouseEvent } from 'react'
+import type { ArticleTableOfContentsItem } from '../../content/schema'
 
 function prefersReducedMotion(): boolean {
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -57,10 +52,7 @@ function getCurrentHeadingId(ids: string[]): string | undefined {
   return currentId
 }
 
-export function ArticleTableOfContents({
-  items,
-  className,
-}: ArticleTableOfContentsProps) {
+export function useActiveHeading(items: ArticleTableOfContentsItem[]) {
   const ids = useMemo(() => items.map((item) => item.id), [items])
   const lockedIdRef = useRef<string | undefined>(undefined)
   const [activeId, setActiveId] = useState<string | undefined>(items[0]?.id)
@@ -123,49 +115,19 @@ export function ArticleTableOfContents({
     }
   }, [ids])
 
-  if (!items.length) return null
+  function navigateToHeading(event: MouseEvent<HTMLAnchorElement>, id: string) {
+    const target = document.getElementById(id)
+    if (!target) return
 
-  return (
-    <nav
-      className={[styles.root, className].filter(Boolean).join(' ')}
-      aria-label="table of contents"
-    >
-      <ol className={styles.list}>
-        {items.map((item) => {
-          const isActive = item.id === activeId
+    event.preventDefault()
+    lockedIdRef.current = id
+    setActiveId(id)
+    target.scrollIntoView({
+      block: 'start',
+      behavior: prefersReducedMotion() ? 'auto' : 'smooth',
+    })
+    window.history.pushState(null, '', `#${id}`)
+  }
 
-          return (
-            <li key={item.id}>
-              <a
-                className={[
-                  styles.link,
-                  item.level === 3 ? styles.levelThree : '',
-                  isActive ? styles.active : '',
-                ]
-                  .filter(Boolean)
-                  .join(' ')}
-                href={`#${item.id}`}
-                aria-current={isActive ? 'location' : undefined}
-                onClick={(event) => {
-                  const target = document.getElementById(item.id)
-                  if (!target) return
-
-                  event.preventDefault()
-                  lockedIdRef.current = item.id
-                  setActiveId(item.id)
-                  target.scrollIntoView({
-                    block: 'start',
-                    behavior: prefersReducedMotion() ? 'auto' : 'smooth',
-                  })
-                  window.history.pushState(null, '', `#${item.id}`)
-                }}
-              >
-                <span className={styles.label}>{item.text}</span>
-              </a>
-            </li>
-          )
-        })}
-      </ol>
-    </nav>
-  )
+  return { activeId, navigateToHeading }
 }

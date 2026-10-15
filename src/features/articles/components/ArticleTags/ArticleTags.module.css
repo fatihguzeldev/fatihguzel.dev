@@ -1,0 +1,25 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--meta-gap-row) var(--meta-gap-item);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.preview {
+  margin-top: var(--meta-gap-row);
+}
+
+.tag {
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  letter-spacing: var(--tracking-meta);
+}
+
+.tag::before {
+  content: '#';
+  color: var(--accent);
+  margin-right: var(--tag-prefix-gap);
+}

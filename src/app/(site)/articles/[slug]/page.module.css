@@ -45,48 +45,6 @@
   color: var(--text);
 }
 
-.meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--meta-gap-row) var(--meta-gap-item);
-  margin: 0;
-  font-family: var(--font-mono);
-  font-size: var(--text-meta);
-  letter-spacing: var(--tracking-wide);
-  color: var(--text-faint);
-}
-
-.dot {
-  width: var(--meta-dot-size);
-  height: var(--meta-dot-size);
-  border-radius: 50%;
-  background: var(--accent);
-  transform: translateY(var(--meta-offset-subtle));
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--meta-gap-row) var(--meta-gap-item);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.tag {
-  color: var(--text-faint);
-  font-family: var(--font-mono);
-  font-size: var(--text-meta);
-  letter-spacing: var(--tracking-meta);
-}
-
-.tag::before {
-  content: '#';
-  color: var(--accent);
-  margin-right: var(--tag-prefix-gap);
-}
-
 .description {
   margin: 0;
   font-size: var(--text-body);

@@ -1,4 +1,4 @@
-import { loadArticles } from '@/content/load-articles'
+import { loadArticles } from '@/features/articles/content/loader'
 import { loadSite, SITE_URL } from '@/site/content/identity/loader'
 import { buildAtomFeed } from '@/lib/feed/atom'
 

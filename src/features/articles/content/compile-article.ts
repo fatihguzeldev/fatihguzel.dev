@@ -1,5 +1,6 @@
 import { parseDocument, renderHtml } from '@fatihguzeldev/vemi'
 import type { InlineNode, Root } from '@fatihguzeldev/vemi'
+import type { ArticleTableOfContentsItem } from './schema'
 
 type CompileArticleBodyOptions = {
   filePath?: string
@@ -8,16 +9,10 @@ type CompileArticleBodyOptions = {
 
 type CompiledArticleBody = {
   html: string
-  tableOfContents: CompiledTableOfContentsItem[]
+  tableOfContents: ArticleTableOfContentsItem[]
 }
 
 type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6
-
-type CompiledTableOfContentsItem = {
-  id: string
-  text: string
-  level: 2 | 3
-}
 
 function getErrorMessage(error: unknown): string {
   if (error instanceof Error) return error.message
@@ -88,13 +83,13 @@ function getNextHeadingId(value: string, seenIds: Map<string, number>): string {
 
 function isTableOfContentsLevel(
   level: HeadingLevel,
-): level is CompiledTableOfContentsItem['level'] {
+): level is ArticleTableOfContentsItem['level'] {
   return level === 2 || level === 3
 }
 
-function extractTableOfContents(root: Root): CompiledTableOfContentsItem[] {
+function extractTableOfContents(root: Root): ArticleTableOfContentsItem[] {
   const seenIds = new Map<string, number>()
-  const tableOfContents: CompiledTableOfContentsItem[] = []
+  const tableOfContents: ArticleTableOfContentsItem[] = []
 
   for (const node of root.children) {
     if (node.type !== 'heading') continue

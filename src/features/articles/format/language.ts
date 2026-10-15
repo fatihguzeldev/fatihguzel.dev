@@ -1,4 +1,4 @@
-import type { ArticleFrontmatter } from './schemas/article'
+import type { ArticleFrontmatter } from '../content/schema'
 
 const languageLabels: Record<ArticleFrontmatter['language'], string> = {
   en: 'english',

@@ -1,9 +1,9 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { ArticleFrontmatterSchema } from './schemas/article'
-import type { Article } from './schemas/article'
-import { compileArticleBody } from '@/lib/vemi/compile-article'
+import { ArticleFrontmatterSchema } from './schema'
+import type { Article } from './schema'
+import { compileArticleBody } from './compile-article'
 
 const ARTICLES_DIR = path.join(process.cwd(), 'content/articles')
 const WORDS_PER_MINUTE = 200

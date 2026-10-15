@@ -1,4 +1,4 @@
-import type { Article } from '@/content/schemas/article'
+import type { Article } from '@/features/articles/content/schema'
 
 type BuildAtomFeedOptions = {
   articles: Article[]

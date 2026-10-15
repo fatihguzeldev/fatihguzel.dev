@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import fs from 'fs'
 import path from 'path'
-import { loadArticles } from '@/content/load-articles'
+import { loadArticles } from '@/features/articles/content/loader'
 import { SITE_URL } from '@/site/content/identity/loader'
 import { talkSummaries } from '@/features/talks/registry/summaries'
 import { loadNow } from '@/content/load-now'

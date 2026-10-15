@@ -1,7 +1,8 @@
+import { getShownUpdatedAt } from '@/features/articles/format/publication'
 import { loadSite } from '@/site/content/identity/loader'
 import { loadSocials } from '@/site/content/socials/loader'
 import { SITE_URL } from '@/site/content/identity/loader'
-import type { Article } from '@/content/schemas/article'
+import type { Article } from '@/features/articles/content/schema'
 import type { Project } from '@/content/schemas/project'
 
 const site = loadSite()
@@ -123,11 +124,7 @@ export function ProfilePageJsonLd() {
 export function ArticleJsonLd({ article }: { article: Article }) {
   const articleUrl = `${SITE_URL}/articles/${article.slug}`
   const canonicalUrl = article.canonicalUrl ?? articleUrl
-  const modifiedAt =
-    article.updatedAt &&
-    article.updatedAt.slice(0, 10) !== article.publishedAt.slice(0, 10)
-      ? article.updatedAt
-      : undefined
+  const modifiedAt = getShownUpdatedAt(article)
   const data = {
     '@context': 'https://schema.org',
     '@type': 'Article',
