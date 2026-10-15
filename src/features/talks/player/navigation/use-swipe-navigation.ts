@@ -1,6 +1,7 @@
 'use client'
 
 import { useRef, type PointerEvent } from 'react'
+import { swipePageOffset } from './swipe'
 
 type SwipeStart = { id: number; x: number; y: number }
 
@@ -28,9 +29,8 @@ export function useSwipeNavigation(index: number, go: (index: number) => void) {
 
     const dx = event.clientX - origin.x
     const dy = event.clientY - origin.y
-    const threshold = Math.max(48, event.currentTarget.clientWidth * 0.08)
-    if (Math.abs(dx) < threshold || Math.abs(dx) < Math.abs(dy) * 1.5) return
-    go(index + (dx < 0 ? 1 : -1))
+    const offset = swipePageOffset(dx, dy, event.currentTarget.clientWidth)
+    if (offset) go(index + offset)
   }
 
   const onPointerCancel = () => {

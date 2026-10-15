@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import { loadArticles } from '@/features/articles/content/loader'
 import { SITE_URL } from '@/site/content/identity/loader'
-import { talkSummaries } from '@/features/talks/registry/summaries'
+import { talkSummaries } from '@/features/talks/content/summaries'
 import { loadNow } from '@/features/home/content/now/loader'
 
 export const dynamic = 'force-static'

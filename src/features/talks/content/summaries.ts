@@ -1,5 +1,5 @@
 import distributedThinking from '@/presentations/biraz-dagitik-dusunelim/talk'
-import type { TalkSummary } from '../types'
+import type { TalkSummary } from './types'
 
 export const talkSummaries: readonly TalkSummary[] = [
   {

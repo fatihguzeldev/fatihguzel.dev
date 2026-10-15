@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { useEffect, useRef, useState } from 'react'
 import type { Presentation } from '@/presentations/common/types'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import {
@@ -13,6 +12,7 @@ import {
   ControlsIcon,
   CloseIcon,
 } from '../icons/PlayerIcons'
+import { useControlsPanel } from './use-controls-panel'
 import styles from './PlayerControls.module.css'
 
 type PlayerControlsProps = {
@@ -32,62 +32,12 @@ export function PlayerControls({
   exporting,
   onExport,
 }: PlayerControlsProps) {
-  const [open, setOpen] = useState(false)
-  const region = useRef<HTMLDivElement>(null)
-  const trigger = useRef<HTMLButtonElement>(null)
-  const focusPanel = useRef(false)
+  const { open, region, trigger, closePanel, openPanel, panelEvents } =
+    useControlsPanel()
   const panelId = 'presentation-controls'
 
-  const closePanel = () => {
-    setOpen(false)
-    requestAnimationFrame(() => trigger.current?.focus())
-  }
-
-  useEffect(() => {
-    const dismiss = (event: PointerEvent) => {
-      if (!region.current?.contains(event.target as Node)) setOpen(false)
-    }
-    document.addEventListener('pointerdown', dismiss)
-    return () => document.removeEventListener('pointerdown', dismiss)
-  }, [])
-
-  useEffect(() => {
-    if (open && focusPanel.current) {
-      focusPanel.current = false
-      region.current
-        ?.querySelector<HTMLAnchorElement>('nav a')
-        ?.focus({ preventScroll: true })
-    }
-  }, [open])
-
   return (
-    <div
-      ref={region}
-      className={styles.region}
-      data-open={open}
-      onPointerEnter={(event) => {
-        if (event.pointerType === 'mouse') setOpen(true)
-      }}
-      onPointerLeave={(event) => {
-        if (
-          event.pointerType === 'mouse' &&
-          !document.activeElement?.matches(':focus-visible')
-        )
-          setOpen(false)
-      }}
-      onFocus={(event) => {
-        if (!trigger.current?.contains(event.target as Node)) setOpen(true)
-      }}
-      onBlur={(event) => {
-        if (event.relatedTarget && !event.currentTarget.contains(event.relatedTarget))
-          setOpen(false)
-      }}
-      onKeyDown={(event) => {
-        if (event.key === 'Escape') {
-          closePanel()
-        }
-      }}
-    >
+    <div ref={region} className={styles.region} data-open={open} {...panelEvents}>
       <button
         ref={trigger}
         className={styles.trigger}
@@ -97,10 +47,7 @@ export function PlayerControls({
         aria-controls={panelId}
         aria-hidden={open}
         tabIndex={open ? -1 : 0}
-        onClick={() => {
-          focusPanel.current = true
-          setOpen(true)
-        }}
+        onClick={openPanel}
       >
         <ControlsIcon />
         <span>
