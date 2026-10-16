@@ -1,5 +1,6 @@
 import { Stage } from '../../components/stage/stage'
 import youtube from '../../assets/social/youtube.svg'
+import browser from '../../assets/social/browser.svg'
 import github from '../../assets/social/github.svg'
 import twitter from '../../assets/social/twitter.svg'
 import linkedin from '../../assets/social/linkedin.svg'
@@ -14,6 +15,12 @@ const contacts = [
     icon: youtube,
     href: 'https://www.youtube.com/@fatihlovestosimplify',
     text: 'youtube.com/@fatihlovestosimplify',
+  },
+  {
+    platform: 'website',
+    icon: browser,
+    href: 'https://fatihguzel.dev',
+    text: 'fatihguzel.dev',
   },
   {
     platform: 'github',
