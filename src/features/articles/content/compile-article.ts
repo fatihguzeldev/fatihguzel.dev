@@ -1,6 +1,7 @@
 import { parseDocument, renderHtml } from '@fatihguzeldev/vemi'
 import type { InlineNode, Root } from '@fatihguzeldev/vemi'
 import type { ArticleTableOfContentsItem } from './schema'
+import { formatCodeBlocks } from './format-code-blocks'
 
 type CompileArticleBodyOptions = {
   filePath?: string
@@ -22,27 +23,6 @@ function getErrorMessage(error: unknown): string {
 function getContextLabel({ filePath, slug }: CompileArticleBodyOptions): string {
   const context = [filePath, slug ? `slug "${slug}"` : ''].filter(Boolean)
   return context.length ? ` for ${context.join(', ')}` : ''
-}
-
-function renderCodeLine(line: string, index: number): string {
-  return [
-    '<span class="vemi-code-line">',
-    `<span class="vemi-code-line-number" data-line="${index + 1}" aria-hidden="true"></span>`,
-    `<span class="vemi-code-line-content">${line}</span>`,
-    '</span>',
-  ].join('')
-}
-
-function addCodeBlockLineNumbers(html: string): string {
-  return html.replace(
-    /<pre([^>]*)><code([^>]*)>([\s\S]*?)<\/code><\/pre>/g,
-    (_match, preAttributes: string, codeAttributes: string, code: string) => {
-      const lines = code.split('\n')
-      const numberedCode = lines.map(renderCodeLine).join('')
-
-      return `<pre${preAttributes}><code${codeAttributes}>${numberedCode}</code></pre>`
-    },
-  )
 }
 
 function getInlinePlainText(nodes: InlineNode[]): string {
@@ -122,7 +102,7 @@ export function compileArticleBody(
     })
 
     return {
-      html: addCodeBlockLineNumbers(html),
+      html: formatCodeBlocks(html),
       tableOfContents: extractTableOfContents(root),
     }
   } catch (error) {

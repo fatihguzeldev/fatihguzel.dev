@@ -203,7 +203,7 @@
 }
 
 .root :global(.prose pre::before) {
-  content: 'text';
+  content: attr(data-language);
   position: absolute;
   top: var(--prose-code-label-offset);
   right: var(--prose-code-label-inline-offset);
@@ -217,47 +217,6 @@
 
 .root :global(.prose pre::after) {
   content: none;
-}
-
-.root :global(.prose pre:has(> code.language-ts)::before),
-.root :global(.prose pre:has(> code.language-typescript)::before) {
-  content: 'typescript';
-}
-
-.root :global(.prose pre:has(> code.language-tsx)::before) {
-  content: 'tsx';
-}
-
-.root :global(.prose pre:has(> code.language-js)::before),
-.root :global(.prose pre:has(> code.language-javascript)::before) {
-  content: 'javascript';
-}
-
-.root :global(.prose pre:has(> code.language-jsx)::before) {
-  content: 'jsx';
-}
-
-.root :global(.prose pre:has(> code.language-sh)::before),
-.root :global(.prose pre:has(> code.language-bash)::before),
-.root :global(.prose pre:has(> code.language-shell)::before) {
-  content: 'shell';
-}
-
-.root :global(.prose pre:has(> code.language-json)::before) {
-  content: 'json';
-}
-
-.root :global(.prose pre:has(> code.language-css)::before) {
-  content: 'css';
-}
-
-.root :global(.prose pre:has(> code.language-html)::before) {
-  content: 'html';
-}
-
-.root :global(.prose pre:has(> code.language-md)::before),
-.root :global(.prose pre:has(> code.language-markdown)::before) {
-  content: 'markdown';
 }
 
 .root :global(.prose pre code) {
