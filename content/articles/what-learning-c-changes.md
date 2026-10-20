@@ -46,15 +46,37 @@ if i write all eight bytes straight to the file, the other program reads `A` cor
 
 i need to write the tag and the count in the format we agreed on. the other program has never seen my struct.
 
+for this one record, i can write the five bytes directly to an open file, with the count's least significant byte first (little-endian):
+
+```c
+const unsigned char bytes[] = { 'A', 42, 0, 0, 0 };
+fwrite(bytes, 1, sizeof bytes, file);
+```
+
 ## still the same program
 
-the compiler is following the target's layout conventions here. c allows space between these fields, but it doesn't say that an `int` must have four-byte alignment on every machine. knowing the declaration alone wouldn't have told us where those three bytes came from.
+the compiler is following the target's layout conventions for the struct. c allows space between these fields, but it doesn't say that an `int` must have four-byte alignment on every machine. knowing the declaration alone wouldn't have told us where those three bytes came from.
 
 we can look at the declaration in a c class and study alignment in computer architecture, but i want to be able to explain these eight bytes without treating that as a change of subject. otherwise, it is quite possible to know the answer to both exam questions and still get the file wrong.
 
 and we can keep playing with this without much setup. i can change the declaration, look at the layout again, and try to work out which choices belong to this target and which things [the language actually guarantees](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf).
 
-in another small program, i might go looking for an addition in the generated assembly and find there isn't one. for a signed `int x`, the compiler can turn [`x + 1 > x` into `true`](https://blog.llvm.org/2011/05/what-every-c-programmer-should-know.html). there doesn't have to be an addition or a comparison in the generated code.
+in another small program, i might go looking for an addition in the generated assembly and find there isn't one. for a signed `int x`, the compiler can turn [`x + 1 > x` into `true`](https://blog.llvm.org/2011/05/what-every-c-programmer-should-know.html).
+
+```c
+int increases(int x) {
+    return x + 1 > x;
+}
+```
+
+on the same arm64 mac, apple clang 21.0.0 with optimization enabled (`-O2`) produces this function body:
+
+```asm
+mov w0, #1
+ret
+```
+
+it just returns `1`.
 
 the case that seems to spoil this is when `x` is already the largest value an `int` can hold. i might picture a machine instruction adding one and wrapping around. but c leaves signed integer overflow undefined, so that case gives the compiler no result it has to preserve. for the cases where the expression has defined behavior, the answer is true.
 
