@@ -60,3 +60,10 @@ Supported code labels in the UI include `ts`, `tsx`, `js`, `jsx`, `sh`, `bash`,
 
 Raw HTML-like text is escaped, so write examples as text unless the renderer
 explicitly supports that syntax.
+
+## share images
+
+Every published article gets a share image at `/articles/<slug>/og.png`. The
+1200 × 630 PNG uses the article title, publication date, and first tag when one is
+present. Images are generated during the static build, and article metadata links
+to them automatically. No image field or image syntax is needed in the article.

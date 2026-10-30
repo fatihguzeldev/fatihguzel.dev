@@ -6,13 +6,16 @@ import { ArticleTableOfContents } from '@/features/articles/components/ArticleTa
 import { Prose } from '@/features/articles/components/Prose/Prose'
 import { TextLink } from '@/components/ui/TextLink/TextLink'
 import { getArticleSlugs, loadArticleBySlug } from '@/features/articles/content/loader'
+import {
+  ARTICLE_STATIC_EXPORT_PLACEHOLDER,
+  getArticleStaticParams,
+} from '@/features/articles/content/static-params'
 import { getShownUpdatedAt } from '@/features/articles/format/publication'
 import { createMetadata } from '@/site/seo/metadata'
 import { ArticleJsonLd } from '@/features/articles/seo/ArticleJsonLd'
+import { SHARE_IMAGE_SIZE } from '@/features/articles/share/share-image'
 import { BreadcrumbJsonLd } from '@/site/seo/structured-data/BreadcrumbJsonLd'
 import styles from './page.module.css'
-
-const STATIC_EXPORT_PLACEHOLDER = '__static_export_placeholder__'
 
 type ArticlePageProps = {
   params: Promise<{ slug: string }>
@@ -21,19 +24,13 @@ type ArticlePageProps = {
 export const dynamicParams = false
 
 export function generateStaticParams(): { slug: string }[] {
-  const slugs = getArticleSlugs()
-
-  if (slugs.length === 0) {
-    return [{ slug: STATIC_EXPORT_PLACEHOLDER }]
-  }
-
-  return slugs.map((slug) => ({ slug }))
+  return getArticleStaticParams(getArticleSlugs())
 }
 
 export async function generateMetadata({ params }: ArticlePageProps) {
   const { slug } = await params
 
-  if (slug === STATIC_EXPORT_PLACEHOLDER) {
+  if (slug === ARTICLE_STATIC_EXPORT_PLACEHOLDER) {
     return createMetadata({ title: 'articles', path: '/articles' })
   }
 
@@ -52,13 +49,18 @@ export async function generateMetadata({ params }: ArticlePageProps) {
     updatedAt: getShownUpdatedAt(article),
     tags: article.tags,
     canonicalUrl: article.canonicalUrl,
+    image: {
+      url: `/articles/${article.slug}/og.png`,
+      alt: article.title,
+      ...SHARE_IMAGE_SIZE,
+    },
   })
 }
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
   const { slug } = await params
 
-  if (slug === STATIC_EXPORT_PLACEHOLDER) {
+  if (slug === ARTICLE_STATIC_EXPORT_PLACEHOLDER) {
     notFound()
   }
 

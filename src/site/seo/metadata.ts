@@ -11,6 +11,12 @@ type PageMetadataOptions = {
   updatedAt?: string
   tags?: string[]
   canonicalUrl?: string
+  image?: {
+    url: string
+    alt: string
+    width: number
+    height: number
+  }
 }
 
 export function createMetadata({
@@ -22,6 +28,7 @@ export function createMetadata({
   updatedAt,
   tags,
   canonicalUrl,
+  image,
 }: PageMetadataOptions = {}): Metadata {
   const pageTitle = title ? `${title} · ${site.name}` : site.name
   const url = `${SITE_URL}${path}`
@@ -61,11 +68,13 @@ export function createMetadata({
       ...(publishedAt ? { publishedTime: publishedAt } : {}),
       ...(updatedAt ? { modifiedTime: updatedAt } : {}),
       ...(tags?.length ? { tags } : {}),
+      ...(image ? { images: [image] } : {}),
     },
     twitter: {
-      card: 'summary',
+      card: image ? 'summary_large_image' : 'summary',
       title: pageTitle,
       description,
+      ...(image ? { images: [{ url: image.url, alt: image.alt }] } : {}),
     },
     robots: {
       index: true,
