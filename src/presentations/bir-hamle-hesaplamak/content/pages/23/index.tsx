@@ -10,7 +10,7 @@ import { useSceneReveal } from '../../components/reveal/use-scene-reveal'
 import { Stage } from '../../components/stage/stage'
 import './growth.css'
 
-export const title = 'Dalların çoğalması'
+export const title = 'dalların çoğalması'
 
 const choices = 35
 

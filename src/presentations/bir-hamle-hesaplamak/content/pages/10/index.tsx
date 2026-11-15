@@ -1,7 +1,7 @@
 import { Stage } from '../../components/stage/stage'
 import { PositionRecordsScene } from '../../components/lesson/position-records'
 
-export const title = 'Bir konuma uyan katsayı'
+export const title = 'a3 piyonunun katkısı'
 
 export default function Page10() {
   return (

@@ -5,7 +5,7 @@ import { PositionBoard } from '../../components/graphics/chess-board/position-bo
 import { Stage } from '../../components/stage/stage'
 import './outcome.css'
 
-export const title = 'Oyun sonucundan öğrenmek'
+export const title = 'Leela Chess Zero'
 
 export default function GameOutcomeScene() {
   return (

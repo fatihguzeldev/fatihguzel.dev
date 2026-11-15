@@ -1,7 +1,7 @@
 import { Stage } from '../../components/stage/stage'
 import { FinaleScene } from '../../components/search/finale'
 
-export const title = 'Matın tespiti'
+export const title = 'mat'
 
 export default function Page29() {
   return (

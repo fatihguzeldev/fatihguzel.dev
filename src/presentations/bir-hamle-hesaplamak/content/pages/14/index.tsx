@@ -4,7 +4,7 @@ import { Score } from '../../components/stage/score'
 import { Stage } from '../../components/stage/stage'
 import './source.css'
 
-export const title = 'Hedefleri üreten değerlendirme'
+export const title = 'hedeflerin kaynağı'
 
 export default function TeacherSourceScene() {
   const position = geometryExamples[1]

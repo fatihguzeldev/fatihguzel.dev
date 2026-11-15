@@ -1,7 +1,7 @@
 import { Stage } from '../../components/stage/stage'
 import { ComparisonScene } from '../../components/lesson/comparison'
 
-export const title = 'Konuma verilen değer'
+export const title = 'kime göre neye göre?'
 
 export default function Page04() {
   return (

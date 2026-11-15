@@ -6,7 +6,7 @@ import { PositionBoard } from '../../components/graphics/chess-board/position-bo
 import { Stage } from '../../components/stage/stage'
 import './network.css'
 
-export const title = 'Özelliklerin birlikte etkisi'
+export const title = 'şahı da hesaba katalım'
 
 const signed = (value: number) =>
   value === 0 ? '0' : `${value > 0 ? '+' : '−'}${Math.abs(value).toFixed(2)}`

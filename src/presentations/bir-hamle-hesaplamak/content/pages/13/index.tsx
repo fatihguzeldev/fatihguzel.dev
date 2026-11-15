@@ -5,7 +5,7 @@ import { Score } from '../../components/stage/score'
 import { Stage } from '../../components/stage/stage'
 import './training.css'
 
-export const title = 'Ağın eğitimi'
+export const title = 'ağı eğitelim'
 
 const targetScore = (value: number) => `${value >= 0 ? '+' : ''}${value.toFixed(2)}`
 

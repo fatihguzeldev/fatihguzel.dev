@@ -6,7 +6,7 @@ import { Score } from '../../components/stage/score'
 import { Stage } from '../../components/stage/stage'
 import './king-context.css'
 
-export const title = 'Aynı piyon, başka şah konumu'
+export const title = 'şah c3’te olsaydı?'
 
 const format = (value: number, digits = 2) => value.toFixed(digits).replace('-', '−')
 

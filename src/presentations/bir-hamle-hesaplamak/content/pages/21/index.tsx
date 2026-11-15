@@ -8,7 +8,7 @@ import { useSceneReveal } from '../../components/reveal/use-scene-reveal'
 import { Stage } from '../../components/stage/stage'
 import './comparison.css'
 
-export const title = 'Aynı ağ, farklı arama'
+export const title = 'arama ilerledikçe'
 
 const runs = searchRuns.slice(0, 2)
 

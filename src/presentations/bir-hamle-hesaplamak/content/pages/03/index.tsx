@@ -3,7 +3,7 @@ import portraits from '../../assets/chess-players.png'
 import { Stage } from '../../components/stage/stage'
 import './personal.css'
 
-export const title = 'Satranç ve ben'
+export const title = 'satranç ve ben'
 
 export default function PersonalScene() {
   return (

@@ -4,7 +4,7 @@ import { PositionBoard } from '../../components/graphics/chess-board/position-bo
 import { Stage } from '../../components/stage/stage'
 import './first-rule.css'
 
-export const title = 'İlk sezgi: taşları saymak'
+export const title = 'konuma değer biçelim'
 
 export default function FirstRuleScene() {
   const p = introExamples[0]

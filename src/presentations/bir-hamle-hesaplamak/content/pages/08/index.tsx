@@ -6,7 +6,7 @@ import { Stage } from '../../components/stage/stage'
 import '../../components/lesson/position-layout.css'
 import './target.css'
 
-export const title = 'Hedef: Stockfish’in değerlendirmesi'
+export const title = 'bizim hesap ve Stockfish'
 
 const format = (value: number, digits = 2) => value.toFixed(digits).replace('-', '−')
 

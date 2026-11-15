@@ -3,7 +3,7 @@ import { PositionBoard } from '../../components/graphics/chess-board/position-bo
 import { Stage } from '../../components/stage/stage'
 import './pawn-threat.css'
 
-export const title = 'a3 piyonunun terfi tehdidi'
+export const title = 'bu piyona −1 yetiyor mu?'
 
 const a3 = geometryExamples[1]
 

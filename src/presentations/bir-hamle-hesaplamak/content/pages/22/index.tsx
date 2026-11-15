@@ -6,7 +6,7 @@ import { OperaBoard } from '../../components/search/opera-board'
 import { useSceneReveal } from '../../components/reveal/use-scene-reveal'
 import { Stage } from '../../components/stage/stage'
 
-export const title = 'Arama ağacı ve derinlik'
+export const title = 'arama ağacı ve derinlik'
 
 export default function DepthScene() {
   const { step, root, advance } = useSceneReveal(5)

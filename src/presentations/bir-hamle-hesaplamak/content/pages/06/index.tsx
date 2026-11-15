@@ -1,7 +1,7 @@
 import { Stage } from '../../components/stage/stage'
 import { ComparisonScene } from '../../components/lesson/comparison'
 
-export const title = 'Bir kare farkı'
+export const title = 'piyon a3’te olsaydı?'
 
 export default function Page06() {
   return (

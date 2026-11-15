@@ -5,7 +5,7 @@ import { PositionBoard } from '../../components/graphics/chess-board/position-bo
 import { Stage } from '../../components/stage/stage'
 import './inference.css'
 
-export const title = 'NNUE’nin hızlı güncellemesi'
+export const title = 'aynı hesabı kullanalım'
 
 const contribution = (value: number) =>
   `${value < 0 ? '−' : '+'}${Math.abs(value).toFixed(2)}`

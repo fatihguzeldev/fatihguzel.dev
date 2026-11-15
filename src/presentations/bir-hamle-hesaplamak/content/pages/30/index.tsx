@@ -3,7 +3,7 @@ import presentationQr from '../../assets/qr/presentation.svg'
 import { Stage } from '../../components/stage/stage'
 import './thanks.css'
 
-export const title = 'Teşekkürler'
+export const title = 'teşekkürler'
 
 const presentationUrl = 'https://fatihguzel.dev/talks/bir-hamle-hesaplamak'
 
