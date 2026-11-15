@@ -1,0 +1,46 @@
+.chess-search-comparison {
+  display: grid;
+  grid-template-columns: 760px 816px;
+  gap: 128px;
+  height: 100%;
+  align-items: center;
+}
+.chess-search-comparison-board {
+  display: block;
+  width: 760px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.chess-search-comparison-board:disabled {
+  cursor: default;
+}
+.chess-search-comparison-board:focus-visible {
+  outline: 3px solid var(--chess-accent);
+  outline-offset: 12px;
+}
+.chess-search-comparison-choice {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.chess-search-comparison-choice > .chess-piece {
+  flex-shrink: 0;
+}
+.chess-search-comparison-move {
+  color: var(--chess-accent);
+  font-size: 112px;
+  font-weight: 650;
+  line-height: 1.1;
+  letter-spacing: -4px;
+  white-space: nowrap;
+}
+.chess-search-comparison-choice > .chess-score {
+  margin-left: auto;
+  color: var(--chess-positive);
+  font-size: 128px;
+  letter-spacing: -5px;
+  white-space: nowrap;
+}

@@ -1,0 +1,38 @@
+.chess-move {
+  font-size: 128px;
+  font-weight: 650;
+  color: var(--chess-accent);
+  letter-spacing: -4px;
+}
+
+.chess-reply-copy {
+  gap: 34px;
+}
+
+.chess-reply-move {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.chess-reply-line {
+  display: flex;
+  align-items: baseline;
+  gap: 28px;
+}
+
+.chess-reply-forced {
+  color: var(--chess-text);
+  font-size: 44px;
+  font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+  white-space: nowrap;
+}
+
+.chess-reply-then {
+  color: var(--chess-text);
+  font-size: 36px;
+  line-height: 1.25;
+}

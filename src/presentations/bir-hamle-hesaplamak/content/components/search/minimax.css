@@ -1,0 +1,102 @@
+.chess-decision {
+  display: grid;
+  grid-template-columns: 680px 930px;
+  gap: 94px;
+  height: 100%;
+  align-items: center;
+}
+.chess-decision-position {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.chess-decision-board {
+  display: block;
+  width: 680px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.chess-decision-board:disabled {
+  cursor: default;
+}
+.chess-decision-board:focus-visible {
+  outline: 3px solid var(--chess-accent);
+  outline-offset: 12px;
+}
+.chess-decision-path {
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+  min-height: 60px;
+  font-size: 48px;
+  line-height: 1.25;
+}
+.chess-decision-tree {
+  display: block;
+  width: 930px;
+  height: 900px;
+  overflow: visible;
+  font-family: var(--slide-font);
+}
+.chess-decision-root > path,
+.chess-decision-reply > path {
+  fill: none;
+  stroke: var(--chess-line);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.chess-decision-tree text {
+  fill: var(--chess-text);
+  font-size: 60px;
+  font-weight: 550;
+}
+.chess-decision-branch--selected > .chess-decision-move > text {
+  fill: var(--chess-accent);
+}
+.chess-decision-tree .chess-decision-value,
+.chess-decision-root > text {
+  fill: var(--chess-positive);
+  font-size: 84px;
+  font-weight: 650;
+  letter-spacing: -3px;
+  text-anchor: middle;
+}
+.chess-decision-reply > path {
+  opacity: 1;
+}
+.chess-decision-reply--chosen > path,
+.chess-decision-reply--current > path {
+  opacity: 1;
+  stroke: var(--chess-text);
+}
+.chess-decision-tree .chess-decision-leaf-value {
+  fill: var(--chess-positive);
+  font-size: 64px;
+  font-weight: 600;
+  letter-spacing: -2px;
+  text-anchor: middle;
+}
+.chess-decision-tree .chess-decision-value--negative {
+  fill: var(--chess-negative);
+}
+.chess-decision-reply--unknown > path {
+  stroke-dasharray: 9 12;
+  opacity: 1;
+}
+.chess-decision-reply--unknown > .chess-decision-move {
+  opacity: 0.6;
+}
+.chess-decision-tree .chess-decision-reply--unknown > .chess-decision-leaf-value {
+  fill: var(--chess-muted);
+}
+.chess-decision-tree .chess-decision-cut {
+  stroke: var(--chess-negative);
+  stroke-width: 6;
+  stroke-dasharray: none;
+  opacity: 1;
+}

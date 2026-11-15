@@ -1,0 +1,66 @@
+.chess-finale-candidates,
+.chess-finale-line {
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.chess-finale-move-row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.chess-finale-move-row > .chess-piece {
+  flex-shrink: 0;
+}
+.chess-finale-move-row > p {
+  font-size: 108px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -3.5px;
+  white-space: nowrap;
+}
+.chess-finale-move-row--active > p {
+  color: var(--chess-accent);
+}
+.chess-finale-candidates > li:first-child {
+  opacity: 0.65;
+}
+.chess-finale-proof--compact .chess-finale-line {
+  gap: 22px;
+}
+.chess-finale-proof--compact .chess-finale-move-row > .chess-piece {
+  width: 60px;
+  height: 72px;
+}
+.chess-finale-proof--compact .chess-finale-move-row > p {
+  font-size: 72px;
+  letter-spacing: -2px;
+}
+.chess-finale-outcome {
+  min-height: 196px;
+  margin-top: 64px;
+  color: var(--chess-accent);
+  font-size: 178px;
+  font-weight: 650;
+  line-height: 1.1;
+  letter-spacing: -6px;
+}
+.chess-finale-board {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.chess-finale-board:disabled {
+  cursor: default;
+}
+.chess-finale-board:focus-visible {
+  outline: 3px solid var(--chess-accent);
+  outline-offset: 12px;
+}

@@ -1,0 +1,44 @@
+.chess-growth-action {
+  font: inherit;
+  text-align: left;
+}
+.chess-growth-calculation {
+  display: grid;
+  grid-template-rows: 100px 170px 170px;
+  gap: 60px;
+  align-content: center;
+  height: 860px;
+}
+.chess-growth-assumption {
+  align-self: center;
+  font-size: 56px;
+  font-weight: 550;
+  line-height: 1.15;
+  letter-spacing: -1.7px;
+}
+.chess-growth-assumption > strong {
+  color: var(--chess-accent);
+}
+.chess-growth-count > span {
+  display: block;
+  font-size: 36px;
+  line-height: 1.25;
+}
+.chess-growth-count > strong {
+  display: block;
+  margin-top: 18px;
+  color: var(--chess-accent);
+  font-size: 100px;
+  line-height: 1.1;
+  letter-spacing: -4px;
+  white-space: nowrap;
+}
+.chess-growth-move > text {
+  fill: var(--chess-text);
+  font-size: 48px;
+  font-weight: 550;
+  letter-spacing: -1.2px;
+}
+.chess-growth-move--selected > text {
+  fill: var(--chess-accent);
+}

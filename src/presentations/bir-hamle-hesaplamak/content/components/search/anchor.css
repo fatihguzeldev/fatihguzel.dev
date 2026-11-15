@@ -1,0 +1,31 @@
+.chess-position-credit {
+  font-size: 30px;
+  color: var(--chess-muted);
+  margin-top: 90px !important;
+}
+
+.chess-search-return {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 64px;
+  margin: 0;
+}
+
+.chess-search-return dt {
+  margin-bottom: 20px;
+  font-size: 32px;
+  line-height: 1.25;
+  color: var(--chess-muted);
+}
+
+.chess-search-return dd {
+  margin: 0;
+  font-size: 112px;
+  font-weight: 650;
+  line-height: 1.1;
+  letter-spacing: -4px;
+}
+
+.chess-search-return > div:last-child dd {
+  color: var(--chess-accent);
+}

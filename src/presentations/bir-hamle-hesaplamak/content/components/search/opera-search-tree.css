@@ -1,0 +1,66 @@
+.chess-depth {
+  display: grid;
+  grid-template-columns: 760px 848px;
+  gap: 96px;
+  height: 100%;
+  align-items: center;
+}
+.chess-depth-board {
+  display: block;
+  width: 760px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.chess-depth-board:disabled {
+  cursor: default;
+}
+.chess-depth-board:focus-visible {
+  outline: 3px solid var(--chess-accent);
+  outline-offset: 12px;
+}
+.chess-depth-tree {
+  display: block;
+  width: 848px;
+  height: 860px;
+  font-family: var(--slide-font);
+}
+.chess-depth-root {
+  fill: var(--chess-text);
+}
+.chess-depth-branch {
+  stroke: var(--chess-line);
+  stroke-width: 3;
+  stroke-linecap: round;
+  fill: none;
+}
+.chess-depth-branch--selected {
+  stroke: var(--chess-accent);
+}
+.chess-depth-move > text {
+  fill: var(--chess-text);
+  font-size: 68px;
+  font-weight: 550;
+  letter-spacing: -2px;
+}
+.chess-depth-move--selected > text {
+  fill: var(--chess-accent);
+}
+.chess-depth-scale text {
+  fill: var(--chess-text);
+  font-size: 36px;
+  font-weight: 450;
+}
+.chess-depth-scale .chess-depth-count {
+  fill: var(--chess-accent);
+  font-size: 64px;
+  font-weight: 600;
+  text-anchor: middle;
+}
+.chess-depth-scale path {
+  fill: none;
+  stroke: var(--chess-line);
+  stroke-width: 2;
+}
