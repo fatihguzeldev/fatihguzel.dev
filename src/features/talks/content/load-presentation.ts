@@ -1,6 +1,7 @@
 import type { Presentation } from '@/presentations/common/model/types'
 
 const loaders: Record<string, () => Promise<{ default: Presentation }>> = {
+  'bir-hamle-hesaplamak': () => import('@/presentations/bir-hamle-hesaplamak'),
   'biraz-dagitik-dusunelim': () => import('@/presentations/biraz-dagitik-dusunelim'),
 }
 

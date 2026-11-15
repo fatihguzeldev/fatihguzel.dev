@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation'
 import { TalkPlayer } from '@/features/talks/player/TalkPlayer'
 import { findTalk, talkSummaries } from '@/features/talks/content/summaries'
 import { createMetadata } from '@/site/seo/metadata'
+// Keep the talk's scoped styles mounted across native-history slide navigation.
+import '@/presentations/bir-hamle-hesaplamak/styles.css'
 
 type TalkPageProps = { params: Promise<{ slug: string }> }
 

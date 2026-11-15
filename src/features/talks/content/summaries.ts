@@ -1,7 +1,15 @@
 import distributedThinking from '@/presentations/biraz-dagitik-dusunelim/talk'
+import calculatingAMove from '@/presentations/bir-hamle-hesaplamak/talk'
 import type { TalkSummary } from './types'
 
 export const talkSummaries: readonly TalkSummary[] = [
+  {
+    slug: 'bir-hamle-hesaplamak',
+    title: calculatingAMove.title,
+    description: calculatingAMove.description ?? '',
+    language: calculatingAMove.language ?? 'tr',
+    appearances: [],
+  },
   {
     slug: 'biraz-dagitik-dusunelim',
     title: distributedThinking.title,
