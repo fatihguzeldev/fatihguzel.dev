@@ -1,0 +1,88 @@
+.chess-profile {
+  display: grid;
+  grid-template-columns: 700px 1fr;
+  align-items: center;
+  gap: 128px;
+  height: 100%;
+}
+
+.chess-profile-person h1 {
+  color: var(--chess-accent);
+  font-size: 120px;
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -4px;
+  white-space: nowrap;
+}
+
+.chess-profile-interests {
+  display: grid;
+  gap: 12px;
+  margin: 64px 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--chess-muted);
+  font-size: 40px;
+  line-height: 1.35;
+}
+
+.chess-profile-links {
+  display: grid;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chess-profile-links a {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  align-items: center;
+  gap: 28px;
+  color: var(--chess-text);
+  font-size: 32px;
+  line-height: 1.35;
+  letter-spacing: 0;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.chess-profile-icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+}
+
+.chess-profile-icon img {
+  display: block;
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.chess-profile-icon--youtube img {
+  width: 64px;
+  height: 64px;
+}
+
+.chess-profile-icon--linkedin img {
+  width: 48px;
+  height: 48px;
+}
+
+.chess-profile-icon--mail img {
+  width: 60px;
+  height: 60px;
+}
+
+.chess-profile-links a:hover > span:last-child {
+  text-decoration: underline;
+  text-decoration-color: var(--chess-accent);
+  text-underline-offset: 8px;
+}
+
+.chess-profile-links a:focus-visible {
+  outline: 3px solid var(--chess-accent);
+  outline-offset: 12px;
+}

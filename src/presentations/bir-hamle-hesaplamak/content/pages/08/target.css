@@ -1,0 +1,30 @@
+.chess-lesson-target-values {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.chess-lesson-target-values > div > span {
+  font-size: 32px;
+  color: var(--chess-muted);
+}
+
+.chess-lesson-target-values > div > strong,
+.chess-lesson-target-values .chess-score {
+  display: block;
+  font-size: 146px;
+  font-weight: 650;
+  letter-spacing: -6px;
+  line-height: 1.2;
+}
+
+.chess-lesson-difference {
+  font-size: 34px;
+  color: var(--chess-muted);
+}
+
+.chess-lesson-difference strong {
+  color: var(--chess-text);
+  font-size: 49px;
+  margin-left: 24px;
+}

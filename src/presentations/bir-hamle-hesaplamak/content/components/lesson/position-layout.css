@@ -1,0 +1,12 @@
+.chess-lesson-records-layout,
+.chess-lesson-target-layout {
+  display: grid;
+  grid-template-columns: 770px 1fr;
+  gap: 150px;
+  align-items: center;
+  height: 100%;
+}
+
+.chess-lesson-board {
+  width: 770px;
+}

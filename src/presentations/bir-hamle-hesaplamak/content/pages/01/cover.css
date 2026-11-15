@@ -1,0 +1,64 @@
+.chess-scene--cover {
+  padding: 0;
+  background: var(--chess-green);
+  color: var(--chess-ink);
+}
+
+.chess-cover {
+  position: relative;
+  height: 100%;
+  padding: 138px 108px 90px;
+}
+
+.chess-cover h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 188px;
+  font-weight: 800;
+  line-height: 0.99;
+  letter-spacing: -10px;
+  font-variation-settings: 'wdth' 94;
+}
+
+.chess-cover-author {
+  position: absolute;
+  bottom: 90px;
+  left: 116px;
+  font-size: 43px;
+  font-weight: 550;
+  letter-spacing: -1.3px;
+}
+
+.chess-cover-art {
+  position: absolute;
+  right: 57px;
+  top: 0;
+  width: 860px;
+  height: 100%;
+}
+
+.chess-cover-knight {
+  position: absolute;
+  width: 480px;
+  height: 576px;
+  bottom: 66px;
+  right: 0;
+  transform: rotate(4deg);
+}
+
+.chess-cover-bishop {
+  position: absolute;
+  width: 380px;
+  height: 456px;
+  right: 400px;
+  bottom: 548px;
+  transform: rotate(-6deg);
+}
+
+.chess-cover .chess-piece--black {
+  --piece-outline: var(--chess-ink);
+}
+
+.chess-cover .chess-piece--black .chess-piece-detail {
+  stroke: var(--chess-green);
+}

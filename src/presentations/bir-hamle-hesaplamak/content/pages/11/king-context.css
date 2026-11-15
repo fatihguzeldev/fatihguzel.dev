@@ -1,0 +1,38 @@
+.chess-lesson-context {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 110px;
+  align-content: center;
+}
+
+.chess-lesson-context-position {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.chess-lesson-context-board {
+  width: 560px;
+}
+
+.chess-lesson-context-value {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.chess-lesson-context-value > span {
+  color: var(--chess-muted);
+  font-size: 28px;
+}
+
+.chess-lesson-context-value > strong,
+.chess-lesson-context-value > .chess-score {
+  font-size: 66px;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  font-weight: 600;
+}

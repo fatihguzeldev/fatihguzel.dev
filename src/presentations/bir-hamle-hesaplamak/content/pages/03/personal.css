@@ -1,0 +1,25 @@
+.chess-scene--chess-and-me .chess-heading {
+  height: 178px;
+}
+
+.chess-scene--chess-and-me .chess-heading h1 {
+  font-size: 132px;
+  letter-spacing: -5px;
+}
+
+.chess-scene--chess-and-me .chess-scene-content {
+  height: calc(100% - 178px);
+}
+
+.chess-portraits {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.chess-portraits img {
+  width: 100%;
+  height: auto;
+  max-height: 640px;
+  object-fit: contain;
+}

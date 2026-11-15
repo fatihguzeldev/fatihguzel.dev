@@ -1,0 +1,36 @@
+.chess-scene--pawn-threat {
+  padding-bottom: 32px;
+}
+
+.chess-scene--pawn-threat .chess-heading {
+  height: 90px;
+}
+
+.chess-scene--pawn-threat .chess-heading + .chess-scene-content {
+  display: grid;
+  place-items: center;
+  height: calc(100% - 90px);
+}
+
+.chess-lesson-threat-layout {
+  position: relative;
+  width: 830px;
+  height: auto;
+  margin: 0;
+  display: block;
+}
+
+.chess-lesson-threat-board {
+  width: 100%;
+}
+
+.chess-lesson-threat-layout > figcaption {
+  position: absolute;
+  right: calc(100% + 24px);
+  bottom: 31px;
+  padding-left: 0;
+  white-space: nowrap;
+  color: var(--chess-text);
+  font-size: 34px;
+  line-height: 1.25;
+}

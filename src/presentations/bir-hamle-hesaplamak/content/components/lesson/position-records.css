@@ -1,0 +1,55 @@
+.chess-lesson-records {
+  padding: 0 35px;
+}
+
+.chess-lesson-record {
+  display: grid;
+  grid-template-columns: 90px 100px 50px minmax(320px, 1fr);
+  align-items: center;
+  gap: 20px;
+  height: 108px;
+  font-size: 54px;
+}
+
+.chess-lesson-record-arrow {
+  color: var(--chess-muted);
+  font-size: 42px;
+}
+
+.chess-lesson-record strong {
+  text-align: right;
+  font-weight: 550;
+}
+
+.chess-lesson-record--selected {
+  color: var(--chess-accent);
+}
+
+.chess-lesson-record-sum {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-top: 2px solid var(--chess-line);
+  padding-top: 30px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.chess-lesson-record-sum span {
+  font-size: 30px;
+  color: var(--chess-muted);
+}
+
+.chess-lesson-record-sum strong {
+  font-size: 80px;
+  letter-spacing: -3px;
+}
+
+.chess-lesson-record-change {
+  color: var(--chess-accent);
+  font-size: 60px;
+}
+
+.chess-lesson-records--fitted .chess-lesson-record-sum {
+  justify-content: flex-end;
+}

@@ -1,0 +1,58 @@
+.chess-thanks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-top: 64px;
+}
+
+.chess-thanks h1 {
+  color: var(--chess-accent);
+  font-size: 208px;
+  font-weight: 650;
+  line-height: 1.03;
+  letter-spacing: -8px;
+}
+
+.chess-thanks-share {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+.chess-thanks-share a {
+  color: var(--chess-text);
+  text-decoration: none;
+}
+
+.chess-thanks-address {
+  display: block;
+  margin-bottom: 24px;
+  font-size: 60px;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+}
+
+.chess-thanks-qr {
+  display: block;
+  flex: 0 0 440px;
+}
+
+.chess-thanks-qr img {
+  display: block;
+  width: 440px;
+  height: 440px;
+  border-radius: 16px;
+}
+
+.chess-thanks-address:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--chess-accent);
+  text-underline-offset: 10px;
+}
+
+.chess-thanks-share a:focus-visible {
+  outline: 3px solid var(--chess-accent);
+  outline-offset: 16px;
+}

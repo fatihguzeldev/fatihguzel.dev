@@ -1,0 +1,17 @@
+.chess-pawn-count {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-self: center;
+  gap: 35px;
+}
+
+.chess-pawn-count > div {
+  display: flex;
+  gap: 25px;
+}
+
+.chess-pawn-count .chess-piece {
+  width: 115px;
+  height: 138px;
+}

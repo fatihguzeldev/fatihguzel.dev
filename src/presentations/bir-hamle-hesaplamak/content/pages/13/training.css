@@ -1,0 +1,94 @@
+.chess-learned {
+  display: grid;
+  grid-template-columns: 1102px 102px 500px;
+  height: 100%;
+}
+
+.chess-learned-targets,
+.chess-learned-records {
+  display: grid;
+  grid-template-rows: 43px 1fr;
+  gap: 24px;
+  min-width: 0;
+}
+
+.chess-learned-heading {
+  margin: 0;
+  color: var(--chess-muted);
+  font-size: 34px;
+  font-weight: 450;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.chess-learned-examples {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  gap: 102px;
+  align-items: center;
+}
+
+.chess-learned-example {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.chess-learned-board {
+  width: 500px;
+}
+
+.chess-learned-example > .chess-score {
+  font-size: 108px;
+  line-height: 1.1;
+  letter-spacing: -4px;
+}
+
+.chess-learned-arrow {
+  display: block;
+  width: 102px;
+  height: 100%;
+  fill: none;
+  stroke: var(--chess-accent);
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.chess-learned-record-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 56px;
+}
+
+.chess-learned-record {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.chess-learned-pieces {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  min-height: 88px;
+}
+
+.chess-learned-piece {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 40px;
+}
+
+.chess-learned-record > strong {
+  color: var(--chess-accent);
+  font-size: 100px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -3px;
+}
