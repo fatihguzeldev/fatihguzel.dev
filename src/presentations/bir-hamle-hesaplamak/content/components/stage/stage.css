@@ -1,0 +1,128 @@
+.chess-talk,
+.chess-surface--dark {
+  --chess-surface: var(--chess-ink);
+  --chess-text: var(--chess-ivory);
+  --chess-muted: var(--chess-on-dark-muted);
+  --chess-accent: var(--chess-green);
+  --chess-positive: var(--chess-green);
+  --chess-negative: var(--chess-coral);
+  --chess-line: var(--chess-on-dark-line);
+}
+
+.chess-talk.chess-surface--green {
+  --chess-surface: var(--chess-green);
+  --chess-text: var(--chess-ink);
+  --chess-muted: var(--chess-on-green-muted);
+  --chess-accent: var(--chess-on-green-accent);
+  --chess-positive: var(--chess-on-green-accent);
+  --chess-negative: var(--chess-on-green-negative);
+  --chess-line: var(--chess-on-green-line);
+}
+
+.chess-talk {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 76px 108px 72px;
+  overflow: hidden;
+  background: var(--chess-surface);
+  color: var(--chess-text);
+  font-family: var(--slide-font);
+  font-size: 36px;
+  font-weight: 450;
+  line-height: 1.25;
+  letter-spacing: -0.6px;
+  font-variant-numeric: tabular-nums;
+  font-optical-sizing: auto;
+}
+
+.chess-talk *,
+.chess-talk *::before,
+.chess-talk *::after {
+  box-sizing: border-box;
+}
+
+.chess-talk :where(h1, p) {
+  margin: 0;
+}
+
+.chess-talk strong {
+  font-weight: 650;
+}
+
+.chess-talk .chess-green {
+  color: var(--chess-accent);
+}
+
+.chess-talk .chess-coral {
+  color: var(--chess-negative);
+}
+
+.chess-heading {
+  height: 126px;
+  position: relative;
+  z-index: 2;
+}
+
+.chess-heading h1 {
+  max-width: 1650px;
+  font-size: 76px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -2.7px;
+}
+
+.chess-scene-content {
+  position: relative;
+  height: 100%;
+}
+
+.chess-heading + .chess-scene-content {
+  height: calc(100% - 126px);
+}
+
+.chess-context {
+  display: block;
+  font-size: 32px;
+  color: var(--chess-muted);
+}
+
+.chess-score {
+  font-size: 142px;
+  font-weight: 650;
+  letter-spacing: -6px;
+  line-height: 1.15;
+}
+
+.chess-score--positive {
+  color: var(--chess-positive);
+}
+
+.chess-score--negative {
+  color: var(--chess-negative);
+}
+
+.chess-position-layout {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 720px 1fr;
+  column-gap: 120px;
+  align-items: center;
+}
+
+.chess-position-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 26px;
+  padding-left: 20px;
+}
+
+.chess-main-board {
+  width: 850px;
+  justify-self: end;
+}
+
+.chess-heading + .chess-scene-content .chess-main-board {
+  width: 775px;
+}

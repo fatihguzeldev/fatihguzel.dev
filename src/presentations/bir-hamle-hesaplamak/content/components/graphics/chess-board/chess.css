@@ -1,0 +1,90 @@
+.chess-piece {
+  display: block;
+  overflow: visible;
+}
+
+.chess-piece--white {
+  --piece-fill: var(--chess-ivory, #f4efe3);
+  --piece-outline: var(--chess-ink, #202522);
+}
+
+.chess-piece--black {
+  --piece-fill: var(--chess-ink, #202522);
+  --piece-outline: var(--chess-ivory, #f4efe3);
+}
+
+.chess-piece-drawing {
+  fill: var(--piece-fill);
+  stroke: var(--piece-outline);
+  stroke-width: 3.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.chess-piece-detail {
+  fill: none;
+  stroke-width: 2.4;
+}
+
+.chess-board {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.chess-board-edge {
+  fill: var(--chess-ink, #202522);
+  stroke: var(--chess-square-light, #bac8b5);
+  stroke-width: 1;
+}
+
+.chess-square-light {
+  fill: var(--chess-square-light, #bac8b5);
+}
+
+.chess-square-dark {
+  fill: var(--chess-square-dark, #49654f);
+}
+
+.chess-board-coordinate {
+  fill: var(--chess-text, #f4efe3);
+  font-family: var(--slide-font, 'Bricolage Grotesque', sans-serif);
+  font-size: 23px;
+  font-weight: 550;
+  text-anchor: middle;
+}
+
+.chess-board-highlight {
+  fill: none;
+  stroke: var(--chess-coral, #f2a27e);
+  stroke-width: 5;
+}
+
+.chess-board-highlight-edge {
+  fill: none;
+  stroke: var(--chess-ink, #202522);
+  stroke-width: 10;
+}
+
+.chess-board-arrow {
+  fill: var(--chess-berry, #8b3155);
+  stroke: var(--chess-ivory, #f4efe3);
+  stroke-width: 3;
+  stroke-linejoin: round;
+  opacity: 0.94;
+}
+
+.chess-board-turn {
+  stroke-width: 2;
+}
+
+.chess-board-turn--white {
+  fill: var(--chess-ivory, #f4efe3);
+  stroke: var(--chess-ink, #202522);
+}
+
+.chess-board-turn--black {
+  fill: var(--chess-ink, #202522);
+  stroke: var(--chess-ivory, #f4efe3);
+}
