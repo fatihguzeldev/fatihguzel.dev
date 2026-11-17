@@ -14,7 +14,7 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "next typegen && tsc --noEmit",
     "audit:prod": "npm audit --omit=dev --audit-level=moderate",
     "prepare": "husky",
     "test": "tsx --test \"src/**/*.test.{ts,mts}\""
