@@ -10,7 +10,7 @@ draft: false
 
 bu senenin başlarında yakın bir arkadaşımla yazılım sektörünü, mevcut gelişmeleri ve olası gidişatları konuşuyorduk. konu çok klasik bir şekilde yapay zekadan ve kodu elle yazmıyor olmamızdan açılmıştı. epey hararetli bir tartışmaydı, sürekli başka konulara saptık ve olay sonunda insanın ne olduğuna, nasıl düşündüğüne geldi.
 
-yapay zekayı konuşurken kullandığımız kelimeler de insan üzerinden geliyor zaten. genelde hep _öğreniyor_, _anlıyor_, _düşünüyor_ gibi kelimeler kullanıyoruz. bunların ne kadar uygun ifadeler olduğunu uzunca tartışabiliriz. çünkü bir modelin bir şeyleri gerçekten anlayıp anlamadığını konuşmak istediğimizde, bir insanın bir şeyi _anlamış_ olduğuna nasıl karar verdiğini de düşünmemiz gerekiyor.
+yapay zekayı konuşurken kullandığımız kelimeler de insan üzerinden geliyor zaten. genelde hep _öğreniyor_, _anlıyor_, _düşünüyor_ gibi kelimeler kullanıyoruz. bunların ne kadar uygun ifadeler olduğunu uzunca tartışabiliriz. çünkü bir modelin bir şeyleri gerçekten anlayıp anlamadığını konuşmak istediğimizde, bir insanın bir şeyi _anlamış_ olduğuna nasıl karar verdiğimizi de düşünmemiz gerekiyor.
 
 mesela birisine bir şey anlattığımda bana söylediklerimi tekrar edebilmesini mi bekliyorum? yoksa anlattığım şeyi kendi cümleleriyle açıklayabilmesini mi? ya da aynı bilgiyi daha önce tartışmadığımız bir durumda kullanabilirse _anlamış_ olduğunu söyleyebilir miyim? kısacası neyi yeterli bulduğum, anlatmaya çalıştığım şeye göre de değişiyor.
 
@@ -36,7 +36,7 @@ unvanları bir kenara bırakıp yapılan şeylere baktığımızda birbirinden u
 
 > tam olarak hangi faaliyet için, nasıl özelliklere sahip bir şey arıyorum?
 
-buna _işleri modellemek_ diyorum. bir işte neyin yapılmasını istediğimizi, hangi bilginin ve kaynakların kullanılabileceğini, hangi koşullara uyulacağını ve sonuçları nasıl değerlendireceğimiz belirginleştikçe, işi başka türlü gerçekleştirme seçenekleri doğuyor. ve işi modelleyebildiğimiz için bunları inceleyip değerlendirebiliyoruz.
+buna _işleri modellemek_ diyorum. bir işte neyin yapılmasını istediğimiz, hangi bilginin ve kaynakların kullanılabileceği, hangi koşullara uyulacağı ve sonuçları nasıl değerlendireceğimiz belirginleştikçe, işi başka türlü gerçekleştirme seçenekleri doğuyor. ve işi modelleyebildiğimiz için bunları inceleyip değerlendirebiliyoruz.
 
 işleri modellerken çözüm yöntemini bulabildiğimiz parçaları uzun zamandır başka şeylere devrediyoruz. buna yapay zeka ile başlamadık. fiziksel gücümüzü gerektiren işler için araçlar geliştirdik; hesaplama, kayıt tutma ve bilgi aktarma gibi uğraşların çeşitli parçalarını da makinelere ve yazılımlara bıraktık.
 
@@ -76,7 +76,7 @@ yani benle alakalı bir şey değişmediği halde **sunduğum hizmetlerin piyasa
 
 işin en üzücü ve stresli tarafı, karşılık bulamadığımızda neyi değiştirmemiz gerektiğini her zaman bilememek. gerçekten eksik miyim? yaptıklarımı yeterince iyi anlatamadım mı? yanlış yere mi başvuruyorum? yoksa bu aralar uygun bir fırsat mı yok? bir reddedilme bunları tek başına açıklamıyor. yine de sonraki adım hakkında karar vermem gerekiyor. neyi öğrenmeye, neyi üretmeye ve nereye ulaşmaya çalışacağıma bu bilinmezlerin içinde karar veriyorum.
 
-her ne kadar dalga geçilen bir durum olsa da _kendimi geliştirmeyi_ bütün bu ilişkilerin, bilinmezlerin merkezine koyuyorum. çünkü elimden gelen tek şey bu. yaptığım işi daha iyi yapmak, sunabildiğim şeyleri genişletmek, daha önce üstlenmediğim sorumlulukları üstlenmek. hangi yönde gelişeceğime de vizyonumla, gördüğüm ihtiyaçlardan, denemelerim ve karşılaştığım sonuçlardan karar veriyorum. fakat _öğrenmek zaman alıyor. çok zaman alıyor._ bugün var olduğunu düşündüğüm bir ihtiyacı karşılayabilir hale geldiğimde koşullar bambaşka olabilir. bir yandan gelişmeye çalışırken diğer yandan bunların karşılığını nerede ve nasıl bulabileceğimi sürekli düşünmem lazım.
+her ne kadar dalga geçilen bir durum olsa da _kendimi geliştirmeyi_ bütün bu ilişkilerin, bilinmezlerin merkezine koyuyorum. çünkü elimden gelen tek şey bu. yaptığım işi daha iyi yapmak, sunabildiğim şeyleri genişletmek, daha önce üstlenmediğim sorumlulukları üstlenmek. hangi yönde gelişeceğime de vizyonuma, gördüğüm ihtiyaçlara, denemelerime ve karşılaştığım sonuçlara göre karar veriyorum. fakat _öğrenmek zaman alıyor. çok zaman alıyor._ bugün var olduğunu düşündüğüm bir ihtiyacı karşılayabilir hale geldiğimde koşullar bambaşka olabilir. bir yandan gelişmeye çalışırken diğer yandan bunların karşılığını nerede ve nasıl bulabileceğimi sürekli düşünmem lazım.
 
 ## pardon, siz de mi mühendissiniz?
 
@@ -116,7 +116,7 @@ barın yükselmesi yalnızca _daha zor teknik konular_ ile uğraşmak değil. ba
 
 ben bu barın bir süre daha yükselip bazı alanlarda gevşeyip dengeleneceğini düşünüyorum. sürekli yeni ihtiyaçların doğuyor olması bazı alanlarda bu baskıyı azaltabilir. yeni ihtiyaçlar yeterince karşılanamadığında farklı deneyim seviyesindeki insanların katkı sunabileceği alanlar, yeni sandalyeler oluşuyor. bütün bunların gerçekleşmesi, yeni işlerin ne ölçüde insan emeği gerektirdiğine ve bu işleri yapabilecek insanların ne kadar hızlı yetişeceğine bağlı.
 
-kendimi geliştirirken yalnızca bugün ortaya çıkarabildiğim sonuca bakmak eksik geliyor. o sonucu hangi bilgimle üretiyorum, hangi kısmını kullandığım araç gerçekleştiriyor, nerede gerçekten müdahale etmem gerekiyor? araçlar geliştiğinde aynı sonucu elde etmek için gereken katkım da azalabilir. bu yüzden bir alanda nişleşirken orada öğrenilecek çok şey olduğu kadar öğrendiklerimin hangi problemlerde işe yarayacağını ve bu problemlerle uğraşma biçimimin nasıl değişebileceğini de öngörmem gerekiyor.
+kendimi geliştirirken yalnızca bugün ortaya çıkarabildiğim sonuca bakmak eksik geliyor. o sonucu hangi bilgimle üretiyorum, hangi kısmını kullandığım araç gerçekleştiriyor, nerede gerçekten müdahale etmem gerekiyor? araçlar geliştiğinde aynı sonucu elde etmek için gereken katkım da azalabilir. bu yüzden bir alanda nişleşirken orada öğrenilecek çok şey olduğunu bilmenin yanında öğrendiklerimin hangi problemlerde işe yarayacağını ve bu problemlerle uğraşma biçimimin nasıl değişebileceğini de öngörmem gerekiyor.
 
 ## hayatta kalmak
 
