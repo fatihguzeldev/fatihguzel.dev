@@ -1,18 +1,25 @@
 {
   "projects": [
     {
-      "slug": "doom-threejs",
-      "name": "doom in typescript",
-      "description": "a browser port of doom, written in typescript with three.js.",
+      "slug": "ring64",
+      "name": "ring64",
+      "description": "an x86 and x86-64 cpu emulator for the browser.",
       "links": [
         {
-          "label": "play",
-          "href": "https://doom.fatihguzel.dev",
-          "kind": "demo"
-        },
+          "label": "repository",
+          "href": "https://github.com/fatihguzeldev/ring64",
+          "kind": "github"
+        }
+      ]
+    },
+    {
+      "slug": "hunin",
+      "name": "hunin",
+      "description": "a sidecar that lets agents observe and measure running software.",
+      "links": [
         {
           "label": "repository",
-          "href": "https://github.com/fatihguzeldev/doom-threejs",
+          "href": "https://github.com/fatihguzeldev/hunin",
           "kind": "github"
         }
       ]
@@ -47,23 +54,6 @@
         {
           "label": "repository",
           "href": "https://github.com/fatihguzeldev/vemi",
-          "kind": "github"
-        }
-      ]
-    },
-    {
-      "slug": "dino-neural-network",
-      "name": "chrome dino learns to run",
-      "description": "a neural network trained to play chrome's offline dino game, built as the demo project for an in-depth computer science video on neural networks.",
-      "links": [
-        {
-          "label": "video",
-          "href": "https://www.youtube.com/watch?v=NuBnuAP4ehE",
-          "kind": "demo"
-        },
-        {
-          "label": "repository",
-          "href": "https://github.com/fatihguzeldev/google-dino-neural-network",
           "kind": "github"
         }
       ]
