@@ -23,7 +23,7 @@
     "@fatihguzeldev/vemi": "0.0.2",
     "gray-matter": "4.0.3",
     "js-yaml": "4.3.2",
-    "next": "15.5.28",
+    "next": "15.5.29",
     "react": "19.2.6",
     "react-dom": "19.2.6",
     "zod": "4.6.7"
